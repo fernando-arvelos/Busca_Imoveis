@@ -23,12 +23,12 @@ def second_line_break(text):
 
 
 # Função para remover palavras-chave de um texto
-def remove_property_keywords(text):
+def remove_text_keywords(text):
     if not text:
         return text
     
     # Lista de palavras-chave a serem removidas
-    keywords = ["Ref:", "Localização:", "Freguesia:", "Tipologia:", "Área:", "Para:", "Ano:", "€", "Referência:", "Tipo de imóvel:", "Área Bruta Coberta:", "Ano construção:"]
+    keywords = ["Ref:", "Localização:", "Freguesia:", "Tipologia:", "Para:", "Referência:", "Tipo de imóvel:", "Ano:", "Contacto:", "Email:", "Telefone:"]
 
     # Criar padrão regex com as palavras-chave
     pattern = "|".join(map(re.escape, keywords))
@@ -38,3 +38,21 @@ def remove_property_keywords(text):
 
     # Remover espaços em branco extras e espaços no início e no final
     return " ".join(cleaned_text.split())  
+
+# Função para retirar espaço em branco dos valores
+def remove_number_keywords(text):
+    if not text:
+        return text
+    
+    # Lista de palavras-chave a serem removidas
+    keywords = ["Área:", "€", "Área Bruta Coberta:", "Ano construção:", "Ano:", "m²", " ", " --"]
+
+    # Criar padrão regex com as palavras-chave
+    pattern = "|".join(map(re.escape, keywords))
+
+    # Remover as palavras-chave do texto e espaços em branco extras
+    cleaned_text = re.sub(pattern, "", text)
+
+    # Remover espaços em branco extras e espaços no início e no final
+    return " ".join(cleaned_text.split())  
+

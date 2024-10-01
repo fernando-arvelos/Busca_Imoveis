@@ -3,7 +3,7 @@ import csv
 def save_to_csv(data, filename='imoveis.csv'):
     """Salva os dados em um arquivo CSV com quebra de linha entre os registros."""
     with open(filename, mode='w', newline='', encoding='utf-8') as file:
-        writer = csv.DictWriter(file, fieldnames=['natureza', 'referência', 'preço', 'distrito', 'concelho', 'freguesia', 'tipologia', 'area', 'venda', 'ano', 'imagens'])
+        writer = csv.DictWriter(file, fieldnames=['natureza', 'referência', 'preçoVenda', 'preçoAluguel', 'distrito', 'concelho', 'freguesia', 'tipologia', 'area', 'ano', 'imagens', 'banco', 'contacto', 'email', 'telefone'])
         writer.writeheader()
         for row in data:
             writer.writerow(row)

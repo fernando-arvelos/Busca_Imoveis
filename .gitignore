@@ -1,3 +1,5 @@
-/backend/.mvn/
-/.idea/
-/backend/target/
+backend/.mvn/
+backend/imoveis.json
+backend/target/
+.idea/
+scraper/venv/

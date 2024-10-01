@@ -16,13 +16,13 @@ public class Property {
     private String natureza;
 
     @Column(name = "reference")
-    private String referencia;
+    private String referência;
 
-    @Column(name = "sale_price")
-    private String preco_venda;
+    @Column(name = "sale_price", nullable = true)
+    private String preço_venda;
 
-    @Column(name = "rental_price")
-    private String preco_aluguel;
+    @Column(name = "rental_price", nullable = true)
+    private String preço_aluguel;
 
     @Column(name = "district")
     private String distrito;
@@ -47,14 +47,17 @@ public class Property {
     @Column(name = "imagem_url")
     private List<String> imagens;
 
-    public Property(Long id, String natureza, String referencia, String preco_venda, String preco_aluguel,
+    public Property() {
+    }
+
+    public Property(Long id, String natureza, String referência, String preço_venda, String preço_aluguel,
                     String distrito, String concelho, String freguesia, String tipologia, String area, String ano,
                     List<String> imagens) {
         this.id = id;
         this.natureza = natureza;
-        this.referencia = referencia;
-        this.preco_venda = preco_venda;
-        this.preco_aluguel = preco_aluguel;
+        this.referência = referência;
+        this.preço_venda = preço_venda;
+        this.preço_aluguel = preço_aluguel;
         this.distrito = distrito;
         this.concelho = concelho;
         this.freguesia = freguesia;
@@ -80,28 +83,28 @@ public class Property {
         this.natureza = natureza;
     }
 
-    public String getReferencia() {
-        return referencia;
+    public String getreferência() {
+        return referência;
     }
 
-    public void setReferencia(String referencia) {
-        this.referencia = referencia;
+    public void setreferência(String referência) {
+        this.referência = referência;
     }
 
-    public String getPreco_venda() {
-        return preco_venda;
+    public String getpreço_venda() {
+        return preço_venda;
     }
 
-    public void setPreco_venda(String preco_venda) {
-        this.preco_venda = preco_venda;
+    public void setpreço_venda(String preço_venda) {
+        this.preço_venda = preço_venda;
     }
 
-    public String getPreco_aluguel() {
-        return preco_aluguel;
+    public String getpreço_aluguel() {
+        return preço_aluguel;
     }
 
-    public void setPreco_aluguel(String preco_aluguel) {
-        this.preco_aluguel = preco_aluguel;
+    public void setpreço_aluguel(String preço_aluguel) {
+        this.preço_aluguel = preço_aluguel;
     }
 
     public String getDistrito() {

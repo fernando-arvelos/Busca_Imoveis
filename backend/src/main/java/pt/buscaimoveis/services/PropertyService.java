@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import pt.buscaimoveis.models.entities.Property;
 import pt.buscaimoveis.models.repositories.PropertyRepository;
 
+import java.util.List;
+
 @Service
 public class PropertyService {
 
@@ -15,7 +17,24 @@ public class PropertyService {
         this.propertyRepository = propertyRepository;
     }
 
-    public Property insertProperty(Property property) {
-        return propertyRepository.save(property);
+    public List<Property> insertProperty(List<Property> properties) {
+        return propertyRepository.saveAll(properties);
     }
+
+    public List<Property> getAllProperties() {
+        return propertyRepository.findAll();
+    }
+
+    public List<Property> searchProperties(String distrito, String concelho) {
+        if (distrito != null && concelho != null) {
+            return propertyRepository.findByDistritoAndConcelho(distrito, concelho);
+        } else if (distrito != null) {
+            return propertyRepository.findByDistrito(distrito);
+        } else if (concelho != null) {
+            return propertyRepository.findByConcelho(concelho);
+        } else {
+            return getAllProperties();
+        }
+    }
+
 }

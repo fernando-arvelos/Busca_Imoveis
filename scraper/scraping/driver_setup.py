@@ -4,7 +4,18 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-def setup_driver():
+def setup_driver(bank_name, bank_data):
+
+    """Configura o WebDriver para um banco específico."""
+    # Configurações do banco
+    bank_config = bank_data.get(bank_name)
+    if not bank_config:
+        raise ValueError(f"Configurações do banco '{bank_name}' não encontradas.")
+    
+    url = bank_config["url"]
+    iframe_selector = bank_config["iframe_selector"]
+    element_selector = bank_config["element_selector"]
+
     """Configura o WebDriver no modo headless."""
     # Definir as opções do Chrome para headless mode
     chrome_options = Options()
@@ -25,9 +36,14 @@ def setup_driver():
     driver = webdriver.Chrome(options=chrome_options)
 
     # Acessar a página inicial
-    driver.get("https://ind.millenniumbcp.pt/pt/Particulares/viver/Imoveis/Pages/imoveis.aspx#/Search.aspx")
+    driver.get(url)
     
-    # Espera para que o iframe seja carregado e o driver possa interagir
-    WebDriverWait(driver, 30).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, "iframe")))
+    # Se o seletor de iframe for fornecido, espera até que o iframe esteja disponível
+    if iframe_selector:
+        WebDriverWait(driver, 30).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, iframe_selector)))
+
+    # Se o seletor de um elemento for fornecido, espera até que ele apareça na página
+    if element_selector:
+        WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.CSS_SELECTOR, element_selector)))
     
     return driver

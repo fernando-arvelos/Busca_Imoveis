@@ -27,7 +27,17 @@ services:
     networks:
       - app-network
 
-
+  scraper:
+    build:
+      context: ./scraper
+      dockerfile: Dockerfile
+    volumes:
+      - ./scraper:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - app-network
+    command: python main.py
 
 networks:
   app-network:

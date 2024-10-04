@@ -4,18 +4,18 @@ import pt.buscaimoveis.models.entities.Property;
 
 import java.util.List;
 
-public record PropertyCreateDto(Long id, String natureza, String referência, Double preço_venda, Double preço_aluguel,
-                                String distrito, String concelho, String freguesia, String tipologia, Integer area,
-                                Integer ano, String banco, String contacto, String email, String telefone,
-                                List<String> imagens) {
+public record PropertyDto(Long id, String natureza, String referência, Double preço_venda, Double preço_aluguel,
+                          String distrito, String concelho, String freguesia, String tipologia, Integer area,
+                          Integer ano, String banco, String contacto, String email, String telefone,
+                          List<String> imagens) {
 
-    public static PropertyCreateDto toPropertyDto(Property property) {
-        return new PropertyCreateDto(
+    public static PropertyDto toPropertyDto(Property property) {
+        return new PropertyDto(
                 property.getId(),
                 property.getNatureza(),
                 property.getReferência(),
-                property.getPreço_venda(),
-                property.getPreço_aluguel(),
+                property.getpreçoVenda(),
+                property.getpreçoAluguel(),
                 property.getDistrito(),
                 property.getConcelho(),
                 property.getFreguesia(),

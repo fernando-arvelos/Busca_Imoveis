@@ -29,6 +29,7 @@ def collect_property_links(driver):
                 continue
 
         try:
+            time.sleep(2)
             driver.execute_script("arguments[0].scrollIntoView();", properties[-1])
             time.sleep(2)
             next_button = WebDriverWait(driver, 15).until(

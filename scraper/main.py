@@ -22,7 +22,7 @@ def main():
             
             # Extrair os detalhes da propriedade
             time.sleep(2)
-            property_data = extract_property_details(driver_millenium)
+            property_data = extract_property_details(driver_millenium, bank_data["millenium"])
             time.sleep(2)
             extracted_data.append(property_data)
 

@@ -2,10 +2,12 @@ package pt.buscaimoveis.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pt.buscaimoveis.controllers.dto.PropertyDto;
 import pt.buscaimoveis.models.entities.Property;
 import pt.buscaimoveis.models.repositories.PropertyRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class PropertyService {
@@ -17,21 +19,32 @@ public class PropertyService {
         this.propertyRepository = propertyRepository;
     }
 
-    public List<Property> insertProperty(List<Property> properties) {
-        return propertyRepository.saveAll(properties);
+    public List<PropertyDto> insertProperty(List<Property> properties) {
+        List<Property> savedProperties = propertyRepository.saveAll(properties);
+
+        return savedProperties.stream()
+                .map(PropertyDto::toPropertyDto).toList();
     }
 
-    public List<Property> getAllProperties() {
-        return propertyRepository.findAll();
+    public List<PropertyDto> getAllProperties() {
+        List<Property> getAll = propertyRepository.findAll();
+        return getAll.stream()
+                .map(PropertyDto::toPropertyDto).toList();
     }
 
-    public List<Property> searchProperties(String distrito, String concelho) {
+    public List<PropertyDto> searchProperties(String distrito, String concelho) {
         if (distrito != null && concelho != null) {
-            return propertyRepository.findByDistritoAndConcelho(distrito, concelho);
+            List<Property> getDistritoConcelho = propertyRepository.findByDistritoAndConcelho(distrito, concelho);
+            return getDistritoConcelho.stream()
+                    .map(PropertyDto::toPropertyDto).toList();
         } else if (distrito != null) {
-            return propertyRepository.findByDistrito(distrito);
+            List<Property> getDistrito = propertyRepository.findByDistrito(distrito);
+            return getDistrito.stream()
+                    .map(PropertyDto::toPropertyDto).toList();
         } else if (concelho != null) {
-            return propertyRepository.findByConcelho(concelho);
+            List<Property> getConcelho = propertyRepository.findByConcelho(concelho);
+            return getConcelho.stream()
+                    .map(PropertyDto::toPropertyDto).toList();
         } else {
             return getAllProperties();
         }

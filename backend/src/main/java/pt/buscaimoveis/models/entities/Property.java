@@ -18,11 +18,11 @@ public class Property {
     @Column(name = "reference")
     private String referência;
 
-    @Column(name = "sale_price", nullable = true)
-    private String preço_venda;
+    @Column(name = "sale_price")
+    private Double preçoVenda;
 
-    @Column(name = "rental_price", nullable = true)
-    private String preço_aluguel;
+    @Column(name = "rental_price")
+    private Double preçoAluguel;
 
     @Column(name = "district")
     private String distrito;
@@ -42,6 +42,18 @@ public class Property {
     @Column(name = "year")
     private String ano;
 
+    @Column(name = "bank")
+    private String banco;
+
+    @Column(name = "contact")
+    private String contacto;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "telephone")
+    private String telefone;
+
     @ElementCollection
     @CollectionTable(name = "images", joinColumns = @JoinColumn(name = "property_id"))
     @Column(name = "imagem_url")
@@ -50,20 +62,24 @@ public class Property {
     public Property() {
     }
 
-    public Property(Long id, String natureza, String referência, String preço_venda, String preço_aluguel,
-                    String distrito, String concelho, String freguesia, String tipologia, String area, String ano,
-                    List<String> imagens) {
+    public Property(Long id, String natureza, String referência, Double preçoVenda, Double preçoAluguel,
+                    String distrito, String concelho, String freguesia, String tipologia, String area,
+                    String ano, String banco, String contacto, String email, String telefone, List<String> imagens) {
         this.id = id;
         this.natureza = natureza;
         this.referência = referência;
-        this.preço_venda = preço_venda;
-        this.preço_aluguel = preço_aluguel;
+        this.preçoVenda = preçoVenda;
+        this.preçoAluguel = preçoAluguel;
         this.distrito = distrito;
         this.concelho = concelho;
         this.freguesia = freguesia;
         this.tipologia = tipologia;
         this.area = area;
         this.ano = ano;
+        this.banco = banco;
+        this.contacto = contacto;
+        this.email = email;
+        this.telefone = telefone;
         this.imagens = imagens;
     }
 
@@ -83,28 +99,28 @@ public class Property {
         this.natureza = natureza;
     }
 
-    public String getreferência() {
+    public String getReferência() {
         return referência;
     }
 
-    public void setreferência(String referência) {
+    public void setReferência(String referência) {
         this.referência = referência;
     }
 
-    public String getpreço_venda() {
-        return preço_venda;
+    public Double getpreçoVenda() {
+        return preçoVenda;
     }
 
-    public void setpreço_venda(String preço_venda) {
-        this.preço_venda = preço_venda;
+    public void setpreçoVenda(Double preçoVenda) {
+        this.preçoVenda = preçoVenda;
     }
 
-    public String getpreço_aluguel() {
-        return preço_aluguel;
+    public Double getpreçoAluguel() {
+        return preçoAluguel;
     }
 
-    public void setpreço_aluguel(String preço_aluguel) {
-        this.preço_aluguel = preço_aluguel;
+    public void setpreçoAluguel(Double preçoAluguel) {
+        this.preçoAluguel = preçoAluguel;
     }
 
     public String getDistrito() {
@@ -153,6 +169,38 @@ public class Property {
 
     public void setAno(String ano) {
         this.ano = ano;
+    }
+
+    public String getBanco() {
+        return banco;
+    }
+
+    public void setBanco(String banco) {
+        this.banco = banco;
+    }
+
+    public String getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public List<String> getImagens() {

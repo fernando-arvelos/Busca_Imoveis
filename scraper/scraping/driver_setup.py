@@ -19,7 +19,7 @@ def setup_driver(bank_name, bank_data):
     """Configura o WebDriver no modo headless."""
     # Definir as opções do Chrome para headless mode
     chrome_options = Options()
-    #chrome_options.add_argument("--headless")  # Executa o Chrome em modo headless
+    chrome_options.add_argument("--headless")  # Executa o Chrome em modo headless
     chrome_options.add_argument("--no-sandbox")  # Necessário para rodar em alguns ambientes, como servidores
     chrome_options.add_argument("--disable-dev-shm-usage")  # Evita problemas de memória compartilhada
     chrome_options.add_argument("--disable-gpu")  # Opcional, desativa GPU (necessário para certos drivers)

@@ -33,7 +33,7 @@ def remove_keywords(text, keywords):
 
 def remove_number_keywords(text):
     # Aqui é uma função de limpeza de números com palavras-chave específicas
-    keywords = ["Área:", "€", "Área Bruta Coberta:", "Ano construção:", "Ano:", "m²", " ", " --"]
+    keywords = ["Área:", "€", "Área Bruta Coberta:", "Ano construção:", "Ano:", "m²", " ", " --", "m2"]
     return clean_text(text, keywords)
 
 

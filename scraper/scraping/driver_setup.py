@@ -44,6 +44,6 @@ def setup_driver(bank_name, bank_data):
 
     # Se o seletor de um elemento for fornecido, espera até que ele apareça na página
     if element_selector:
-        WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.CSS_SELECTOR, element_selector)))
+        WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.CLASS_NAME, element_selector)))
     
     return driver

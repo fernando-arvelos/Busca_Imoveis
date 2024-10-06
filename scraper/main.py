@@ -6,36 +6,46 @@ from scraping.extractor import extract_property_details
 from export.csv_export import save_to_csv
 from export.json_export import save_to_json
 
-def main():
-    driver_millenium = setup_driver("millenium", bank_data)
-    
+def process_bank(bank_name, bank_data):
+    # Processa e coleta os links e extrai os 
+    print(f"Processando dados para o banco: {bank_name}")
+
+    # Inicializa o driver para cada banco
+    driver = setup_driver(bank_name, bank_data)
+
     try:
         # Coletar os links de todos os imóveis
-        property_links = collect_property_links(driver_millenium)
+        property_links = collect_property_links(driver, bank_name, bank_data)
+        print(f"Encontrados {len(property_links)} links de imóveis para o banco {bank_name}.")
 
         extracted_data = []
 
         # Visitar cada link de imóvel e extrair os dados
         for idx, link in enumerate(property_links):
-            print(f"Extraindo dados do imóvel {idx + 1}...")
-            driver_millenium.get(link)
+            print(f"Extraindo dados do imóvel {idx + 1} ({bank_name})...")
+            driver.get(link)
             
             # Extrair os detalhes da propriedade
             time.sleep(2)
-            property_data = extract_property_details(driver_millenium, bank_data["millenium"])
+            property_data = extract_property_details(driver, bank_name, bank_data)
             time.sleep(2)
             extracted_data.append(property_data)
 
-            save_to_csv(extracted_data)
-            save_to_json(extracted_data)
-
+        # Salvar os dados extraídos em um arquivo CSV e JSON
+        save_to_csv(extracted_data, filename=f"{bank_name}_properties.csv")
+        save_to_json(extracted_data, filename=f"{bank_name}_properties.json")
 
         # Exibe os resultados no console
         for data in extracted_data:
             print(data)
 
     finally:
-        driver_millenium.quit()
+        driver.quit()
+
+def main():
+    # Iterar sobre cada banco configurado no 'bank_data'
+    for bank_name in bank_data.keys():
+        process_bank(bank_name, bank_data)
 
 if __name__ == "__main__":
     main()

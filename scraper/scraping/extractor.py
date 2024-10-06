@@ -6,32 +6,42 @@ from scraping.utils.cleaning_utils import clean_first_line, clean_second_line, r
 from scraping.utils.element_utils import get_element_text_or_none
 
 
-def extract_property_details(driver, bank_data):
+def extract_property_details(driver, bank_name, bank_data):
     """Extrai detalhes da propriedade de acordo com as configurações específicas do banco."""
     
     # Se o banco usar um iframe, aguardamos que o iframe esteja disponível
-    iframe_selector = bank_data.get("iframe_selector")
+    iframe_selector = bank_data[bank_name].get("iframe_selector")
     if iframe_selector:
         WebDriverWait(driver, 30).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, iframe_selector)))
 
-    selectors = bank_data.get("selectors")
+    selectors = bank_data[bank_name].get("selectors")
     
-    natureza = clean_first_line(get_element_text_or_none(driver, *selectors["natureza"]))
-    referencia = clean_second_line(get_element_text_or_none(driver, *selectors["referencia"]), keywords=["Ref:"])
-    precoVenda = clean_first_line(get_element_text_or_none(driver, *selectors["precoVenda"]))
-    precoAluguel = (get_element_text_or_none(driver, *selectors["precoAluguel"]))
-    distrito_concelho_text = get_element_text_or_none(driver, *selectors["distrito_concelho"])
-    if distrito_concelho_text:
-        distrito_concelho = remove_keywords(distrito_concelho_text, keywords=["Localização:"]).split(" /")
+    # Se o banco for Santander, o campo "natureza" e "referência" estão juntos
+    if bank_name == "santander":
+        natureza_referencia = remove_keywords(get_element_text_or_none(driver, *selectors["natureza"]), keywords=["Referência:"]).split(" | ")
+        natureza = natureza_referencia[0].strip()
+        referencia = natureza_referencia[1].strip()
     else:
-        distrito_concelho = [None, None]
-    distrito = distrito_concelho[0].strip() if distrito_concelho[0] else None
-    concelho = distrito_concelho[1].strip() if distrito_concelho[1] else None
+        natureza = clean_first_line(get_element_text_or_none(driver, *selectors["natureza"]))
+        referencia = clean_second_line(get_element_text_or_none(driver, *selectors["referencia"]), keywords=["Ref:"])
+    
+    precoVenda = clean_first_line(get_element_text_or_none(driver, *selectors["precoVenda"]))
+    precoAluguel = get_element_text_or_none(driver, *selectors["precoAluguel"])
+    
+    distrito_concelho_text = get_element_text_or_none(driver, *selectors["distrito_concelho"])
+    if bank_name == "millenium":
+        distrito_concelho = remove_keywords(distrito_concelho_text, keywords=["Localização:"]).split(" /")
+        distrito = distrito_concelho[0].strip() if len(distrito_concelho) > 0 else None
+        concelho = distrito_concelho[1].strip() if len(distrito_concelho) > 1 else None
+    else:
+        distrito = None
+        concelho = distrito_concelho_text
+    
     freguesia = remove_keywords(get_element_text_or_none(driver, *selectors["freguesia"]), keywords=["Freguesia:"])
-    tipologia = remove_keywords(get_element_text_or_none(driver, *selectors["tipologia"]), keywords=["Tipologia:"])
+    tipologia = remove_keywords(get_element_text_or_none(driver, *selectors["tipologia"]), keywords=["Tipologia:", "Tipo de imóvel:"])
     area = get_element_text_or_none(driver, *selectors["area"])
     ano = get_element_text_or_none(driver, *selectors["ano"])
-    contacto = remove_keywords(get_element_text_or_none(driver, *selectors["contacto"]), keywords=["Contacto:"])
+    contacto = remove_keywords(get_element_text_or_none(driver, *selectors["contacto"]), keywords=["Contacto:", "Comercial:"])
     email = remove_keywords(get_element_text_or_none(driver, *selectors["email"]), keywords=["Email:"])
     telefone = remove_keywords(get_element_text_or_none(driver, *selectors["telefone"]), keywords=["Telefone:"])
 
@@ -49,7 +59,7 @@ def extract_property_details(driver, bank_data):
             "tipologia": tipologia,
             "area": remove_number_keywords(area),
             "ano": remove_number_keywords(ano),
-            "banco": "Millennium",
+            "banco": bank_name.capitalize(),
             "contacto": contacto,
             "email": email,
             "telefone": telefone,

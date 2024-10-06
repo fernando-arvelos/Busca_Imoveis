@@ -14,8 +14,8 @@ public record PropertyDto(Long id, String natureza, String referência, Double p
                 property.getId(),
                 property.getNatureza(),
                 property.getReferência(),
-                property.getpreçoVenda(),
-                property.getpreçoAluguel(),
+                safeParseDouble(property.getpreçoVenda()),
+                safeParseDouble(property.getpreçoAluguel()),
                 property.getDistrito(),
                 property.getConcelho(),
                 property.getFreguesia(),
@@ -38,4 +38,11 @@ public record PropertyDto(Long id, String natureza, String referência, Double p
         }
     }
 
+    private static Double safeParseDouble(String value) {
+        try {
+            return (value != null && !value.isEmpty()) ? Double.valueOf(value) : null;
+        } catch (NumberFormatException e) {
+            return null;
+        }
+    }
 }

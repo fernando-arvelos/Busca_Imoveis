@@ -19,10 +19,10 @@ public class Property {
     private String referência;
 
     @Column(name = "sale_price")
-    private Double preçoVenda;
+    private String preçoVenda;
 
     @Column(name = "rental_price")
-    private Double preçoAluguel;
+    private String preçoAluguel;
 
     @Column(name = "district")
     private String distrito;
@@ -62,7 +62,7 @@ public class Property {
     public Property() {
     }
 
-    public Property(Long id, String natureza, String referência, Double preçoVenda, Double preçoAluguel,
+    public Property(Long id, String natureza, String referência, String preçoVenda, String preçoAluguel,
                     String distrito, String concelho, String freguesia, String tipologia, String area,
                     String ano, String banco, String contacto, String email, String telefone, List<String> imagens) {
         this.id = id;
@@ -107,19 +107,19 @@ public class Property {
         this.referência = referência;
     }
 
-    public Double getpreçoVenda() {
+    public String getpreçoVenda() {
         return preçoVenda;
     }
 
-    public void setpreçoVenda(Double preçoVenda) {
+    public void setpreçoVenda(String preçoVenda) {
         this.preçoVenda = preçoVenda;
     }
 
-    public Double getpreçoAluguel() {
+    public String getpreçoAluguel() {
         return preçoAluguel;
     }
 
-    public void setpreçoAluguel(Double preçoAluguel) {
+    public void setpreçoAluguel(String preçoAluguel) {
         this.preçoAluguel = preçoAluguel;
     }
 

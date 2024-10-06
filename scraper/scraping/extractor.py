@@ -30,12 +30,16 @@ def extract_property_details(driver, bank_name, bank_data):
     
     distrito_concelho_text = get_element_text_or_none(driver, *selectors["distrito_concelho"])
     if bank_name == "millenium":
-        distrito_concelho = remove_keywords(distrito_concelho_text, keywords=["Localização:"]).split(" /")
-        distrito = distrito_concelho[0].strip() if len(distrito_concelho) > 0 else None
-        concelho = distrito_concelho[1].strip() if len(distrito_concelho) > 1 else None
+        if distrito_concelho_text:
+            distrito_concelho = remove_keywords(distrito_concelho_text, keywords=["Localização:"]).split(" /")
+            distrito = distrito_concelho[0].strip() if len(distrito_concelho) > 0 else None
+            concelho = distrito_concelho[1].strip() if len(distrito_concelho) > 1 else None
+        else:
+            distrito = None
+            concelho = None
     else:
         distrito = None
-        concelho = distrito_concelho_text
+        concelho = distrito_concelho_text if distrito_concelho_text else None
     
     freguesia = remove_keywords(get_element_text_or_none(driver, *selectors["freguesia"]), keywords=["Freguesia:"])
     tipologia = remove_keywords(get_element_text_or_none(driver, *selectors["tipologia"]), keywords=["Tipologia:", "Tipo de imóvel:"])

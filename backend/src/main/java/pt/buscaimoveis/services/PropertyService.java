@@ -20,7 +20,21 @@ public class PropertyService {
     }
 
     public List<PropertyDto> insertProperty(List<Property> properties) {
-        List<Property> savedProperties = propertyRepository.saveAll(properties);
+        List<Property> allProperties = propertyRepository.findAll();
+
+        List<Property> filteredProperties = properties.stream()
+                .filter(property -> allProperties.stream()
+                        .noneMatch(p -> p.getReferência().equals(property.getReferência())))
+                .toList();
+
+        List<Property> savedProperties = propertyRepository.saveAll(filteredProperties);
+
+        List<Property> deletedProperties = allProperties.stream()
+                .filter(property -> properties.stream()
+                        .noneMatch(p -> p.getReferência().equals(property.getReferência())))
+                .toList();
+
+        propertyRepository.deleteAll(deletedProperties);
 
         return savedProperties.stream()
                 .map(PropertyDto::toPropertyDto).toList();

@@ -22,8 +22,8 @@ public class PropertyController {
 
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
-    public List<PropertyDto> createProperty(@RequestBody List<Property> properties) {
-        return propertyService.insertProperty(properties);
+    public String createProperty(@RequestBody List<Property> properties) {
+        return propertyService.insertOrUpdateProperties(properties);
     }
 
     @GetMapping()

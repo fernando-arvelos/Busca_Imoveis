@@ -6,7 +6,9 @@ import pt.buscaimoveis.controllers.dto.PropertyDto;
 import pt.buscaimoveis.models.entities.Property;
 import pt.buscaimoveis.models.repositories.PropertyRepository;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,26 +21,51 @@ public class PropertyService {
         this.propertyRepository = propertyRepository;
     }
 
-    public List<PropertyDto> insertProperty(List<Property> properties) {
+    public String insertOrUpdateProperties(List<Property> properties) {
         List<Property> allProperties = propertyRepository.findAll();
 
-        List<Property> filteredProperties = properties.stream()
-                .filter(property -> allProperties.stream()
-                        .noneMatch(p -> p.getReferência().equals(property.getReferência())))
-                .toList();
+        List<Property> updatedProperties = new ArrayList<>();
 
-        List<Property> savedProperties = propertyRepository.saveAll(filteredProperties);
+        List<Property> newProperties = new ArrayList<>();
 
-        List<Property> deletedProperties = allProperties.stream()
-                .filter(property -> properties.stream()
-                        .noneMatch(p -> p.getReferência().equals(property.getReferência())))
-                .toList();
+        properties.forEach(property -> {
+            Optional<Property> existingPropertyOpt = allProperties.stream()
+                    .filter(p -> p.getReferência().equals(property.getReferência()))
+                    .findFirst();
 
-        propertyRepository.deleteAll(deletedProperties);
+            if (existingPropertyOpt.isPresent()) {
+                Property existingProperty = existingPropertyOpt.get();
+                boolean isUpdated = false;
 
-        return savedProperties.stream()
-                .map(PropertyDto::toPropertyDto).toList();
+                if ((existingProperty.getpreçoVenda() == null && property.getpreçoVenda() != null) ||
+                        (existingProperty.getpreçoVenda() != null && !existingProperty.getpreçoVenda().equals(property.getpreçoVenda()))) {
+                    existingProperty.setpreçoVenda(property.getpreçoVenda());
+                    isUpdated = true;
+                }
+
+                if ((existingProperty.getpreçoAluguel() == null && property.getpreçoAluguel() != null) ||
+                        (existingProperty.getpreçoAluguel() != null && !existingProperty.getpreçoAluguel().equals(property.getpreçoAluguel()))) {
+                    existingProperty.setpreçoAluguel(property.getpreçoAluguel());
+                    isUpdated = true;
+                }
+
+                if (isUpdated) {
+                    updatedProperties.add(existingProperty);
+                }
+
+            } else {
+                newProperties.add(property);
+            }
+        });
+
+        List<Property> savedNewProperties = propertyRepository.saveAll(newProperties);
+        List<Property> savedUpdatedProperties = propertyRepository.saveAll(updatedProperties);
+
+        return String.format("Foram cadastradas %d novas propriedades e atualizadas %d propriedades.",
+                savedNewProperties.size(), savedUpdatedProperties.size());
     }
+
+
 
     public List<PropertyDto> getAllProperties() {
         List<Property> getAll = propertyRepository.findAll();

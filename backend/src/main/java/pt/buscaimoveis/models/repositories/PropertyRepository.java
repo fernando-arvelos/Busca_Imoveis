@@ -14,4 +14,8 @@ public interface PropertyRepository extends JpaRepository<Property, Long> {
     List<Property> findByConcelho(String concelho);
 
     List<Property> findByDistritoAndConcelho(String distrito, String concelho);
+
+    List<Property> findByPreçoVendaBetween(Double min, Double max);
+
+    List<Property> findByPreçoAluguelBetween(Double min, Double max);
 }

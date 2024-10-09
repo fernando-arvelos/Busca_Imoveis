@@ -22,23 +22,37 @@ public class PropertyController {
 
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
-    public String createProperty(@RequestBody List<Property> properties) {
-        return propertyService.insertOrUpdateProperties(properties);
+    public void createProperty(@RequestBody List<Property> properties) {
+        propertyService.insertOrUpdateProperties(properties);
     }
 
     @GetMapping()
     @ResponseStatus(HttpStatus.OK)
-    public List<PropertyDto> getAllProperties() {
+    public List<Property> getAllProperties() {
         return propertyService.getAllProperties();
     }
 
-    @GetMapping("/search")
+    @GetMapping("/distrito-concelho/search")
     @ResponseStatus(HttpStatus.OK)
-    public List<PropertyDto> searchProperties(
+    public List<Property> searchDistritoConcelhoProperties(
             @RequestParam(required = false) String distrito,
             @RequestParam(required = false) String concelho) {
-        return propertyService.searchProperties(distrito, concelho);
+        return propertyService.searchDistritoConcelhoProperties(distrito, concelho);
     }
 
+    @GetMapping("/preco-venda/search")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Property> searchPrecoVendaProperties(
+            @RequestParam(required = false) Double min,
+            @RequestParam(required = false) Double max) {
+        return propertyService.searchPrecoVendaProperties(min, max);
+    }
 
+    @GetMapping("/preco-aluguel/search")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Property> searchPrecoAluguelProperties(
+            @RequestParam(required = false) Double min,
+            @RequestParam(required = false) Double max) {
+        return propertyService.searchPrecoAluguelProperties(min, max);
+    }
 }

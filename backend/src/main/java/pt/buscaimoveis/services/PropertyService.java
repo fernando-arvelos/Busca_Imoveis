@@ -2,14 +2,12 @@ package pt.buscaimoveis.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pt.buscaimoveis.controllers.dto.PropertyDto;
 import pt.buscaimoveis.models.entities.Property;
 import pt.buscaimoveis.models.repositories.PropertyRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class PropertyService {
@@ -21,11 +19,13 @@ public class PropertyService {
         this.propertyRepository = propertyRepository;
     }
 
-    public String insertOrUpdateProperties(List<Property> properties) {
+    public void insertOrUpdateProperties(List<Property> properties) {
         List<Property> allProperties = propertyRepository.findAll();
+        List<Property> allBankProperties = allProperties.stream()
+                .filter(property -> property.getBanco().equals(properties.getFirst().getBanco()))
+                .toList();
 
         List<Property> updatedProperties = new ArrayList<>();
-
         List<Property> newProperties = new ArrayList<>();
 
         properties.forEach(property -> {
@@ -49,6 +49,18 @@ public class PropertyService {
                     isUpdated = true;
                 }
 
+                if ((existingProperty.getArea() == null && property.getArea() != null) ||
+                        (existingProperty.getArea() != null && !existingProperty.getArea().equals(property.getArea()))) {
+                    existingProperty.setArea(property.getArea());
+                    isUpdated = true;
+                }
+
+                if ((existingProperty.getAno() == null && property.getAno() != null) ||
+                        (existingProperty.getAno() != null && !existingProperty.getAno().equals(property.getAno()))) {
+                    existingProperty.setAno(property.getAno());
+                    isUpdated = true;
+                }
+
                 if (isUpdated) {
                     updatedProperties.add(existingProperty);
                 }
@@ -58,37 +70,42 @@ public class PropertyService {
             }
         });
 
-        List<Property> savedNewProperties = propertyRepository.saveAll(newProperties);
-        List<Property> savedUpdatedProperties = propertyRepository.saveAll(updatedProperties);
+        List<Property> propertiesToDelete = allBankProperties.stream()
+                .filter(property -> properties.stream()
+                        .noneMatch(p -> p.getReferência().equals(property.getReferência())))
+                .toList();
 
-        return String.format("Foram cadastradas %d novas propriedades e atualizadas %d propriedades.",
-                savedNewProperties.size(), savedUpdatedProperties.size());
+        if (!propertiesToDelete.isEmpty()) {
+            propertyRepository.deleteAll(propertiesToDelete);
+        }
+
+        propertyRepository.saveAll(newProperties);
+        propertyRepository.saveAll(updatedProperties);
     }
 
 
+    public List<Property> getAllProperties() {
+        return propertyRepository.findAll();
 
-    public List<PropertyDto> getAllProperties() {
-        List<Property> getAll = propertyRepository.findAll();
-        return getAll.stream()
-                .map(PropertyDto::toPropertyDto).toList();
     }
 
-    public List<PropertyDto> searchProperties(String distrito, String concelho) {
+    public List<Property> searchDistritoConcelhoProperties(String distrito, String concelho) {
         if (distrito != null && concelho != null) {
-            List<Property> getDistritoConcelho = propertyRepository.findByDistritoAndConcelho(distrito, concelho);
-            return getDistritoConcelho.stream()
-                    .map(PropertyDto::toPropertyDto).toList();
+            return propertyRepository.findByDistritoAndConcelho(distrito, concelho);
         } else if (distrito != null) {
-            List<Property> getDistrito = propertyRepository.findByDistrito(distrito);
-            return getDistrito.stream()
-                    .map(PropertyDto::toPropertyDto).toList();
+            return propertyRepository.findByDistrito(distrito);
         } else if (concelho != null) {
-            List<Property> getConcelho = propertyRepository.findByConcelho(concelho);
-            return getConcelho.stream()
-                    .map(PropertyDto::toPropertyDto).toList();
+            return propertyRepository.findByConcelho(concelho);
         } else {
             return getAllProperties();
         }
     }
 
+    public List<Property> searchPrecoVendaProperties(Double min, Double max) {
+        return propertyRepository.findByPreçoVendaBetween(min, max);
+    }
+
+    public List<Property> searchPrecoAluguelProperties(Double min, Double max) {
+        return propertyRepository.findByPreçoAluguelBetween(min, max);
+    }
 }

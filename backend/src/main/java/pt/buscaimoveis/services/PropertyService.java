@@ -102,14 +102,29 @@ public class PropertyService {
     }
 
     public List<Property> searchPrecoVendaProperties(Double min, Double max) {
+        if (min == null) {
+            min = 0.0;
+        } else if (max == null) {
+            max = Double.MAX_VALUE;
+        }
         return propertyRepository.findByPreçoVendaBetween(min, max);
     }
 
     public List<Property> searchPrecoAluguelProperties(Double min, Double max) {
+        if (min == null) {
+            min = 0.0;
+        } else if (max == null) {
+            max = Double.MAX_VALUE;
+        }
         return propertyRepository.findByPreçoAluguelBetween(min, max);
     }
 
     public List<Property> searchAreaProperties(Integer min, Integer max) {
+        if (min == null) {
+            min = 0;
+        } else if (max == null) {
+            max = Integer.MAX_VALUE;
+        }
         return propertyRepository.findByAreaBetween(min, max);
     }
 }

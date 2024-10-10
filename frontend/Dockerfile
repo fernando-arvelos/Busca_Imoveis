@@ -1,6 +1,13 @@
-# Dockerfile.frontend
-FROM node:20.17.0-alpine
+FROM node:20.17.0-slim
+
 WORKDIR /app
-COPY ../docker/frontend /app
+
+COPY package*.json ./
+
 RUN npm install
-CMD ["npm", "start"]
+
+COPY . .
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev"]

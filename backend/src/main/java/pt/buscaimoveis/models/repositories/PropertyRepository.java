@@ -18,4 +18,6 @@ public interface PropertyRepository extends JpaRepository<Property, Long> {
     List<Property> findByPreçoVendaBetween(Double min, Double max);
 
     List<Property> findByPreçoAluguelBetween(Double min, Double max);
+
+    List<Property> findByAreaBetween(Integer min, Integer max);
 }

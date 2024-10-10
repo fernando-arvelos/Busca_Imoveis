@@ -55,4 +55,12 @@ public class PropertyController {
             @RequestParam(required = false) Double max) {
         return propertyService.searchPrecoAluguelProperties(min, max);
     }
+
+    @GetMapping("/area/search")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Property> searchAreaProperties(
+            @RequestParam(required = false) Integer min,
+            @RequestParam(required = false) Integer max) {
+        return propertyService.searchAreaProperties(min, max);
+    }
 }

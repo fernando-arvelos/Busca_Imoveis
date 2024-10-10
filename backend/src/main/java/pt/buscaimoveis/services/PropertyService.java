@@ -108,4 +108,8 @@ public class PropertyService {
     public List<Property> searchPrecoAluguelProperties(Double min, Double max) {
         return propertyRepository.findByPreçoAluguelBetween(min, max);
     }
+
+    public List<Property> searchAreaProperties(Integer min, Integer max) {
+        return propertyRepository.findByAreaBetween(min, max);
+    }
 }

@@ -29,7 +29,6 @@ public record PropertyDto(Long id, String natureza, String referência, String p
         return property;
     }
 
-    // Métodos auxiliares para conversão
     private Double parseDouble(String value) {
         try {
             return value != null ? Double.parseDouble(value) : null;

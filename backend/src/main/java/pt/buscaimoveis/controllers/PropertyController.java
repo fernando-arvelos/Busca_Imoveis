@@ -3,7 +3,6 @@ package pt.buscaimoveis.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pt.buscaimoveis.controllers.dto.PropertyDto;
 import pt.buscaimoveis.models.entities.Property;
 import pt.buscaimoveis.services.PropertyService;
 

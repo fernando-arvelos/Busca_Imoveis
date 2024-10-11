@@ -3,3 +3,4 @@ backend/imoveis.json
 backend/target/
 .idea/
 scraper/venv/
+.vscode/

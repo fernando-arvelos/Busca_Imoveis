@@ -19,10 +19,10 @@ public class Property {
     private String referência;
 
     @Column(name = "sale_price")
-    private String preçoVenda;
+    private Double preçoVenda;
 
     @Column(name = "rental_price")
-    private String preçoAluguel;
+    private Double preçoAluguel;
 
     @Column(name = "district")
     private String distrito;
@@ -37,10 +37,10 @@ public class Property {
     private String tipologia;
 
     @Column(name = "area")
-    private String area;
+    private Integer area;
 
     @Column(name = "year")
-    private String ano;
+    private Integer ano;
 
     @Column(name = "bank")
     private String banco;
@@ -62,9 +62,9 @@ public class Property {
     public Property() {
     }
 
-    public Property(Long id, String natureza, String referência, String preçoVenda, String preçoAluguel,
-                    String distrito, String concelho, String freguesia, String tipologia, String area,
-                    String ano, String banco, String contacto, String email, String telefone, List<String> imagens) {
+    public Property(Long id, String natureza, String referência, Double preçoVenda, Double preçoAluguel,
+                    String distrito, String concelho, String freguesia, String tipologia, Integer area,
+                    Integer ano, String banco, String contacto, String email, String telefone, List<String> imagens) {
         this.id = id;
         this.natureza = natureza;
         this.referência = referência;
@@ -107,19 +107,19 @@ public class Property {
         this.referência = referência;
     }
 
-    public String getpreçoVenda() {
+    public Double getpreçoVenda() {
         return preçoVenda;
     }
 
-    public void setpreçoVenda(String preçoVenda) {
+    public void setpreçoVenda(Double preçoVenda) {
         this.preçoVenda = preçoVenda;
     }
 
-    public String getpreçoAluguel() {
+    public Double getpreçoAluguel() {
         return preçoAluguel;
     }
 
-    public void setpreçoAluguel(String preçoAluguel) {
+    public void setpreçoAluguel(Double preçoAluguel) {
         this.preçoAluguel = preçoAluguel;
     }
 
@@ -155,19 +155,19 @@ public class Property {
         this.tipologia = tipologia;
     }
 
-    public String getArea() {
+    public Integer getArea() {
         return area;
     }
 
-    public void setArea(String area) {
+    public void setArea(Integer area) {
         this.area = area;
     }
 
-    public String getAno() {
+    public Integer getAno() {
         return ano;
     }
 
-    public void setAno(String ano) {
+    public void setAno(Integer ano) {
         this.ano = ano;
     }
 

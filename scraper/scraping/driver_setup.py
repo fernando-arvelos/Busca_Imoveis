@@ -19,7 +19,7 @@ def setup_driver(bank_name, bank_data):
     """Configura o WebDriver no modo headless."""
     # Definir as opções do Chrome para headless mode
     chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Executa o Chrome em modo headless
+    #chrome_options.add_argument("--headless")  # Executa o Chrome em modo headless
     chrome_options.add_argument("--no-sandbox")  # Necessário para rodar em alguns ambientes, como servidores
     chrome_options.add_argument("--disable-dev-shm-usage")  # Evita problemas de memória compartilhada
     chrome_options.add_argument("--disable-gpu")  # Opcional, desativa GPU (necessário para certos drivers)
@@ -37,13 +37,27 @@ def setup_driver(bank_name, bank_data):
 
     # Acessar a página inicial
     driver.get(url)
+
+    # Configuração para aceitar cookies
+    if bank_name == "credito_agricola":
+        try:
+            # Aguarda até que o botão de aceitar cookies esteja presente
+            accept_cookies_button = WebDriverWait(driver, 60).until(
+                EC.element_to_be_clickable((By.XPATH, "//button[text()='Aceitar' or text()='Aceite todos os cookies' or text()='Accept all Cookies']"))
+            )
+            accept_cookies_button.click()
+            print("Cookies aceitos com sucesso.")
+        except Exception as e:
+            print("Erro ao tentar aceitar os cookies:", e)
     
     # Se o seletor de iframe for fornecido, espera até que o iframe esteja disponível
     if iframe_selector:
         WebDriverWait(driver, 30).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, iframe_selector)))
+        print("Iframe encontrado e acessado com sucesso.")
 
     # Se o seletor de um elemento for fornecido, espera até que ele apareça na página
     if element_selector:
         WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.CLASS_NAME, element_selector)))
+        print("Elemento encontrado com sucesso.")
     
     return driver

@@ -21,24 +21,42 @@ def extract_property_details(driver, bank_name, bank_data):
         natureza_referencia = remove_keywords(get_element_text_or_none(driver, *selectors["natureza"]), keywords=["Referência:"]).split(" | ")
         natureza = natureza_referencia[0].strip()
         referencia = natureza_referencia[1].strip()
+    elif bank_name == "credito_agricola":
+        natureza = get_element_text_or_none(driver, *selectors["natureza"])
+        referencia = get_element_text_or_none(driver, *selectors["referencia"])
     else:
         natureza = clean_first_line(get_element_text_or_none(driver, *selectors["natureza"]))
         referencia = clean_second_line(get_element_text_or_none(driver, *selectors["referencia"]), keywords=["Ref:"])
     
-    precoVenda = clean_first_line(get_element_text_or_none(driver, *selectors["precoVenda"]))
-    precoAluguel = get_element_text_or_none(driver, *selectors["precoAluguel"])
-    
-    distrito_concelho_text = get_element_text_or_none(driver, *selectors["distrito_concelho"])
-    if bank_name == "millenium":
+    # Se o banco for Credito Agricola, o campo "precoVenda" e "precoAluguel" estão juntos
+    if bank_name == "credito_agricola":
+        precoVenda_aluguel = remove_keywords(get_element_text_or_none(driver, *selectors["precoVenda"]), keywords=["Preço de Venda:"]).split(" /")
+        precoVenda = precoVenda_aluguel[0].strip() if len(precoVenda_aluguel) > 0 else None
+        precoAluguel = precoVenda_aluguel[1].strip() if len(precoVenda_aluguel) > 1 else None
+    else:
+        precoVenda = clean_first_line(get_element_text_or_none(driver, *selectors["precoVenda"]))
+        precoAluguel = get_element_text_or_none(driver, *selectors["precoAluguel"])
+        
+    # Inicializar distrito e concelho como None para evitar erros
+    distrito = None
+    concelho = None
+
+    # Verificar se é "credito_agricola" e usar os seletores separados para distrito e concelho
+    if bank_name == "credito_agricola":
+        distrito = get_element_text_or_none(driver, *selectors["distrito"])
+        concelho = get_element_text_or_none(driver, *selectors["concelho"])
+        
+    # Se for "millenium", o campo "distrito_concelho" está junto
+    elif bank_name == "millenium":
+        distrito_concelho_text = get_element_text_or_none(driver, *selectors["distrito_concelho"])
         if distrito_concelho_text:
             distrito_concelho = remove_keywords(distrito_concelho_text, keywords=["Localização:"]).split(" /")
             distrito = distrito_concelho[0].strip() if len(distrito_concelho) > 0 else None
             concelho = distrito_concelho[1].strip() if len(distrito_concelho) > 1 else None
-        else:
-            distrito = None
-            concelho = None
+
+    # Para os demais bancos, manter o comportamento padrão
     else:
-        distrito = None
+        distrito_concelho_text = get_element_text_or_none(driver, *selectors["distrito_concelho"])
         concelho = distrito_concelho_text if distrito_concelho_text else None
     
     freguesia = remove_keywords(get_element_text_or_none(driver, *selectors["freguesia"]), keywords=["Freguesia:"])

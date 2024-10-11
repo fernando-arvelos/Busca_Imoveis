@@ -48,8 +48,34 @@ bank_data = {
             "contacto": (By.XPATH, ".//p[label='Comercial:']"),
             "email": (By.XPATH, ".//p[label='Email:']"),
             "telefone": (By.XPATH, ".//p[label='Telefone:']"),
-
             "imagens": (By.CLASS_NAME, "gallery-img"),
+        }
+    },
+    "credito_agricola": {
+        "url": "https://www.caimoveis.pt/Pesquisar/",
+        "iframe_selector": None,
+        "element_selector": "properties-results",
+        "selectors": {
+            # Paginação
+            "property_list_selector": (By.CLASS_NAME, "properties-results"),
+            "property_link_selector": (By.CSS_SELECTOR, ".property-item a"),
+            "next_page_selector": (By.ID, "MC_paginator_LinkNextActive"),
+            # Extrator de dados
+            "natureza": (By.XPATH, ".//span[text()='Natureza:']/following-sibling::h3"),
+            "referencia": (By.XPATH, ".//span[text()='Referência:']/following-sibling::span"),
+            "precoVenda": (By.CLASS_NAME, "price"),
+            "precoAluguel": (By.CLASS_NAME, "price"),
+            "distrito_concelho": (By.XPATH, ".//span[strong='Localização']"),
+            "distrito": (By.XPATH, ".//span[text()='Distrito:']/following-sibling::h3"),
+            "concelho": (By.XPATH, ".//span[text()='Concelho:']/following-sibling::h3"),
+            "freguesia": (By.XPATH, ".//span[text()='Freguesia:']/following-sibling::span"),
+            "tipologia": (By.XPATH, ".//span[text()='Tipologia:']/following-sibling::h3"),
+            "area": (By.XPATH, ".//span[text()='Área:']/following-sibling::span"),
+            "ano": (By.XPATH, ".//span[text()='Ano de construção:']/following-sibling::span"),
+            "contacto": (By.XPATH, "/html/body/div[2]/div/div[5]/div[2]/div[2]/span"),
+            "email": (By.XPATH, ".//div[strong='Email']"),
+            "telefone": (By.XPATH, "/html/body/div[2]/div/div[5]/div[2]/div[3]/span"),
+            "imagens": (By.CLASS_NAME, "fotorama__img"),
         }
     },
 }

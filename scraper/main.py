@@ -26,9 +26,9 @@ def process_bank(bank_name, bank_data):
             driver.get(link)
             
             # Extrair os detalhes da propriedade
-            time.sleep(2)
+            time.sleep(3)
             property_data = extract_property_details(driver, bank_name, bank_data)
-            time.sleep(2)
+            time.sleep(3)
             extracted_data.append(property_data)
 
         # Salvar os dados extraídos em um arquivo CSV e JSON

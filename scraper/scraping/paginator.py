@@ -18,7 +18,7 @@ def paginate_by_url(driver, base_url, page_param_name, selectors):
         
         # Esperar até que os itens do imóvel sejam carregados
         try:
-            WebDriverWait(driver, 15).until(
+            WebDriverWait(driver, 45).until(
                 EC.presence_of_all_elements_located(selectors["property_list_selector"])
             )
         except TimeoutException:
@@ -60,7 +60,7 @@ def collect_property_links(driver, bank_name, bank_data):
         while True:
             try:
                 # Esperar até que os itens do imóvel sejam carregados
-                WebDriverWait(driver, 15).until(
+                WebDriverWait(driver, 45).until(
                     EC.presence_of_all_elements_located(selectors["property_list_selector"])
                 )
         

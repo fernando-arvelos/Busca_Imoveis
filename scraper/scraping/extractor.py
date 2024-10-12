@@ -12,7 +12,7 @@ def extract_property_details(driver, bank_name, bank_data):
     # Se o banco usar um iframe, aguardamos que o iframe esteja disponível
     iframe_selector = bank_data[bank_name].get("iframe_selector")
     if iframe_selector:
-        WebDriverWait(driver, 30).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, iframe_selector)))
+        WebDriverWait(driver, 45).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, iframe_selector)))
 
     selectors = bank_data[bank_name].get("selectors")
     

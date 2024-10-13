@@ -425,31 +425,6 @@
         ]
     },
     {
-        "natureza": "Terreno",
-        "referência": "107303",
-        "preçoVenda": "84000",
-        "preçoAluguel": null,
-        "distrito": "Setúbal",
-        "concelho": "Palmela",
-        "freguesia": "Poceirão e Marateca",
-        "tipologia": null,
-        "area": "21250",
-        "ano": "1996",
-        "banco": "Millenium",
-        "contacto": "DCEI- AVI - Área de Gestão de Vendas de Imóveis",
-        "email": "dgv@millenniumbcp.pt",
-        "telefone": "211 988 863",
-        "imagens": [
-            "https://millenniumimoveis.janeladigital.com/images/640x480/96a0/5313e500-0000-0500-0000-000013ab96a0.jpg",
-            "https://millenniumimoveis.janeladigital.com/images/640x480/96a1/5313e500-0000-0500-0000-000013ab96a1.jpg",
-            "https://millenniumimoveis.janeladigital.com/images/140x105/96a0/5313e500-0000-0500-0000-000013ab96a0.jpg",
-            "https://millenniumimoveis.janeladigital.com/images/140x105/96a1/5313e500-0000-0500-0000-000013ab96a1.jpg",
-            "https://millenniumimoveis.janeladigital.com/images/140x105/96a2/5313e500-0000-0500-0000-000013ab96a2.jpg",
-            "https://millenniumimoveis.janeladigital.com/images/140x105/96a3/5313e500-0000-0500-0000-000013ab96a3.jpg",
-            "https://millenniumimoveis.janeladigital.com/images/140x105/96a4/5313e500-0000-0500-0000-000013ab96a4.jpg"
-        ]
-    },
-    {
         "natureza": "Loja",
         "referência": "33043",
         "preçoVenda": "331000",

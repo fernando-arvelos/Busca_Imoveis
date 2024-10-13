@@ -21,6 +21,7 @@ def paginate_by_url(driver, base_url, page_param_name, selectors):
             WebDriverWait(driver, 45).until(
                 EC.presence_of_all_elements_located(selectors["property_list_selector"])
             )
+            print(f"Elementos de imóvel carregados na página {current_page}.")
         except TimeoutException:
             print(f"Não foi possível carregar a página {current_page}. Finalizando.")
             break
@@ -49,7 +50,7 @@ def collect_property_links(driver, bank_name, bank_data):
     # Obter os seletores específicos para o banco
     selectors = bank_data[bank_name]["selectors"]
 
-    if bank_name == "credito_agricola":
+    if bank_name == "credito_agricola" or bank_name == "montepio":
         base_url = bank_data[bank_name]["url"]
         page_param_name = "pn"
 
@@ -63,10 +64,14 @@ def collect_property_links(driver, bank_name, bank_data):
                 WebDriverWait(driver, 45).until(
                     EC.presence_of_all_elements_located(selectors["property_list_selector"])
                 )
+                print(f"Elementos de imóvel carregados na página do banco {bank_name}.")
         
                 # Coletar todos os elementos de imóvel
                 properties = driver.find_elements(*selectors["property_link_selector"])
                 print(f"Encontrados {len(properties)} imóveis na página do banco {bank_name}.")
+
+            #except TimeoutException:
+            #    print(f"Não foi possível carregar a página do banco {bank_name}. Finalizando.")
         
                 # Coletar os links para cada imóvel
                 for property_item in properties:
@@ -81,7 +86,7 @@ def collect_property_links(driver, bank_name, bank_data):
                         continue
 
                 # Se o banco for "santander", aplicar a lógica de paginação personalizada
-                if bank_name == "santander":
+                if bank_name == "santander" or bank_name == "montepio":
                     try:
                         # Encontrar a paginação atual e o total de páginas
                         pagination_info = driver.find_element(By.CLASS_NAME, "pager-counter").text

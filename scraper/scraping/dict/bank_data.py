@@ -78,4 +78,82 @@ bank_data = {
             "imagens": (By.CLASS_NAME, "fotorama__img"),
         }
     },
+    "montepio": {
+        "url": "https://imoveismontepio.pt/Comprar/",
+        "iframe_selector": None,
+        "element_selector": "content",
+        "selectors": {
+            # Paginação
+            "property_list_selector": (By.CLASS_NAME, "content "),
+            "property_link_selector": (By.CSS_SELECTOR, ".searchProperties > .property > a"),
+            "next_page_selector": (By.CSS_SELECTOR, "a.pager-arrow.pager-arrow--right.fa.fa-arrow-right"),
+            # Extrator de dados
+            "natureza": (By.CLASS_NAME, "detailTitle"),
+            "referencia": (By.CSS_SELECTOR, ".detailFeaturesList > li:nth-child(1)"),
+            "precoVenda": (By.CLASS_NAME, "detailPrice"),
+            "precoAluguel": (By.CLASS_NAME, "naoExiste"),
+            "distrito_concelho": (By.CLASS_NAME, "detailLocation"),
+            "freguesia": (By.CLASS_NAME, "detailLocation"),
+            "tipologia": (By.CLASS_NAME, "detailTitle"),
+            "area": (By.CSS_SELECTOR, ".detailFeaturesList > li:nth-child(3)"),
+            "ano": (By.XPATH, ".//span[strong='Ano']"),
+            "contacto": (By.CLASS_NAME, "naoExiste"),
+            "email": (By.CLASS_NAME, "naoExiste"),
+            "telefone": (By.CLASS_NAME, "naoExiste"),
+            "imagens": (By.CLASS_NAME, "fotorama__img"),
+        }
+    },
+    # # este banco não estou conseguindo encontrar os itens e links iniciais
+    # # "cgd": {
+    # #     "url": "https://www.caixaimobiliario.pt/comprar/imoveis-venda.jsp?op=comprar&pgnr=1&ofs=&rsnr=&pgsz=&listing=&ordby=&dc=0&tptpl=0&pcmax=0&pcmin=-1&f=0&armin=0",
+    # #     "iframe_selector": "iframe",
+    # #     "element_selector": None,
+    # #     "selectors": {
+    # #         # Paginação
+    # #         # # "property_list_selector": (By.ID, "mod_imovel"),
+    # #         "property_list_selector": (By.ID, "central"),
+    # #         "property_link_selector": (By.CSS_SELECTOR, "div.mod_imovel > a"),
+    # #         "next_page_selector": (By.CLASS_NAME, "clic_front"),
+    # #         # Extrator de dados
+    # #         "natureza": (By.CLASS_NAME, "propertyDetailNature"),
+    # #         "referencia": (By.CLASS_NAME, "propertyDetailNature"),
+    # #         "precoVenda": (By.CLASS_NAME, "propertyDetailPrice"),
+    # #         "precoAluguel": (By.CLASS_NAME, "naoExiste"),
+    # #         "distrito_concelho": (By.XPATH, ".//span[strong='Localização']"),
+    # #         "freguesia": (By.XPATH, ".//span[strong='Freguesia']"),
+    # #         "tipologia": (By.XPATH, ".//span[strong='Tipologia']"),
+    # #         "area": (By.XPATH, ".//span[strong='Área']"),
+    # #         "ano": (By.XPATH, ".//span[strong='Ano']"),
+    # #         "contacto": (By.XPATH, ".//div[strong='Contacto']"),
+    # #         "email": (By.XPATH, ".//div[strong='Email']"),
+    # #         "telefone": (By.XPATH, ".//div[strong='Telefone']"),
+    # #         "imagens": (By.CLASS_NAME, "fotorama__img"),
+    # #     }
+    # # },
+    # # este banco não estou conseguindo encontrar os itens e links iniciais
+    # # "bankinter": {
+    # #     "url": "https://www.bankinter.pt/www/pt-pt/cgi/ebk+pt+inmuebles+listado?",
+    # #     "iframe_selector": "iframe",
+    # #     "element_selector": None,
+    # #     "selectors": {
+    # #         # Paginação
+    # #         "property_list_selector": (By.CLASS_NAME, "center"),
+    # #         "property_link_selector": (By.XPATH, "//*[@id='tablaDin_tabla']/tbody/tr[1]"),
+    # #         "next_page_selector": (By.ID, "MC_paginator_LinkNextActive"),
+    # #         # Extrator de dados
+    # #         "natureza": (By.CLASS_NAME, "propertyDetailNature"),
+    # #         "referencia": (By.CLASS_NAME, "propertyDetailNature"),
+    # #         "precoVenda": (By.CLASS_NAME, "propertyDetailPrice"),
+    # #         "precoAluguel": (By.CLASS_NAME, "naoExiste"),
+    # #         "distrito_concelho": (By.XPATH, ".//span[strong='Localização']"),
+    # #         "freguesia": (By.XPATH, ".//span[strong='Freguesia']"),
+    # #         "tipologia": (By.XPATH, ".//span[strong='Tipologia']"),
+    # #         "area": (By.XPATH, ".//span[strong='Área']"),
+    # #         "ano": (By.XPATH, ".//span[strong='Ano']"),
+    # #         "contacto": (By.XPATH, ".//div[strong='Contacto']"),
+    # #         "email": (By.XPATH, ".//div[strong='Email']"),
+    # #         "telefone": (By.XPATH, ".//div[strong='Telefone']"),
+    # #         "imagens": (By.CLASS_NAME, "fotorama__img"),
+    # #     }
+    # # },
 }

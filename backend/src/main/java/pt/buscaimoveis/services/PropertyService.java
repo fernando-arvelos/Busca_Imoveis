@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 import pt.buscaimoveis.models.entities.Property;
 import pt.buscaimoveis.models.repositories.PropertyRepository;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 @Service
@@ -89,42 +91,51 @@ public class PropertyService {
 
     }
 
-    public List<Property> searchDistritoConcelhoProperties(String distrito, String concelho) {
-        if (distrito != null && concelho != null) {
-            return propertyRepository.findByDistritoAndConcelho(distrito, concelho);
-        } else if (distrito != null) {
-            return propertyRepository.findByDistrito(distrito);
-        } else if (concelho != null) {
-            return propertyRepository.findByConcelho(concelho);
-        } else {
-            return getAllProperties();
-        }
+    public List<Property> searchProperties(String distrito, String concelho,
+                                           Double minV, Double maxV,
+                                           Double minL, Double maxL,
+                                           Integer minA, Integer maxA) {
+        List<Property> properties = propertyRepository.findAll();
+
+        return properties.stream()
+                .filter(property -> isNullOrEmpty(distrito) ||
+                        isNullOrMatches(distrito, property.getDistrito()))
+                .filter(property -> isNullOrEmpty(concelho) ||
+                        isNullOrMatches(concelho, property.getConcelho()))
+                .filter(property -> minV == null ||
+                        (property.getpreçoVenda() != null &&
+                                property.getpreçoVenda() >= minV))
+                .filter(property -> maxV == null ||
+                        (property.getpreçoVenda() != null &&
+                                property.getpreçoVenda() <= maxV))
+                .filter(property -> minL == null ||
+                        (property.getpreçoAluguel() != null &&
+                                property.getpreçoAluguel() >= minL))
+                .filter(property -> maxL == null ||
+                        (property.getpreçoAluguel() != null &&
+                                property.getpreçoAluguel() <= maxL))
+                .filter(property -> minA == null ||
+                        (property.getArea() != null &&
+                                property.getArea() >= minA))
+                .filter(property -> maxA == null ||
+                        (property.getArea() != null &&
+                                property.getArea() <= maxA))
+                .toList();
     }
 
-    public List<Property> searchPrecoVendaProperties(Double min, Double max) {
-        if (min == null) {
-            min = 0.0;
-        } else if (max == null) {
-            max = Double.MAX_VALUE;
-        }
-        return propertyRepository.findByPreçoVendaBetween(min, max);
+    private boolean isNullOrEmpty(String value) {
+        return value == null || value.trim().isEmpty();
     }
 
-    public List<Property> searchPrecoAluguelProperties(Double min, Double max) {
-        if (min == null) {
-            min = 0.0;
-        } else if (max == null) {
-            max = Double.MAX_VALUE;
-        }
-        return propertyRepository.findByPreçoAluguelBetween(min, max);
+    private boolean isNullOrMatches(String filterValue, String propertyValue) {
+        if (isNullOrEmpty(filterValue)) return true;
+        if (propertyValue == null) return false;
+        return normalizeString(filterValue).equals(normalizeString(propertyValue));
     }
 
-    public List<Property> searchAreaProperties(Integer min, Integer max) {
-        if (min == null) {
-            min = 0;
-        } else if (max == null) {
-            max = Integer.MAX_VALUE;
-        }
-        return propertyRepository.findByAreaBetween(min, max);
+    private String normalizeString(String value) {
+        return Normalizer.normalize(value, Normalizer.Form.NFD)
+                .replaceAll("\\p{M}", "")
+                .toLowerCase(Locale.ROOT);
     }
 }

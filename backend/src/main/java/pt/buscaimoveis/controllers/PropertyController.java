@@ -31,35 +31,17 @@ public class PropertyController {
         return propertyService.getAllProperties();
     }
 
-    @GetMapping("/distrito-concelho/search")
+    @GetMapping("/search")
     @ResponseStatus(HttpStatus.OK)
-    public List<Property> searchDistritoConcelhoProperties(
+    public List<Property> searchProperties(
             @RequestParam(required = false) String distrito,
-            @RequestParam(required = false) String concelho) {
-        return propertyService.searchDistritoConcelhoProperties(distrito, concelho);
-    }
-
-    @GetMapping("/preco-venda/search")
-    @ResponseStatus(HttpStatus.OK)
-    public List<Property> searchPrecoVendaProperties(
-            @RequestParam(required = false) Double min,
-            @RequestParam(required = false) Double max) {
-        return propertyService.searchPrecoVendaProperties(min, max);
-    }
-
-    @GetMapping("/preco-aluguel/search")
-    @ResponseStatus(HttpStatus.OK)
-    public List<Property> searchPrecoAluguelProperties(
-            @RequestParam(required = false) Double min,
-            @RequestParam(required = false) Double max) {
-        return propertyService.searchPrecoAluguelProperties(min, max);
-    }
-
-    @GetMapping("/area/search")
-    @ResponseStatus(HttpStatus.OK)
-    public List<Property> searchAreaProperties(
-            @RequestParam(required = false) Integer min,
-            @RequestParam(required = false) Integer max) {
-        return propertyService.searchAreaProperties(min, max);
+            @RequestParam(required = false) String concelho,
+            @RequestParam(required = false) Double minV,
+            @RequestParam(required = false) Double maxV,
+            @RequestParam(required = false) Double minL,
+            @RequestParam(required = false) Double maxL,
+            @RequestParam(required = false) Integer minA,
+            @RequestParam(required = false) Integer maxA) {
+        return propertyService.searchProperties(distrito, concelho, minV, maxV, minL, maxL, minA, maxA);
     }
 }

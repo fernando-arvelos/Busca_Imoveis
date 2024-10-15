@@ -6,10 +6,9 @@ import pt.buscaimoveis.models.entities.Property;
 import pt.buscaimoveis.models.repositories.PropertyRepository;
 
 import java.text.Normalizer;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 @Service
 public class PropertyService {
@@ -23,68 +22,80 @@ public class PropertyService {
 
     public void insertOrUpdateProperties(List<Property> properties) {
         List<Property> allProperties = propertyRepository.findAll();
-        List<Property> allBankProperties = allProperties.stream()
-                .filter(property -> property.getBanco().equals(properties.getFirst().getBanco()))
-                .toList();
+        String banco = properties.getFirst().getBanco();
 
+        List<Property> allBankProperties = filterPropertiesByBank(allProperties, banco);
         List<Property> updatedProperties = new ArrayList<>();
         List<Property> newProperties = new ArrayList<>();
 
         properties.forEach(property -> {
-            Optional<Property> existingPropertyOpt = allProperties.stream()
-                    .filter(p -> p.getReferência().equals(property.getReferência()))
-                    .findFirst();
+            Optional<Property> existingPropertyOpt = findPropertyByReference(allProperties, property.getReferência());
 
             if (existingPropertyOpt.isPresent()) {
                 Property existingProperty = existingPropertyOpt.get();
-                boolean isUpdated = false;
-
-                if ((existingProperty.getpreçoVenda() == null && property.getpreçoVenda() != null) ||
-                        (existingProperty.getpreçoVenda() != null && !existingProperty.getpreçoVenda().equals(property.getpreçoVenda()))) {
-                    existingProperty.setpreçoVenda(property.getpreçoVenda());
-                    isUpdated = true;
-                }
-
-                if ((existingProperty.getpreçoAluguel() == null && property.getpreçoAluguel() != null) ||
-                        (existingProperty.getpreçoAluguel() != null && !existingProperty.getpreçoAluguel().equals(property.getpreçoAluguel()))) {
-                    existingProperty.setpreçoAluguel(property.getpreçoAluguel());
-                    isUpdated = true;
-                }
-
-                if ((existingProperty.getArea() == null && property.getArea() != null) ||
-                        (existingProperty.getArea() != null && !existingProperty.getArea().equals(property.getArea()))) {
-                    existingProperty.setArea(property.getArea());
-                    isUpdated = true;
-                }
-
-                if ((existingProperty.getAno() == null && property.getAno() != null) ||
-                        (existingProperty.getAno() != null && !existingProperty.getAno().equals(property.getAno()))) {
-                    existingProperty.setAno(property.getAno());
-                    isUpdated = true;
-                }
-
-                if (isUpdated) {
+                if (updateProperty(existingProperty, property)) {
                     updatedProperties.add(existingProperty);
                 }
-
             } else {
                 newProperties.add(property);
             }
         });
 
-        List<Property> propertiesToDelete = allBankProperties.stream()
-                .filter(property -> properties.stream()
+        List<Property> propertiesToDelete = findPropertiesToDelete(allBankProperties, properties);
+
+        deleteProperties(propertiesToDelete);
+        saveProperties(newProperties, updatedProperties);
+    }
+
+    private List<Property> filterPropertiesByBank(List<Property> properties, String banco) {
+        return properties.stream()
+                .filter(property -> property.getBanco().equals(banco))
+                .toList();
+    }
+
+    private Optional<Property> findPropertyByReference(List<Property> properties, String referência) {
+        return properties.stream()
+                .filter(p -> p.getReferência().equals(referência))
+                .findFirst();
+    }
+
+    private boolean updateProperty(Property existing, Property newProperty) {
+        boolean isUpdated = false;
+
+        isUpdated |= updateField(existing::getpreçoVenda, existing::setpreçoVenda, newProperty.getpreçoVenda());
+        isUpdated |= updateField(existing::getpreçoAluguel, existing::setpreçoAluguel, newProperty.getpreçoAluguel());
+        isUpdated |= updateField(existing::getArea, existing::setArea, newProperty.getArea());
+        isUpdated |= updateField(existing::getAno, existing::setAno, newProperty.getAno());
+
+        return isUpdated;
+    }
+
+    private <T> boolean updateField(Supplier<T> getter, Consumer<T> setter, T newValue) {
+        T currentValue = getter.get();
+        if (!Objects.equals(currentValue, newValue)) {
+            setter.accept(newValue);
+            return true;
+        }
+        return false;
+    }
+
+    private List<Property> findPropertiesToDelete(List<Property> allBankProperties, List<Property> newProperties) {
+        return allBankProperties.stream()
+                .filter(property -> newProperties.stream()
                         .noneMatch(p -> p.getReferência().equals(property.getReferência())))
                 .toList();
+    }
 
+    private void deleteProperties(List<Property> propertiesToDelete) {
         if (!propertiesToDelete.isEmpty()) {
             propertyRepository.deleteAll(propertiesToDelete);
         }
+    }
 
+    private void saveProperties(List<Property> newProperties, List<Property> updatedProperties) {
         propertyRepository.saveAll(newProperties);
         propertyRepository.saveAll(updatedProperties);
     }
-
 
     public List<Property> getAllProperties() {
         return propertyRepository.findAll();

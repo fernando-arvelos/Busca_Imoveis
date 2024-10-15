@@ -22,7 +22,7 @@ public class PropertyController {
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public void createProperty(@RequestBody List<Property> properties) {
-        propertyService.insertOrUpdateProperties(properties);
+        propertyService.insertOrUpdateOrDeleteProperties(properties);
     }
 
     @GetMapping()

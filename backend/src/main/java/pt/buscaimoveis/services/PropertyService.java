@@ -20,7 +20,7 @@ public class PropertyService {
         this.propertyRepository = propertyRepository;
     }
 
-    public void insertOrUpdateProperties(List<Property> properties) {
+    public void insertOrUpdateOrDeleteProperties(List<Property> properties) {
         List<Property> allProperties = propertyRepository.findAll();
         String banco = properties.getFirst().getBanco();
 
@@ -64,8 +64,14 @@ public class PropertyService {
 
         isUpdated |= updateField(existing::getpreçoVenda, existing::setpreçoVenda, newProperty.getpreçoVenda());
         isUpdated |= updateField(existing::getpreçoAluguel, existing::setpreçoAluguel, newProperty.getpreçoAluguel());
+        isUpdated |= updateField(existing::getTipologia, existing::setTipologia, newProperty.getTipologia());
         isUpdated |= updateField(existing::getArea, existing::setArea, newProperty.getArea());
         isUpdated |= updateField(existing::getAno, existing::setAno, newProperty.getAno());
+        isUpdated |= updateField(existing::getBanco, existing::setBanco, newProperty.getBanco());
+        isUpdated |= updateField(existing::getContacto, existing::setContacto, newProperty.getContacto());
+        isUpdated |= updateField(existing::getEmail, existing::setEmail, newProperty.getEmail());
+        isUpdated |= updateField(existing::getTelefone, existing::setTelefone, newProperty.getTelefone());
+        isUpdated |= updateField(existing::getImagens, existing::setImagens, newProperty.getImagens());
 
         return isUpdated;
     }

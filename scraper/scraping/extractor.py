@@ -78,6 +78,12 @@ def extract_property_details(driver, bank_name, bank_data):
     email = remove_keywords(get_element_text_or_none(driver, *selectors["email"]), keywords=["Email:"])
     telefone = remove_keywords(get_element_text_or_none(driver, *selectors["telefone"]), keywords=["Telefone:"])
 
+    if bank_name == "santander":
+        descricao_elements = driver.find_elements(*selectors["descricao"])
+        descricao = "<br>".join([element.text for element in descricao_elements])
+    else:
+        descricao = get_element_text_or_none(driver, *selectors["descricao"])
+
     """Extrai os dados de uma única propriedade."""
     property_data = {}
     try:
@@ -96,6 +102,7 @@ def extract_property_details(driver, bank_name, bank_data):
             "contacto": contacto,
             "email": email,
             "telefone": telefone,
+            "descricao": descricao,
         }
 
         # Extrair todas as imagens da galeria de fotos

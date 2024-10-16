@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { getProperties } from "../services/propertiesApi";
 import SearchForm from "./SearchForm";
 
@@ -13,7 +14,7 @@ const PropertiesPage = () => {
       const data = await getProperties(filters); // busca os imóveis com ou sem filtros
       setProperties(data); // atualiza o estado com os imóveis
     } catch (error) {
-      setError('Erro ao buscar imóveis');
+      setError('Erro ao buscar imóveis: ', error);
     } finally {
       setLoading(false); // desliga o loading
     }

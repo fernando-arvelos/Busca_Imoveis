@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Route, Routes } from 'react';
-import TesteTemp from './components/TesteTemp';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PropertiesPage from './components/PropertiesPage.jsx';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={ <TesteTemp /> } exact />
+        <Route path="/" element={ <PropertiesPage /> } />
       </Routes>
     </Router> 
   )

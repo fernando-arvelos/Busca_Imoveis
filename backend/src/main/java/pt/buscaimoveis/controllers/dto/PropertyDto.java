@@ -7,7 +7,7 @@ import java.util.List;
 public record PropertyDto(Long id, String natureza, String referência, String preçoVenda, String preçoAluguel,
                           String distrito, String concelho, String freguesia, String tipologia, String area,
                           String ano, String banco, String contacto, String email, String telefone,
-                          List<String> imagens) {
+                          String descricao, List<String> imagens) {
 
     public Property toEntity() {
         Property property = new Property();
@@ -25,6 +25,7 @@ public record PropertyDto(Long id, String natureza, String referência, String p
         property.setContacto(this.contacto);
         property.setEmail(this.email);
         property.setTelefone(this.telefone);
+        property.setDescricao(this.descricao);
         property.setImagens(this.imagens);
         return property;
     }

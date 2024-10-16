@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getPropertyById } from "../services/propertiesApi";
 
 const PropertyDetails = () => {
@@ -13,7 +14,7 @@ const PropertyDetails = () => {
         const data = await getPropertyById(id); // busca o imóvel pelo id
         setProperty(data); // atualiza o estado com o imóvel
       } catch (error) {
-        setError('Erro ao buscar detalhes do imóvel.');
+        setError('Erro ao buscar detalhes do imóvel.', error);
       } finally {
         setLoading(false); // desliga o loading
       }

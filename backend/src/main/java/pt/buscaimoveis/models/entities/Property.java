@@ -54,6 +54,9 @@ public class Property {
     @Column(name = "telephone")
     private String telefone;
 
+    @Column(name = "descricao", columnDefinition = "TEXT")
+    private String descricao;
+
     @ElementCollection
     @CollectionTable(name = "images", joinColumns = @JoinColumn(name = "property_id"))
     @Column(name = "imagem_url")
@@ -64,7 +67,7 @@ public class Property {
 
     public Property(Long id, String natureza, String referência, Double preçoVenda, Double preçoAluguel,
                     String distrito, String concelho, String freguesia, String tipologia, Integer area,
-                    Integer ano, String banco, String contacto, String email, String telefone, List<String> imagens) {
+                    Integer ano, String banco, String contacto, String email, String telefone, String descricao, List<String> imagens) {
         this.id = id;
         this.natureza = natureza;
         this.referência = referência;
@@ -80,92 +83,51 @@ public class Property {
         this.contacto = contacto;
         this.email = email;
         this.telefone = telefone;
+        this.descricao = descricao;
         this.imagens = imagens;
     }
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public void setId(Long id) { this.id = id; }
 
-    public String getNatureza() {
-        return natureza;
-    }
+    public String getNatureza() { return natureza; }
 
-    public void setNatureza(String natureza) {
-        this.natureza = natureza;
-    }
+    public void setNatureza(String natureza) { this.natureza = natureza; }
 
-    public String getReferência() {
-        return referência;
-    }
+    public String getReferência() { return referência; }
 
-    public void setReferência(String referência) {
-        this.referência = referência;
-    }
+    public void setReferência(String referência) { this.referência = referência; }
 
-    public Double getpreçoVenda() {
-        return preçoVenda;
-    }
+    public Double getpreçoVenda() { return preçoVenda; }
 
-    public void setpreçoVenda(Double preçoVenda) {
-        this.preçoVenda = preçoVenda;
-    }
+    public void setpreçoVenda(Double preçoVenda) { this.preçoVenda = preçoVenda; }
 
-    public Double getpreçoAluguel() {
-        return preçoAluguel;
-    }
+    public Double getpreçoAluguel() { return preçoAluguel; }
 
-    public void setpreçoAluguel(Double preçoAluguel) {
-        this.preçoAluguel = preçoAluguel;
-    }
+    public void setpreçoAluguel(Double preçoAluguel) { this.preçoAluguel = preçoAluguel; }
 
-    public String getDistrito() {
-        return distrito;
-    }
+    public String getDistrito() { return distrito; }
 
-    public void setDistrito(String distrito) {
-        this.distrito = distrito;
-    }
+    public void setDistrito(String distrito) { this.distrito = distrito; }
 
-    public String getConcelho() {
-        return concelho;
-    }
+    public String getConcelho() { return concelho; }
 
-    public void setConcelho(String concelho) {
-        this.concelho = concelho;
-    }
+    public void setConcelho(String concelho) { this.concelho = concelho; }
 
-    public String getFreguesia() {
-        return freguesia;
-    }
+    public String getFreguesia() { return freguesia; }
 
-    public void setFreguesia(String freguesia) {
-        this.freguesia = freguesia;
-    }
+    public void setFreguesia(String freguesia) { this.freguesia = freguesia; }
 
-    public String getTipologia() {
-        return tipologia;
-    }
+    public String getTipologia() {  return tipologia; }
 
-    public void setTipologia(String tipologia) {
-        this.tipologia = tipologia;
-    }
+    public void setTipologia(String tipologia) { this.tipologia = tipologia; }
 
-    public Integer getArea() {
-        return area;
-    }
+    public Integer getArea() { return area; }
 
-    public void setArea(Integer area) {
-        this.area = area;
-    }
+    public void setArea(Integer area) { this.area = area; }
 
-    public Integer getAno() {
-        return ano;
-    }
+    public Integer getAno() { return ano; }
 
     public void setAno(Integer ano) {
         this.ano = ano;
@@ -202,6 +164,10 @@ public class Property {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public String getDescricao() { return descricao; }
+
+    public void setDescricao(String descricao) { this.descricao = descricao; }
 
     public List<String> getImagens() {
         return imagens;

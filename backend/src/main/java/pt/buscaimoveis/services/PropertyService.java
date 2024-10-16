@@ -71,6 +71,7 @@ public class PropertyService {
         isUpdated |= updateField(existing::getContacto, existing::setContacto, newProperty.getContacto());
         isUpdated |= updateField(existing::getEmail, existing::setEmail, newProperty.getEmail());
         isUpdated |= updateField(existing::getTelefone, existing::setTelefone, newProperty.getTelefone());
+        isUpdated |= updateField(existing::getDescricao, existing::setDescricao, newProperty.getDescricao());
         isUpdated |= updateField(existing::getImagens, existing::setImagens, newProperty.getImagens());
 
         return isUpdated;

@@ -24,6 +24,7 @@ bank_data = {
             "email": (By.XPATH, ".//div[strong='Email']"),
             "telefone": (By.XPATH, ".//div[strong='Telefone']"),
             "imagens": (By.CLASS_NAME, "fotorama__img"),
+            "descricao": (By.CSS_SELECTOR, "div.propertyDescription > p"),
         }
     },
     "santander": {
@@ -49,6 +50,7 @@ bank_data = {
             "email": (By.XPATH, ".//p[label='Email:']"),
             "telefone": (By.XPATH, ".//p[label='Telefone:']"),
             "imagens": (By.CLASS_NAME, "gallery-img"),
+            "descricao": (By.CSS_SELECTOR, "body > div.layout > div.layout-fullRow > div.propLayout.clearfix > div > div.propLayout-col.propLayout-col--left > div.row > div:nth-child(1) p"),
         }
     },
     "credito_agricola": {
@@ -76,6 +78,7 @@ bank_data = {
             "email": (By.XPATH, ".//div[strong='Email']"),
             "telefone": (By.XPATH, "/html/body/div[2]/div/div[5]/div[2]/div[3]/span"),
             "imagens": (By.CLASS_NAME, "fotorama__img"),
+            "descricao": (By.CSS_SELECTOR, "div.property-description > h3"),
         }
     },
     "montepio": {
@@ -101,6 +104,7 @@ bank_data = {
             "email": (By.CLASS_NAME, "naoExiste"),
             "telefone": (By.CLASS_NAME, "naoExiste"),
             "imagens": (By.CLASS_NAME, "fotorama__img"),
+            "descricao": (By.CSS_SELECTOR, "div.detailDescriptionText > p"),
         }
     },
     # # este banco não estou conseguindo encontrar os itens e links iniciais
@@ -128,6 +132,7 @@ bank_data = {
     # #         "email": (By.XPATH, ".//div[strong='Email']"),
     # #         "telefone": (By.XPATH, ".//div[strong='Telefone']"),
     # #         "imagens": (By.CLASS_NAME, "fotorama__img"),
+    # #         "descricao": (By.CSS_SELECTOR, "div.propertyDescription > p"),
     # #     }
     # # },
     # # este banco não estou conseguindo encontrar os itens e links iniciais
@@ -154,6 +159,7 @@ bank_data = {
     # #         "email": (By.XPATH, ".//div[strong='Email']"),
     # #         "telefone": (By.XPATH, ".//div[strong='Telefone']"),
     # #         "imagens": (By.CLASS_NAME, "fotorama__img"),
+    # #         "descricao": (By.CSS_SELECTOR, "div.propertyDescription > p"),
     # #     }
     # # },
 }

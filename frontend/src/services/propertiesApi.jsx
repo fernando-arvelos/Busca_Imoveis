@@ -13,11 +13,13 @@ export const getProperties = async (filters = {}) => {
   try {
     const response = await fetch(url);
 
+    const data = await response.json();  // Converte a resposta para JSON
+    
     if (!response.ok) {
       throw new Error('Erro ao buscar imóveis');
     }
 
-    return await response.json(); // retorna os dados dos imoveis
+    return data; // retorna os dados dos imoveis
   } catch (error) {
     console.error('Erro na requisição da API:', error);
     throw error;

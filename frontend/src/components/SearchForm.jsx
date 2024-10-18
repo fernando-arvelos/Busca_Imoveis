@@ -5,16 +5,16 @@ const SearchForm = ({ onSearch }) => {
   const [filters, setFilters] = useState({
     natureza: '',
     referencia: '',
-    precoCompraMin: '',
-    precoCompraMax: '',
-    precoAluguelMin: '',
-    precoAluguelMax: '',
+    minV: '',
+    maxV: '',
+    minL: '',
+    maxL: '',
     distrito: '',
     concelho: '',
     freguesia: '',
     tipologia: '',
-    areaMin: '',
-    areaMax: '',
+    minA: '',
+    maxA: '',
     anoMin: '',
     anoMax: '',
     banco: '',
@@ -81,23 +81,23 @@ const SearchForm = ({ onSearch }) => {
               <span className="text-gray-700 mb-2">Preço de Compra</span>
               <div className="flex space-x-4">
                 <div className="flex flex-col w-1/2">
-                  <label htmlFor="precoCompraMin" className="text-gray-700">Mínimo</label>
+                  <label htmlFor="minV" className="text-gray-700">Mínimo</label>
                   <input
                     type="number"
-                    name="precoCompraMin"
+                    name="minV"
                     placeholder="Preço Mínimo"
-                    value={filters.preçoCompraMin}
+                    value={filters.minV}
                     onChange={handleInputChange}
                     className="border border-gray-300 rounded-lg p-2"
                   />
                 </div>
                 <div className="flex flex-col w-1/2">
-                  <label htmlFor="precoCompraMax" className="text-gray-700">Máximo</label>
+                  <label htmlFor="maxV" className="text-gray-700">Máximo</label>
                   <input
                     type="number"
-                    name="precoCompraMax"
+                    name="maxV"
                     placeholder="Preço Máximo"
-                    value={filters.preçoCompraMax}
+                    value={filters.maxV}
                     onChange={handleInputChange}
                     className="border border-gray-300 rounded-lg p-2"
                   />
@@ -111,10 +111,10 @@ const SearchForm = ({ onSearch }) => {
               <span className="text-gray-700 mb-2">Preço de Aluguel</span>
               <div className="flex space-x-4">
                 <div className="flex flex-col w-1/2">
-                  <label htmlFor="precoAluguelMin" className="text-gray-700">Mínimo</label>
+                  <label htmlFor="minL" className="text-gray-700">Mínimo</label>
                   <input
                     type="number"
-                    name="precoAluguelMin"
+                    name="minL"
                     placeholder="Preço Mínimo"
                     value={filters.preçoAluguelMin}
                     onChange={handleInputChange}
@@ -122,10 +122,10 @@ const SearchForm = ({ onSearch }) => {
                   />
                 </div>
                 <div className="flex flex-col w-1/2">
-                  <label htmlFor="precoAluguelMax" className="text-gray-700">Máximo</label>
+                  <label htmlFor="maxL" className="text-gray-700">Máximo</label>
                   <input
                     type="number"
-                    name="precoAluguelMax"
+                    name="maxL"
                     placeholder="Preço Máximo"
                     value={filters.preçoAluguelMax}
                     onChange={handleInputChange}
@@ -184,23 +184,23 @@ const SearchForm = ({ onSearch }) => {
               <span className="text-gray-700 mb-2">Área</span>
               <div className="flex space-x-4">
                 <div className="flex flex-col w-1/2">
-                  <label htmlFor="areaMin" className="text-gray-700">Mínimo</label>
+                  <label htmlFor="minA" className="text-gray-700">Mínimo</label>
                   <input
                     type="number"
-                    name="areaMin"
+                    name="minA"
                     placeholder="Mínimo"
-                    value={filters.areaMin}
+                    value={filters.minA}
                     onChange={handleInputChange}
                     className="border border-gray-300 rounded-lg p-2"
                   />
                 </div>
                 <div className="flex flex-col w-1/2">
-                  <label htmlFor="areaMax" className="text-gray-700">Máximo</label>
+                  <label htmlFor="maxA" className="text-gray-700">Máximo</label>
                   <input
                     type="number"
-                    name="areaMax"
+                    name="maxA"
                     placeholder="Máximo"
-                    value={filters.areaMax}
+                    value={filters.maxA}
                     onChange={handleInputChange}
                     className="border border-gray-300 rounded-lg p-2"
                   />

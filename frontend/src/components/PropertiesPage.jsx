@@ -41,14 +41,14 @@ const PropertiesPage = () => {
         {properties.length > 0 ? (
           properties.map(property => (
             <div key={property.id}>
-              <h2>{property.natureza}</h2>
-              <p>{property.preçoVenda}</p>
-              <p>{property.distrito}</p>
-              <p>{property.concelho}</p>
-              <p>{property.freguesia}</p>
-              <p>{property.area}</p>
-              <p>{property.ano}</p>
-              <p>{property.banco}</p>
+              <h2>Natureza: {property.natureza}</h2>
+              <p>€ {property.preçoVenda}</p>
+              <p>Distrito: {property.distrito}</p>
+              <p>Conselho: {property.concelho}</p>
+              <p>Freguesia: {property.freguesia}</p>
+              <p>Área: {property.area}</p>
+              <p>Ano: {property.ano}</p>
+              <p>Banco responsável: {property.banco}</p>
               <Link to={`/properties/${property.id}`}>Ver Detalhes</Link>
             </div>
           ))

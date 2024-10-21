@@ -1,4 +1,5 @@
 import time
+import random
 from scraping.dict.bank_data import bank_data
 from scraping.driver_setup import setup_driver
 from scraping.paginator import collect_property_links
@@ -26,13 +27,13 @@ def process_bank(bank_name, bank_data):
             driver.get(link)
             
             # Extrair os detalhes da propriedade
-            time.sleep(3)
+            time.sleep(random.uniform(3, 5))
             property_data = extract_property_details(driver, bank_name, bank_data)
-            time.sleep(3)
+            time.sleep(random.uniform(3, 5))
             extracted_data.append(property_data)
 
         # Salvar os dados extraídos em um arquivo CSV e JSON
-        save_to_csv(extracted_data, filename=f"{bank_name}_properties.csv")
+        # save_to_csv(extracted_data, filename=f"{bank_name}_properties.csv")
         save_to_json(extracted_data, filename=f"{bank_name}_properties.json")
 
         # Exibe os resultados no console

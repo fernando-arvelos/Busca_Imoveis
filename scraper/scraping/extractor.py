@@ -70,15 +70,38 @@ def extract_property_details(driver, bank_name, bank_data):
         distrito_concelho_text = get_element_text_or_none(driver, *selectors["distrito_concelho"])
         concelho = distrito_concelho_text if distrito_concelho_text else None
         freguesia = remove_keywords(get_element_text_or_none(driver, *selectors["freguesia"]), keywords=["Freguesia:"])
+
+    if bank_name == "cgd":
+        natureza_concelho_valor = get_element_text_or_none(driver, *selectors["natureza"])
+        if natureza_concelho_valor is not None:
+            natureza_concelho_valor = natureza_concelho_valor.split(" | ")
+            natureza = natureza_concelho_valor[0].strip()
+            concelho = natureza_concelho_valor[1].strip()
+            precoVenda = natureza_concelho_valor[2].strip()
+        else:
+            natureza = None
+            concelho = None
+            precoVenda = None
+        freguesia = clean_second_line(get_element_text_or_none(driver, *selectors["freguesia"]))
+        referencia = remove_keywords(get_element_text_or_none(driver, *selectors["referencia"]), keywords=["Ref."])
         
-    tipologia = remove_keywords(get_element_text_or_none(driver, *selectors["tipologia"]), keywords=["Tipologia:", "Tipo de imóvel:", "Moradia", "Apartamento", "Loja", "Terreno", "Armazém", "Escritório", "Prédio", "Quinta", "Quintinha"])
-    area = get_element_text_or_none(driver, *selectors["area"])
+    if bank_name == "cgd":
+        tipologia_natureza = get_element_text_or_none(driver, *selectors["tipologia"])
+        if tipologia_natureza is not None:
+            tipologia_natureza = tipologia_natureza.split(" | ")
+            tipologia = remove_keywords((tipologia_natureza[0].strip()), keywords=["Apartamento", "Terreno Urbano", "Prédio Serviços", "Terreno Misto", "Armazém Industrial", "Armazém Logístico", "Loja Comércio de Rua", "Estaleiro", "Prédio Uso Misto", "Moradia", "Terreno Lote Habitação", "Restaurante", "Escritório Independente", "Terreno Rústico", "Prédio Industrial", "Armazém Comercial", "Loja Centro Comercial", "Armazém Pavilhão", "Prédio Habitação", "Lugar de Garagem", "Armazém Independente", "Prédio Centro Comercial"])
+        else:
+            tipologia = None
+    else:
+        tipologia = remove_keywords(get_element_text_or_none(driver, *selectors["tipologia"]), keywords=["Tipologia:", "Tipo de imóvel:", "Moradia", "Apartamento", "Loja", "Terreno", "Armazém", "Escritório", "Prédio", "Quinta", "Quintinha"])
+
+    area = remove_keywords(get_element_text_or_none(driver, *selectors["area"]), keywords=["Área bruta de"])
     ano = get_element_text_or_none(driver, *selectors["ano"])
     contacto = remove_keywords(get_element_text_or_none(driver, *selectors["contacto"]), keywords=["Contacto:", "Comercial:"])
     email = remove_keywords(get_element_text_or_none(driver, *selectors["email"]), keywords=["Email:"])
     telefone = remove_keywords(get_element_text_or_none(driver, *selectors["telefone"]), keywords=["Telefone:"])
 
-    if bank_name == "santander":
+    if bank_name == "santander" or bank_name == "cgd":
         descricao_elements = driver.find_elements(*selectors["descricao"])
         descricao = "<br>".join([element.text for element in descricao_elements])
     else:
@@ -101,7 +124,7 @@ def extract_property_details(driver, bank_name, bank_data):
             "banco": bank_name.capitalize(),
             "contacto": contacto,
             "email": email,
-            "telefone": telefone,
+            "telefone": remove_number_keywords(telefone),
             "descricao": descricao,
         }
 

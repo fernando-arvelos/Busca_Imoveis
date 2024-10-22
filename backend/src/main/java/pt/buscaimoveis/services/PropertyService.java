@@ -2,7 +2,9 @@ package pt.buscaimoveis.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pt.buscaimoveis.models.entities.District;
 import pt.buscaimoveis.models.entities.Property;
+import pt.buscaimoveis.models.repositories.DistrictRepository;
 import pt.buscaimoveis.models.repositories.PropertyRepository;
 
 import java.text.Normalizer;
@@ -14,10 +16,12 @@ import java.util.function.Supplier;
 public class PropertyService {
 
     private final PropertyRepository propertyRepository;
+    private final DistrictRepository districtRepository;
 
     @Autowired
-    public PropertyService(PropertyRepository propertyRepository) {
+    public PropertyService(PropertyRepository propertyRepository, pt.buscaimoveis.models.repositories.DistrictRepository districtRepository) {
         this.propertyRepository = propertyRepository;
+        this.districtRepository = districtRepository;
     }
 
     public void insertOrUpdateOrDeleteProperties(List<Property> properties) {
@@ -100,6 +104,18 @@ public class PropertyService {
     }
 
     private void saveProperties(List<Property> newProperties, List<Property> updatedProperties) {
+        List<District> districts_concelhos = districtRepository.findAll();
+        newProperties
+            .forEach(property -> {
+                if (property.getDistrito() == null) {
+                    String concelho = property.getConcelho();
+                        districts_concelhos.forEach(district -> {
+                            if (district.getConcelhos().stream().anyMatch(concelho1 -> concelho1.getNameConcelho().equals(concelho))) {
+                                property.setDistrito(district.getNameDistrict());
+                            }
+                        });
+                }
+            });
         propertyRepository.saveAll(newProperties);
         propertyRepository.saveAll(updatedProperties);
     }

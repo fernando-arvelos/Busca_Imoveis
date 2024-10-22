@@ -1,0 +1,1027 @@
+
+[
+  {
+    "name_district": "Aveiro",
+    "concelhos": [
+      {
+        "name_concelho": "Águeda"
+      },
+      {
+        "name_concelho": "Albergaria-a-velha"
+      },
+      {
+        "name_concelho": "Anadia"
+      },
+      {
+        "name_concelho": "Arouca"
+      },
+      {
+        "name_concelho": "Aveiro"
+      },
+      {
+        "name_concelho": "Castelo de Paiva"
+      },
+      {
+        "name_concelho": "Espinho"
+      },
+      {
+        "name_concelho": "Estarreja"
+      },
+      {
+        "name_concelho": "Ílhavo"
+      },
+      {
+        "name_concelho": "Mealhada"
+      },
+      {
+        "name_concelho": "Murtosa"
+      },
+      {
+        "name_concelho": "Oliveira de Azeméis"
+      },
+      {
+        "name_concelho": "Oliveira do Bairro"
+      },
+      {
+        "name_concelho": "Ovar"
+      },
+      {
+        "name_concelho": "Santa Maria da Feira"
+      },
+      {
+        "name_concelho": "São João da Madeira"
+      },
+      {
+        "name_concelho": "Sever do Vouga"
+      },
+      {
+        "name_concelho": "Vagos"
+      },
+      {
+        "name_concelho": "Vale de Cambra"
+      }
+    ]
+  },
+  {
+    "name_district": "Beja",
+    "concelhos": [
+      {
+        "name_concelho": "Aljustrel"
+      },
+      {
+        "name_concelho": "Almodôvar"
+      },
+      {
+        "name_concelho": "Alvito"
+      },
+      {
+        "name_concelho": "Barrancos"
+      },
+      {
+        "name_concelho": "Beja"
+      },
+      {
+        "name_concelho": "Castro Verde"
+      },
+      {
+        "name_concelho": "Cuba"
+      },
+      {
+        "name_concelho": "Ferreira do Alentejo"
+      },
+      {
+        "name_concelho": "Mértola"
+      },
+      {
+        "name_concelho": "Moura"
+      },
+      {
+        "name_concelho": "Odemira"
+      },
+      {
+        "name_concelho": "Ourique"
+      },
+      {
+        "name_concelho": "Serpa"
+      },
+      {
+        "name_concelho": "Vidigueira"
+      }
+    ]
+  },
+  {
+    "name_district": "Braga",
+    "concelhos": [
+      {
+        "name_concelho": "Amares"
+      },
+      {
+        "name_concelho": "Barcelos"
+      },
+      {
+        "name_concelho": "Braga"
+      },
+      {
+        "name_concelho": "Cabeceiras de Basto"
+      },
+      {
+        "name_concelho": "Celorico de Basto"
+      },
+      {
+        "name_concelho": "Esposende"
+      },
+      {
+        "name_concelho": "Fafe"
+      },
+      {
+        "name_concelho": "Guimarães"
+      },
+      {
+        "name_concelho": "Póvoa de Lanhoso"
+      },
+      {
+        "name_concelho": "Terras de Bouro"
+      },
+      {
+        "name_concelho": "Vieira do Minho"
+      },
+      {
+        "name_concelho": "Vila Nova de Famalicão"
+      },
+      {
+        "name_concelho": "Vila Verde"
+      },
+      {
+        "name_concelho": "Vizela"
+      }
+    ]
+  },
+  {
+    "name_district": "Bragança",
+    "concelhos": [
+      {
+        "name_concelho": "Alfândega da fé"
+      },
+      {
+        "name_concelho": "Bragança"
+      },
+      {
+        "name_concelho": "Carrazeda de Ansiães"
+      },
+      {
+        "name_concelho": "Freixo de Espada à Cinta"
+      },
+      {
+        "name_concelho": "Macedo de Cavaleiros"
+      },
+      {
+        "name_concelho": "Miranda do Douro"
+      },
+      {
+        "name_concelho": "Mirandela"
+      },
+      {
+        "name_concelho": "Mogadouro"
+      },
+      {
+        "name_concelho": "Torre de Moncorvo"
+      },
+      {
+        "name_concelho": "Vila Flor"
+      },
+      {
+        "name_concelho": "Vimioso"
+      },
+      {
+        "name_concelho": "Vinhais"
+      }
+    ]
+  },
+  {
+    "name_district": "Castelo Branco",
+    "concelhos": [
+      {
+        "name_concelho": "Belmonte"
+      },
+      {
+        "name_concelho": "Castelo Branco"
+      },
+      {
+        "name_concelho": "Covilhã"
+      },
+      {
+        "name_concelho": "Fundão"
+      },
+      {
+        "name_concelho": "Idanha-a-nova"
+      },
+      {
+        "name_concelho": "Oleiros"
+      },
+      {
+        "name_concelho": "Penamacor"
+      },
+      {
+        "name_concelho": "Proença-a-nova"
+      },
+      {
+        "name_concelho": "Sertã"
+      },
+      {
+        "name_concelho": "Vila de Rei"
+      },
+      {
+        "name_concelho": "Vila Velha de Ródão"
+      }
+    ]
+  },
+  {
+    "name_district": "Coimbra",
+    "concelhos": [
+      {
+        "name_concelho": "Arganil"
+      },
+      {
+        "name_concelho": "Cantanhede"
+      },
+      {
+        "name_concelho": "Coimbra"
+      },
+      {
+        "name_concelho": "Condeixa-a-nova"
+      },
+      {
+        "name_concelho": "Figueira da Foz"
+      },
+      {
+        "name_concelho": "Góis"
+      },
+      {
+        "name_concelho": "Lousã"
+      },
+      {
+        "name_concelho": "Mira"
+      },
+      {
+        "name_concelho": "Miranda do Corvo"
+      },
+      {
+        "name_concelho": "Montemor-o-velho"
+      },
+      {
+        "name_concelho": "Oliveira do Hospital"
+      },
+      {
+        "name_concelho": "Pampilhosa da Serra"
+      },
+      {
+        "name_concelho": "Penacova"
+      },
+      {
+        "name_concelho": "Penela"
+      },
+      {
+        "name_concelho": "Soure"
+      },
+      {
+        "name_concelho": "Tábua"
+      },
+      {
+        "name_concelho": "Vila Nova de Poiares"
+      }
+    ]
+  },
+  {
+    "name_district": "Faro",
+    "concelhos": [
+      {
+        "name_concelho": "Albufeira"
+      },
+      {
+        "name_concelho": "Alcoutim"
+      },
+      {
+        "name_concelho": "Aljezur"
+      },
+      {
+        "name_concelho": "Castro Marim"
+      },
+      {
+        "name_concelho": "Faro"
+      },
+      {
+        "name_concelho": "Lagoa"
+      },
+      {
+        "name_concelho": "Lagos"
+      },
+      {
+        "name_concelho": "Loulé"
+      },
+      {
+        "name_concelho": "Monchique"
+      },
+      {
+        "name_concelho": "Olhão"
+      },
+      {
+        "name_concelho": "Portimão"
+      },
+      {
+        "name_concelho": "São Brás de Alportel"
+      },
+      {
+        "name_concelho": "Silves"
+      },
+      {
+        "name_concelho": "Tavira"
+      },
+      {
+        "name_concelho": "Vila do Bispo"
+      },
+      {
+        "name_concelho": "Vila Real de Santo António"
+      }
+    ]
+  },
+  {
+    "name_district": "Guarda",
+    "concelhos": [
+      {
+        "name_concelho": "Aguiar da Beira"
+      },
+      {
+        "name_concelho": "Almeida"
+      },
+      {
+        "name_concelho": "Celorico da Beira"
+      },
+      {
+        "name_concelho": "Figueira de Castelo Rodrigo"
+      },
+      {
+        "name_concelho": "Fornos de Algodres"
+      },
+      {
+        "name_concelho": "Gouveia"
+      },
+      {
+        "name_concelho": "Guarda"
+      },
+      {
+        "name_concelho": "Manteigas"
+      },
+      {
+        "name_concelho": "Mêda"
+      },
+      {
+        "name_concelho": "Pinhel"
+      },
+      {
+        "name_concelho": "Sabugal"
+      },
+      {
+        "name_concelho": "Seia"
+      },
+      {
+        "name_concelho": "Trancoso"
+      },
+      {
+        "name_concelho": "Vila Nova de Foz Côa"
+      }
+    ]
+  },
+  {
+    "name_district": "Leiria",
+    "concelhos": [
+      {
+        "name_concelho": "Alcobaça"
+      },
+      {
+        "name_concelho": "Alvaiázere"
+      },
+      {
+        "name_concelho": "Ansião"
+      },
+      {
+        "name_concelho": "Batalha"
+      },
+      {
+        "name_concelho": "Bombarral"
+      },
+      {
+        "name_concelho": "Caldas da Rainha"
+      },
+      {
+        "name_concelho": "Castanheira de Pêra"
+      },
+      {
+        "name_concelho": "Figueiró Dos Vinhos"
+      },
+      {
+        "name_concelho": "Leiria"
+      },
+      {
+        "name_concelho": "Marinha Grande"
+      },
+      {
+        "name_concelho": "Nazaré"
+      },
+      {
+        "name_concelho": "Óbidos"
+      },
+      {
+        "name_concelho": "Pedrógão Grande"
+      },
+      {
+        "name_concelho": "Peniche"
+      },
+      {
+        "name_concelho": "Pombal"
+      },
+      {
+        "name_concelho": "Porto de Mós"
+      }
+    ]
+  },
+  {
+    "name_district": "Lisboa",
+    "concelhos": [
+      {
+        "name_concelho": "Alenquer"
+      },
+      {
+        "name_concelho": "Amadora"
+      },
+      {
+        "name_concelho": "Arruda Dos Vinhos"
+      },
+      {
+        "name_concelho": "Azambuja"
+      },
+      {
+        "name_concelho": "Cadaval"
+      },
+      {
+        "name_concelho": "Cascais"
+      },
+      {
+        "name_concelho": "Lisboa"
+      },
+      {
+        "name_concelho": "Loures"
+      },
+      {
+        "name_concelho": "Lourinhã"
+      },
+      {
+        "name_concelho": "Mafra"
+      },
+      {
+        "name_concelho": "Odivelas"
+      },
+      {
+        "name_concelho": "Oeiras"
+      },
+      {
+        "name_concelho": "Sintra"
+      },
+      {
+        "name_concelho": "Sobral de Monte Agraço"
+      },
+      {
+        "name_concelho": "Torres Vedras"
+      },
+      {
+        "name_concelho": "Vila Franca de Xira"
+      }
+    ]
+  },
+  {
+    "name_district": "Portalegre",
+    "concelhos": [
+      {
+        "name_concelho": "Alter do Chão"
+      },
+      {
+        "name_concelho": "Arronches"
+      },
+      {
+        "name_concelho": "Avis"
+      },
+      {
+        "name_concelho": "Campo Maior"
+      },
+      {
+        "name_concelho": "Castelo de Vide"
+      },
+      {
+        "name_concelho": "Crato"
+      },
+      {
+        "name_concelho": "Elvas"
+      },
+      {
+        "name_concelho": "Fronteira"
+      },
+      {
+        "name_concelho": "Gavião"
+      },
+      {
+        "name_concelho": "Marvão"
+      },
+      {
+        "name_concelho": "Monforte"
+      },
+      {
+        "name_concelho": "Nisa"
+      },
+      {
+        "name_concelho": "Ponte de Sor"
+      },
+      {
+        "name_concelho": "Portalegre"
+      },
+      {
+        "name_concelho": "Sousel"
+      }
+    ]
+  },
+  {
+    "name_district": "Porto",
+    "concelhos": [
+      {
+        "name_concelho": "Amarante"
+      },
+      {
+        "name_concelho": "Baião"
+      },
+      {
+        "name_concelho": "Felgueiras"
+      },
+      {
+        "name_concelho": "Gondomar"
+      },
+      {
+        "name_concelho": "Lousada"
+      },
+      {
+        "name_concelho": "Maia"
+      },
+      {
+        "name_concelho": "Marco de Canaveses"
+      },
+      {
+        "name_concelho": "Matosinhos"
+      },
+      {
+        "name_concelho": "Paços de Ferreira"
+      },
+      {
+        "name_concelho": "Paredes"
+      },
+      {
+        "name_concelho": "Penafiel"
+      },
+      {
+        "name_concelho": "Porto"
+      },
+      {
+        "name_concelho": "Póvoa de Varzim"
+      },
+      {
+        "name_concelho": "Santo Tirso"
+      },
+      {
+        "name_concelho": "Trofa"
+      },
+      {
+        "name_concelho": "Valongo"
+      },
+      {
+        "name_concelho": "Vila do Conde"
+      },
+      {
+        "name_concelho": "Vila Nova de Gaia"
+      }
+    ]
+  },
+  {
+    "name_district": "Região Autónoma dos Açores",
+    "concelhos": [
+      {
+        "name_concelho": "Angra do Heroísmo"
+      },
+      {
+        "name_concelho": "Calheta de São Jorge"
+      },
+      {
+        "name_concelho": "Corvo"
+      },
+      {
+        "name_concelho": "Horta"
+      },
+      {
+        "name_concelho": "Lagoa (açores)"
+      },
+      {
+        "name_concelho": "Lajes Das Flores"
+      },
+      {
+        "name_concelho": "Lajes do Pico"
+      },
+      {
+        "name_concelho": "Madalena"
+      },
+      {
+        "name_concelho": "Nordeste"
+      },
+      {
+        "name_concelho": "Ponta Delgada"
+      },
+      {
+        "name_concelho": "Povoação"
+      },
+      {
+        "name_concelho": "Praia da Vitória"
+      },
+      {
+        "name_concelho": "Ribeira Grande"
+      },
+      {
+        "name_concelho": "Santa Cruz da Graciosa"
+      },
+      {
+        "name_concelho": "Santa Cruz Das Flores"
+      },
+      {
+        "name_concelho": "São Roque do Pico"
+      },
+      {
+        "name_concelho": "Velas"
+      },
+      {
+        "name_concelho": "Vila do Porto"
+      },
+      {
+        "name_concelho": "Vila Franca do Campo"
+      }
+    ]
+  },
+  {
+    "name_district": "Região Autónoma da Madeira",
+    "concelhos": [
+      {
+        "name_concelho": "Calheta"
+      },
+      {
+        "name_concelho": "Câmara de Lobos"
+      },
+      {
+        "name_concelho": "Funchal"
+      },
+      {
+        "name_concelho": "Machico"
+      },
+      {
+        "name_concelho": "Ponta do Sol"
+      },
+      {
+        "name_concelho": "Porto Moniz"
+      },
+      {
+        "name_concelho": "Porto Santo"
+      },
+      {
+        "name_concelho": "Ribeira Brava"
+      },
+      {
+        "name_concelho": "Santa Cruz"
+      },
+      {
+        "name_concelho": "Santana"
+      },
+      {
+        "name_concelho": "São Vicente"
+      }
+    ]
+  },
+  {
+    "name_district": "Santarém",
+    "concelhos": [
+      {
+        "name_concelho": "Abrantes"
+      },
+      {
+        "name_concelho": "Alcanena"
+      },
+      {
+        "name_concelho": "Almeirim"
+      },
+      {
+        "name_concelho": "Alpiarça"
+      },
+      {
+        "name_concelho": "Benavente"
+      },
+      {
+        "name_concelho": "Cartaxo"
+      },
+      {
+        "name_concelho": "Chamusca"
+      },
+      {
+        "name_concelho": "Constância"
+      },
+      {
+        "name_concelho": "Coruche"
+      },
+      {
+        "name_concelho": "Entroncamento"
+      },
+      {
+        "name_concelho": "Ferreira do Zêzere"
+      },
+      {
+        "name_concelho": "Golegã"
+      },
+      {
+        "name_concelho": "Mação"
+      },
+      {
+        "name_concelho": "Ourém"
+      },
+      {
+        "name_concelho": "Rio Maior"
+      },
+      {
+        "name_concelho": "Salvaterra de Magos"
+      },
+      {
+        "name_concelho": "Santarém"
+      },
+      {
+        "name_concelho": "Sardoal"
+      },
+      {
+        "name_concelho": "Tomar"
+      },
+      {
+        "name_concelho": "Torres Novas"
+      },
+      {
+        "name_concelho": "Vila Nova da Barquinha"
+      }
+    ]
+  },
+  {
+    "name_district": "Setúbal",
+    "concelhos": [
+      {
+        "name_concelho": "Alcácer do Sal"
+      },
+      {
+        "name_concelho": "Alcochete"
+      },
+      {
+        "name_concelho": "Almada"
+      },
+      {
+        "name_concelho": "Barreiro"
+      },
+      {
+        "name_concelho": "Grândola"
+      },
+      {
+        "name_concelho": "Moita"
+      },
+      {
+        "name_concelho": "Montijo"
+      },
+      {
+        "name_concelho": "Palmela"
+      },
+      {
+        "name_concelho": "Santiago do Cacém"
+      },
+      {
+        "name_concelho": "Seixal"
+      },
+      {
+        "name_concelho": "Sesimbra"
+      },
+      {
+        "name_concelho": "Setúbal"
+      },
+      {
+        "name_concelho": "Sines"
+      }
+    ]
+  },
+  {
+    "name_district": "Viana do Castelo",
+    "concelhos": [
+      {
+        "name_concelho": "Arcos de Valdevez"
+      },
+      {
+        "name_concelho": "Caminha"
+      },
+      {
+        "name_concelho": "Melgaço"
+      },
+      {
+        "name_concelho": "Monção"
+      },
+      {
+        "name_concelho": "Paredes de Coura"
+      },
+      {
+        "name_concelho": "Ponte da Barca"
+      },
+      {
+        "name_concelho": "Ponte de Lima"
+      },
+      {
+        "name_concelho": "Valença"
+      },
+      {
+        "name_concelho": "Viana do Castelo"
+      },
+      {
+        "name_concelho": "Vila Nova de Cerveira"
+      }
+    ]
+  },
+  {
+    "name_district": "Vila Real",
+    "concelhos": [
+      {
+        "name_concelho": "Alijó"
+      },
+      {
+        "name_concelho": "Boticas"
+      },
+      {
+        "name_concelho": "Chaves"
+      },
+      {
+        "name_concelho": "Mesão Frio"
+      },
+      {
+        "name_concelho": "Mondim de Basto"
+      },
+      {
+        "name_concelho": "Montalegre"
+      },
+      {
+        "name_concelho": "Murça"
+      },
+      {
+        "name_concelho": "Peso da Régua"
+      },
+      {
+        "name_concelho": "Ribeira de Pena"
+      },
+      {
+        "name_concelho": "Sabrosa"
+      },
+      {
+        "name_concelho": "Santa Marta de Penaguião"
+      },
+      {
+        "name_concelho": "Valpaços"
+      },
+      {
+        "name_concelho": "Vila Pouca de Aguiar"
+      },
+      {
+        "name_concelho": "Vila Real"
+      }
+    ]
+  },
+  {
+    "name_district": "Viseu",
+    "concelhos": [
+      {
+        "name_concelho": "Armamar"
+      },
+      {
+        "name_concelho": "Carregal do Sal"
+      },
+      {
+        "name_concelho": "Castro Daire"
+      },
+      {
+        "name_concelho": "Cinfães"
+      },
+      {
+        "name_concelho": "Lamego"
+      },
+      {
+        "name_concelho": "Mangualde"
+      },
+      {
+        "name_concelho": "Moimenta da Beira"
+      },
+      {
+        "name_concelho": "Mortágua"
+      },
+      {
+        "name_concelho": "Nelas"
+      },
+      {
+        "name_concelho": "Oliveira de Frades"
+      },
+      {
+        "name_concelho": "Penalva do Castelo"
+      },
+      {
+        "name_concelho": "Penedono"
+      },
+      {
+        "name_concelho": "Resende"
+      },
+      {
+        "name_concelho": "Santa Comba Dão"
+      },
+      {
+        "name_concelho": "São João da Pesqueira"
+      },
+      {
+        "name_concelho": "São Pedro do Sul"
+      },
+      {
+        "name_concelho": "Sátão"
+      },
+      {
+        "name_concelho": "Sernancelhe"
+      },
+      {
+        "name_concelho": "Tabuaço"
+      },
+      {
+        "name_concelho": "Tarouca"
+      },
+      {
+        "name_concelho": "Tondela"
+      },
+      {
+        "name_concelho": "Vila Nova de Paiva"
+      },
+      {
+        "name_concelho": "Viseu"
+      },
+      {
+        "name_concelho": "Vouzela"
+      }
+    ]
+  },
+  {
+    "name_district": "Évora",
+    "concelhos": [
+      {
+        "name_concelho": "Alandroal"
+      },
+      {
+        "name_concelho": "Arraiolos"
+      },
+      {
+        "name_concelho": "Borba"
+      },
+      {
+        "name_concelho": "Estremoz"
+      },
+      {
+        "name_concelho": "Évora"
+      },
+      {
+        "name_concelho": "Montemor-o-novo"
+      },
+      {
+        "name_concelho": "Mora"
+      },
+      {
+        "name_concelho": "Mourão"
+      },
+      {
+        "name_concelho": "Portel"
+      },
+      {
+        "name_concelho": "Redondo"
+      },
+      {
+        "name_concelho": "Reguengos de Monsaraz"
+      },
+      {
+        "name_concelho": "Vendas Novas"
+      },
+      {
+        "name_concelho": "Viana do Alentejo"
+      },
+      {
+        "name_concelho": "Vila Viçosa"
+      }
+    ]
+  }
+]

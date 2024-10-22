@@ -1,0 +1,1334 @@
+[
+  {
+    "distrito": "Aveiro",
+    "municipios": [
+      {
+        "nome": "Águeda",
+        "codigoine": "0101"
+      },
+      {
+        "nome": "Albergaria-a-velha",
+        "codigoine": "0102"
+      },
+      {
+        "nome": "Anadia",
+        "codigoine": "0103"
+      },
+      {
+        "nome": "Arouca",
+        "codigoine": "0104"
+      },
+      {
+        "nome": "Aveiro",
+        "codigoine": "0105"
+      },
+      {
+        "nome": "Castelo de Paiva",
+        "codigoine": "0106"
+      },
+      {
+        "nome": "Espinho",
+        "codigoine": "0107"
+      },
+      {
+        "nome": "Estarreja",
+        "codigoine": "0108"
+      },
+      {
+        "nome": "Ílhavo",
+        "codigoine": "0110"
+      },
+      {
+        "nome": "Mealhada",
+        "codigoine": "0111"
+      },
+      {
+        "nome": "Murtosa",
+        "codigoine": "0112"
+      },
+      {
+        "nome": "Oliveira de Azeméis",
+        "codigoine": "0113"
+      },
+      {
+        "nome": "Oliveira do Bairro",
+        "codigoine": "0114"
+      },
+      {
+        "nome": "Ovar",
+        "codigoine": "0115"
+      },
+      {
+        "nome": "Santa Maria da Feira",
+        "codigoine": "0109"
+      },
+      {
+        "nome": "São João da Madeira",
+        "codigoine": "0116"
+      },
+      {
+        "nome": "Sever do Vouga",
+        "codigoine": "0117"
+      },
+      {
+        "nome": "Vagos",
+        "codigoine": "0118"
+      },
+      {
+        "nome": "Vale de Cambra",
+        "codigoine": "0119"
+      }
+    ]
+  },
+  {
+    "distrito": "Beja",
+    "municipios": [
+      {
+        "nome": "Aljustrel",
+        "codigoine": "0201"
+      },
+      {
+        "nome": "Almodôvar",
+        "codigoine": "0202"
+      },
+      {
+        "nome": "Alvito",
+        "codigoine": "0203"
+      },
+      {
+        "nome": "Barrancos",
+        "codigoine": "0204"
+      },
+      {
+        "nome": "Beja",
+        "codigoine": "0205"
+      },
+      {
+        "nome": "Castro Verde",
+        "codigoine": "0206"
+      },
+      {
+        "nome": "Cuba",
+        "codigoine": "0207"
+      },
+      {
+        "nome": "Ferreira do Alentejo",
+        "codigoine": "0208"
+      },
+      {
+        "nome": "Mértola",
+        "codigoine": "0209"
+      },
+      {
+        "nome": "Moura",
+        "codigoine": "0210"
+      },
+      {
+        "nome": "Odemira",
+        "codigoine": "0211"
+      },
+      {
+        "nome": "Ourique",
+        "codigoine": "0212"
+      },
+      {
+        "nome": "Serpa",
+        "codigoine": "0213"
+      },
+      {
+        "nome": "Vidigueira",
+        "codigoine": "0214"
+      }
+    ]
+  },
+  {
+    "distrito": "Braga",
+    "municipios": [
+      {
+        "nome": "Amares",
+        "codigoine": "0301"
+      },
+      {
+        "nome": "Barcelos",
+        "codigoine": "0302"
+      },
+      {
+        "nome": "Braga",
+        "codigoine": "0303"
+      },
+      {
+        "nome": "Cabeceiras de Basto",
+        "codigoine": "0304"
+      },
+      {
+        "nome": "Celorico de Basto",
+        "codigoine": "0305"
+      },
+      {
+        "nome": "Esposende",
+        "codigoine": "0306"
+      },
+      {
+        "nome": "Fafe",
+        "codigoine": "0307"
+      },
+      {
+        "nome": "Guimarães",
+        "codigoine": "0308"
+      },
+      {
+        "nome": "Póvoa de Lanhoso",
+        "codigoine": "0309"
+      },
+      {
+        "nome": "Terras de Bouro",
+        "codigoine": "0310"
+      },
+      {
+        "nome": "Vieira do Minho",
+        "codigoine": "0311"
+      },
+      {
+        "nome": "Vila Nova de Famalicão",
+        "codigoine": "0312"
+      },
+      {
+        "nome": "Vila Verde",
+        "codigoine": "0313"
+      },
+      {
+        "nome": "Vizela",
+        "codigoine": "0314"
+      }
+    ]
+  },
+  {
+    "distrito": "Bragança",
+    "municipios": [
+      {
+        "nome": "Alfândega da fé",
+        "codigoine": "0401"
+      },
+      {
+        "nome": "Bragança",
+        "codigoine": "0402"
+      },
+      {
+        "nome": "Carrazeda de Ansiães",
+        "codigoine": "0403"
+      },
+      {
+        "nome": "Freixo de Espada à Cinta",
+        "codigoine": "0404"
+      },
+      {
+        "nome": "Macedo de Cavaleiros",
+        "codigoine": "0405"
+      },
+      {
+        "nome": "Miranda do Douro",
+        "codigoine": "0406"
+      },
+      {
+        "nome": "Mirandela",
+        "codigoine": "0407"
+      },
+      {
+        "nome": "Mogadouro",
+        "codigoine": "0408"
+      },
+      {
+        "nome": "Torre de Moncorvo",
+        "codigoine": "0409"
+      },
+      {
+        "nome": "Vila Flor",
+        "codigoine": "0410"
+      },
+      {
+        "nome": "Vimioso",
+        "codigoine": "0411"
+      },
+      {
+        "nome": "Vinhais",
+        "codigoine": "0412"
+      }
+    ]
+  },
+  {
+    "distrito": "Castelo Branco",
+    "municipios": [
+      {
+        "nome": "Belmonte",
+        "codigoine": "0501"
+      },
+      {
+        "nome": "Castelo Branco",
+        "codigoine": "0502"
+      },
+      {
+        "nome": "Covilhã",
+        "codigoine": "0503"
+      },
+      {
+        "nome": "Fundão",
+        "codigoine": "0504"
+      },
+      {
+        "nome": "Idanha-a-nova",
+        "codigoine": "0505"
+      },
+      {
+        "nome": "Oleiros",
+        "codigoine": "0506"
+      },
+      {
+        "nome": "Penamacor",
+        "codigoine": "0507"
+      },
+      {
+        "nome": "Proença-a-nova",
+        "codigoine": "0508"
+      },
+      {
+        "nome": "Sertã",
+        "codigoine": "0509"
+      },
+      {
+        "nome": "Vila de Rei",
+        "codigoine": "0510"
+      },
+      {
+        "nome": "Vila Velha de Ródão",
+        "codigoine": "0511"
+      }
+    ]
+  },
+  {
+    "distrito": "Coimbra",
+    "municipios": [
+      {
+        "nome": "Arganil",
+        "codigoine": "0601"
+      },
+      {
+        "nome": "Cantanhede",
+        "codigoine": "0602"
+      },
+      {
+        "nome": "Coimbra",
+        "codigoine": "0603"
+      },
+      {
+        "nome": "Condeixa-a-nova",
+        "codigoine": "0604"
+      },
+      {
+        "nome": "Figueira da Foz",
+        "codigoine": "0605"
+      },
+      {
+        "nome": "Góis",
+        "codigoine": "0606"
+      },
+      {
+        "nome": "Lousã",
+        "codigoine": "0607"
+      },
+      {
+        "nome": "Mira",
+        "codigoine": "0608"
+      },
+      {
+        "nome": "Miranda do Corvo",
+        "codigoine": "0609"
+      },
+      {
+        "nome": "Montemor-o-velho",
+        "codigoine": "0610"
+      },
+      {
+        "nome": "Oliveira do Hospital",
+        "codigoine": "0611"
+      },
+      {
+        "nome": "Pampilhosa da Serra",
+        "codigoine": "0612"
+      },
+      {
+        "nome": "Penacova",
+        "codigoine": "0613"
+      },
+      {
+        "nome": "Penela",
+        "codigoine": "0614"
+      },
+      {
+        "nome": "Soure",
+        "codigoine": "0615"
+      },
+      {
+        "nome": "Tábua",
+        "codigoine": "0616"
+      },
+      {
+        "nome": "Vila Nova de Poiares",
+        "codigoine": "0617"
+      }
+    ]
+  },
+  {
+    "distrito": "Faro",
+    "municipios": [
+      {
+        "nome": "Albufeira",
+        "codigoine": "0801"
+      },
+      {
+        "nome": "Alcoutim",
+        "codigoine": "0802"
+      },
+      {
+        "nome": "Aljezur",
+        "codigoine": "0803"
+      },
+      {
+        "nome": "Castro Marim",
+        "codigoine": "0804"
+      },
+      {
+        "nome": "Faro",
+        "codigoine": "0805"
+      },
+      {
+        "nome": "Lagoa",
+        "codigoine": "0806"
+      },
+      {
+        "nome": "Lagos",
+        "codigoine": "0807"
+      },
+      {
+        "nome": "Loulé",
+        "codigoine": "0808"
+      },
+      {
+        "nome": "Monchique",
+        "codigoine": "0809"
+      },
+      {
+        "nome": "Olhão",
+        "codigoine": "0810"
+      },
+      {
+        "nome": "Portimão",
+        "codigoine": "0811"
+      },
+      {
+        "nome": "São Brás de Alportel",
+        "codigoine": "0812"
+      },
+      {
+        "nome": "Silves",
+        "codigoine": "0813"
+      },
+      {
+        "nome": "Tavira",
+        "codigoine": "0814"
+      },
+      {
+        "nome": "Vila do Bispo",
+        "codigoine": "0815"
+      },
+      {
+        "nome": "Vila Real de Santo António",
+        "codigoine": "0816"
+      }
+    ]
+  },
+  {
+    "distrito": "Guarda",
+    "municipios": [
+      {
+        "nome": "Aguiar da Beira",
+        "codigoine": "0901"
+      },
+      {
+        "nome": "Almeida",
+        "codigoine": "0902"
+      },
+      {
+        "nome": "Celorico da Beira",
+        "codigoine": "0903"
+      },
+      {
+        "nome": "Figueira de Castelo Rodrigo",
+        "codigoine": "0904"
+      },
+      {
+        "nome": "Fornos de Algodres",
+        "codigoine": "0905"
+      },
+      {
+        "nome": "Gouveia",
+        "codigoine": "0906"
+      },
+      {
+        "nome": "Guarda",
+        "codigoine": "0907"
+      },
+      {
+        "nome": "Manteigas",
+        "codigoine": "0908"
+      },
+      {
+        "nome": "Mêda",
+        "codigoine": "0909"
+      },
+      {
+        "nome": "Pinhel",
+        "codigoine": "0910"
+      },
+      {
+        "nome": "Sabugal",
+        "codigoine": "0911"
+      },
+      {
+        "nome": "Seia",
+        "codigoine": "0912"
+      },
+      {
+        "nome": "Trancoso",
+        "codigoine": "0913"
+      },
+      {
+        "nome": "Vila Nova de Foz Côa",
+        "codigoine": "0914"
+      }
+    ]
+  },
+  {
+    "distrito": "Leiria",
+    "municipios": [
+      {
+        "nome": "Alcobaça",
+        "codigoine": "1001"
+      },
+      {
+        "nome": "Alvaiázere",
+        "codigoine": "1002"
+      },
+      {
+        "nome": "Ansião",
+        "codigoine": "1003"
+      },
+      {
+        "nome": "Batalha",
+        "codigoine": "1004"
+      },
+      {
+        "nome": "Bombarral",
+        "codigoine": "1005"
+      },
+      {
+        "nome": "Caldas da Rainha",
+        "codigoine": "1006"
+      },
+      {
+        "nome": "Castanheira de Pêra",
+        "codigoine": "1007"
+      },
+      {
+        "nome": "Figueiró Dos Vinhos",
+        "codigoine": "1008"
+      },
+      {
+        "nome": "Leiria",
+        "codigoine": "1009"
+      },
+      {
+        "nome": "Marinha Grande",
+        "codigoine": "1010"
+      },
+      {
+        "nome": "Nazaré",
+        "codigoine": "1011"
+      },
+      {
+        "nome": "Óbidos",
+        "codigoine": "1012"
+      },
+      {
+        "nome": "Pedrógão Grande",
+        "codigoine": "1013"
+      },
+      {
+        "nome": "Peniche",
+        "codigoine": "1014"
+      },
+      {
+        "nome": "Pombal",
+        "codigoine": "1015"
+      },
+      {
+        "nome": "Porto de Mós",
+        "codigoine": "1016"
+      }
+    ]
+  },
+  {
+    "distrito": "Lisboa",
+    "municipios": [
+      {
+        "nome": "Alenquer",
+        "codigoine": "1101"
+      },
+      {
+        "nome": "Amadora",
+        "codigoine": "1115"
+      },
+      {
+        "nome": "Arruda Dos Vinhos",
+        "codigoine": "1102"
+      },
+      {
+        "nome": "Azambuja",
+        "codigoine": "1103"
+      },
+      {
+        "nome": "Cadaval",
+        "codigoine": "1104"
+      },
+      {
+        "nome": "Cascais",
+        "codigoine": "1105"
+      },
+      {
+        "nome": "Lisboa",
+        "codigoine": "1106"
+      },
+      {
+        "nome": "Loures",
+        "codigoine": "1107"
+      },
+      {
+        "nome": "Lourinhã",
+        "codigoine": "1108"
+      },
+      {
+        "nome": "Mafra",
+        "codigoine": "1109"
+      },
+      {
+        "nome": "Odivelas",
+        "codigoine": "1116"
+      },
+      {
+        "nome": "Oeiras",
+        "codigoine": "1110"
+      },
+      {
+        "nome": "Sintra",
+        "codigoine": "1111"
+      },
+      {
+        "nome": "Sobral de Monte Agraço",
+        "codigoine": "1112"
+      },
+      {
+        "nome": "Torres Vedras",
+        "codigoine": "1113"
+      },
+      {
+        "nome": "Vila Franca de Xira",
+        "codigoine": "1114"
+      }
+    ]
+  },
+  {
+    "distrito": "Portalegre",
+    "municipios": [
+      {
+        "nome": "Alter do Chão",
+        "codigoine": "1201"
+      },
+      {
+        "nome": "Arronches",
+        "codigoine": "1202"
+      },
+      {
+        "nome": "Avis",
+        "codigoine": "1203"
+      },
+      {
+        "nome": "Campo Maior",
+        "codigoine": "1204"
+      },
+      {
+        "nome": "Castelo de Vide",
+        "codigoine": "1205"
+      },
+      {
+        "nome": "Crato",
+        "codigoine": "1206"
+      },
+      {
+        "nome": "Elvas",
+        "codigoine": "1207"
+      },
+      {
+        "nome": "Fronteira",
+        "codigoine": "1208"
+      },
+      {
+        "nome": "Gavião",
+        "codigoine": "1209"
+      },
+      {
+        "nome": "Marvão",
+        "codigoine": "1210"
+      },
+      {
+        "nome": "Monforte",
+        "codigoine": "1211"
+      },
+      {
+        "nome": "Nisa",
+        "codigoine": "1212"
+      },
+      {
+        "nome": "Ponte de Sor",
+        "codigoine": "1213"
+      },
+      {
+        "nome": "Portalegre",
+        "codigoine": "1214"
+      },
+      {
+        "nome": "Sousel",
+        "codigoine": "1215"
+      }
+    ]
+  },
+  {
+    "distrito": "Porto",
+    "municipios": [
+      {
+        "nome": "Amarante",
+        "codigoine": "1301"
+      },
+      {
+        "nome": "Baião",
+        "codigoine": "1302"
+      },
+      {
+        "nome": "Felgueiras",
+        "codigoine": "1303"
+      },
+      {
+        "nome": "Gondomar",
+        "codigoine": "1304"
+      },
+      {
+        "nome": "Lousada",
+        "codigoine": "1305"
+      },
+      {
+        "nome": "Maia",
+        "codigoine": "1306"
+      },
+      {
+        "nome": "Marco de Canaveses",
+        "codigoine": "1307"
+      },
+      {
+        "nome": "Matosinhos",
+        "codigoine": "1308"
+      },
+      {
+        "nome": "Paços de Ferreira",
+        "codigoine": "1309"
+      },
+      {
+        "nome": "Paredes",
+        "codigoine": "1310"
+      },
+      {
+        "nome": "Penafiel",
+        "codigoine": "1311"
+      },
+      {
+        "nome": "Porto",
+        "codigoine": "1312"
+      },
+      {
+        "nome": "Póvoa de Varzim",
+        "codigoine": "1313"
+      },
+      {
+        "nome": "Santo Tirso",
+        "codigoine": "1314"
+      },
+      {
+        "nome": "Trofa",
+        "codigoine": "1318"
+      },
+      {
+        "nome": "Valongo",
+        "codigoine": "1315"
+      },
+      {
+        "nome": "Vila do Conde",
+        "codigoine": "1316"
+      },
+      {
+        "nome": "Vila Nova de Gaia",
+        "codigoine": "1317"
+      }
+    ]
+  },
+  {
+    "distrito": "Região Autónoma dos Açores",
+    "municipios": [
+      {
+        "nome": "Angra do Heroísmo",
+        "codigoine": "4301"
+      },
+      {
+        "nome": "Calheta de São Jorge",
+        "codigoine": "4501"
+      },
+      {
+        "nome": "Corvo",
+        "codigoine": "4901"
+      },
+      {
+        "nome": "Horta",
+        "codigoine": "4701"
+      },
+      {
+        "nome": "Lagoa (açores)",
+        "codigoine": "4201"
+      },
+      {
+        "nome": "Lajes Das Flores",
+        "codigoine": "4801"
+      },
+      {
+        "nome": "Lajes do Pico",
+        "codigoine": "4601"
+      },
+      {
+        "nome": "Madalena",
+        "codigoine": "4602"
+      },
+      {
+        "nome": "Nordeste",
+        "codigoine": "4202"
+      },
+      {
+        "nome": "Ponta Delgada",
+        "codigoine": "4203"
+      },
+      {
+        "nome": "Povoação",
+        "codigoine": "4204"
+      },
+      {
+        "nome": "Praia da Vitória",
+        "codigoine": "4302"
+      },
+      {
+        "nome": "Ribeira Grande",
+        "codigoine": "4205"
+      },
+      {
+        "nome": "Santa Cruz da Graciosa",
+        "codigoine": "4401"
+      },
+      {
+        "nome": "Santa Cruz Das Flores",
+        "codigoine": "4802"
+      },
+      {
+        "nome": "São Roque do Pico",
+        "codigoine": "4603"
+      },
+      {
+        "nome": "Velas",
+        "codigoine": "4502"
+      },
+      {
+        "nome": "Vila do Porto",
+        "codigoine": "4101"
+      },
+      {
+        "nome": "Vila Franca do Campo",
+        "codigoine": "4206"
+      }
+    ]
+  },
+  {
+    "distrito": "Região Autónoma da Madeira",
+    "municipios": [
+      {
+        "nome": "Calheta",
+        "codigoine": "3101"
+      },
+      {
+        "nome": "Câmara de Lobos",
+        "codigoine": "3102"
+      },
+      {
+        "nome": "Funchal",
+        "codigoine": "3103"
+      },
+      {
+        "nome": "Machico",
+        "codigoine": "3104"
+      },
+      {
+        "nome": "Ponta do Sol",
+        "codigoine": "3105"
+      },
+      {
+        "nome": "Porto Moniz",
+        "codigoine": "3106"
+      },
+      {
+        "nome": "Porto Santo",
+        "codigoine": "3201"
+      },
+      {
+        "nome": "Ribeira Brava",
+        "codigoine": "3107"
+      },
+      {
+        "nome": "Santa Cruz",
+        "codigoine": "3108"
+      },
+      {
+        "nome": "Santana",
+        "codigoine": "3109"
+      },
+      {
+        "nome": "São Vicente",
+        "codigoine": "3110"
+      }
+    ]
+  },
+  {
+    "distrito": "Santarém",
+    "municipios": [
+      {
+        "nome": "Abrantes",
+        "codigoine": "1401"
+      },
+      {
+        "nome": "Alcanena",
+        "codigoine": "1402"
+      },
+      {
+        "nome": "Almeirim",
+        "codigoine": "1403"
+      },
+      {
+        "nome": "Alpiarça",
+        "codigoine": "1404"
+      },
+      {
+        "nome": "Benavente",
+        "codigoine": "1405"
+      },
+      {
+        "nome": "Cartaxo",
+        "codigoine": "1406"
+      },
+      {
+        "nome": "Chamusca",
+        "codigoine": "1407"
+      },
+      {
+        "nome": "Constância",
+        "codigoine": "1408"
+      },
+      {
+        "nome": "Coruche",
+        "codigoine": "1409"
+      },
+      {
+        "nome": "Entroncamento",
+        "codigoine": "1410"
+      },
+      {
+        "nome": "Ferreira do Zêzere",
+        "codigoine": "1411"
+      },
+      {
+        "nome": "Golegã",
+        "codigoine": "1412"
+      },
+      {
+        "nome": "Mação",
+        "codigoine": "1413"
+      },
+      {
+        "nome": "Ourém",
+        "codigoine": "1421"
+      },
+      {
+        "nome": "Rio Maior",
+        "codigoine": "1414"
+      },
+      {
+        "nome": "Salvaterra de Magos",
+        "codigoine": "1415"
+      },
+      {
+        "nome": "Santarém",
+        "codigoine": "1416"
+      },
+      {
+        "nome": "Sardoal",
+        "codigoine": "1417"
+      },
+      {
+        "nome": "Tomar",
+        "codigoine": "1418"
+      },
+      {
+        "nome": "Torres Novas",
+        "codigoine": "1419"
+      },
+      {
+        "nome": "Vila Nova da Barquinha",
+        "codigoine": "1420"
+      }
+    ]
+  },
+  {
+    "distrito": "Setúbal",
+    "municipios": [
+      {
+        "nome": "Alcácer do Sal",
+        "codigoine": "1501"
+      },
+      {
+        "nome": "Alcochete",
+        "codigoine": "1502"
+      },
+      {
+        "nome": "Almada",
+        "codigoine": "1503"
+      },
+      {
+        "nome": "Barreiro",
+        "codigoine": "1504"
+      },
+      {
+        "nome": "Grândola",
+        "codigoine": "1505"
+      },
+      {
+        "nome": "Moita",
+        "codigoine": "1506"
+      },
+      {
+        "nome": "Montijo",
+        "codigoine": "1507"
+      },
+      {
+        "nome": "Palmela",
+        "codigoine": "1508"
+      },
+      {
+        "nome": "Santiago do Cacém",
+        "codigoine": "1509"
+      },
+      {
+        "nome": "Seixal",
+        "codigoine": "1510"
+      },
+      {
+        "nome": "Sesimbra",
+        "codigoine": "1511"
+      },
+      {
+        "nome": "Setúbal",
+        "codigoine": "1512"
+      },
+      {
+        "nome": "Sines",
+        "codigoine": "1513"
+      }
+    ]
+  },
+  {
+    "distrito": "Viana do Castelo",
+    "municipios": [
+      {
+        "nome": "Arcos de Valdevez",
+        "codigoine": "1601"
+      },
+      {
+        "nome": "Caminha",
+        "codigoine": "1602"
+      },
+      {
+        "nome": "Melgaço",
+        "codigoine": "1603"
+      },
+      {
+        "nome": "Monção",
+        "codigoine": "1604"
+      },
+      {
+        "nome": "Paredes de Coura",
+        "codigoine": "1605"
+      },
+      {
+        "nome": "Ponte da Barca",
+        "codigoine": "1606"
+      },
+      {
+        "nome": "Ponte de Lima",
+        "codigoine": "1607"
+      },
+      {
+        "nome": "Valença",
+        "codigoine": "1608"
+      },
+      {
+        "nome": "Viana do Castelo",
+        "codigoine": "1609"
+      },
+      {
+        "nome": "Vila Nova de Cerveira",
+        "codigoine": "1610"
+      }
+    ]
+  },
+  {
+    "distrito": "Vila Real",
+    "municipios": [
+      {
+        "nome": "Alijó",
+        "codigoine": "1701"
+      },
+      {
+        "nome": "Boticas",
+        "codigoine": "1702"
+      },
+      {
+        "nome": "Chaves",
+        "codigoine": "1703"
+      },
+      {
+        "nome": "Mesão Frio",
+        "codigoine": "1704"
+      },
+      {
+        "nome": "Mondim de Basto",
+        "codigoine": "1705"
+      },
+      {
+        "nome": "Montalegre",
+        "codigoine": "1706"
+      },
+      {
+        "nome": "Murça",
+        "codigoine": "1707"
+      },
+      {
+        "nome": "Peso da Régua",
+        "codigoine": "1708"
+      },
+      {
+        "nome": "Ribeira de Pena",
+        "codigoine": "1709"
+      },
+      {
+        "nome": "Sabrosa",
+        "codigoine": "1710"
+      },
+      {
+        "nome": "Santa Marta de Penaguião",
+        "codigoine": "1711"
+      },
+      {
+        "nome": "Valpaços",
+        "codigoine": "1712"
+      },
+      {
+        "nome": "Vila Pouca de Aguiar",
+        "codigoine": "1713"
+      },
+      {
+        "nome": "Vila Real",
+        "codigoine": "1714"
+      }
+    ]
+  },
+  {
+    "distrito": "Viseu",
+    "municipios": [
+      {
+        "nome": "Armamar",
+        "codigoine": "1801"
+      },
+      {
+        "nome": "Carregal do Sal",
+        "codigoine": "1802"
+      },
+      {
+        "nome": "Castro Daire",
+        "codigoine": "1803"
+      },
+      {
+        "nome": "Cinfães",
+        "codigoine": "1804"
+      },
+      {
+        "nome": "Lamego",
+        "codigoine": "1805"
+      },
+      {
+        "nome": "Mangualde",
+        "codigoine": "1806"
+      },
+      {
+        "nome": "Moimenta da Beira",
+        "codigoine": "1807"
+      },
+      {
+        "nome": "Mortágua",
+        "codigoine": "1808"
+      },
+      {
+        "nome": "Nelas",
+        "codigoine": "1809"
+      },
+      {
+        "nome": "Oliveira de Frades",
+        "codigoine": "1810"
+      },
+      {
+        "nome": "Penalva do Castelo",
+        "codigoine": "1811"
+      },
+      {
+        "nome": "Penedono",
+        "codigoine": "1812"
+      },
+      {
+        "nome": "Resende",
+        "codigoine": "1813"
+      },
+      {
+        "nome": "Santa Comba Dão",
+        "codigoine": "1814"
+      },
+      {
+        "nome": "São João da Pesqueira",
+        "codigoine": "1815"
+      },
+      {
+        "nome": "São Pedro do Sul",
+        "codigoine": "1816"
+      },
+      {
+        "nome": "Sátão",
+        "codigoine": "1817"
+      },
+      {
+        "nome": "Sernancelhe",
+        "codigoine": "1818"
+      },
+      {
+        "nome": "Tabuaço",
+        "codigoine": "1819"
+      },
+      {
+        "nome": "Tarouca",
+        "codigoine": "1820"
+      },
+      {
+        "nome": "Tondela",
+        "codigoine": "1821"
+      },
+      {
+        "nome": "Vila Nova de Paiva",
+        "codigoine": "1822"
+      },
+      {
+        "nome": "Viseu",
+        "codigoine": "1823"
+      },
+      {
+        "nome": "Vouzela",
+        "codigoine": "1824"
+      }
+    ]
+  },
+  {
+    "distrito": "Évora",
+    "municipios": [
+      {
+        "nome": "Alandroal",
+        "codigoine": "0701"
+      },
+      {
+        "nome": "Arraiolos",
+        "codigoine": "0702"
+      },
+      {
+        "nome": "Borba",
+        "codigoine": "0703"
+      },
+      {
+        "nome": "Estremoz",
+        "codigoine": "0704"
+      },
+      {
+        "nome": "Évora",
+        "codigoine": "0705"
+      },
+      {
+        "nome": "Montemor-o-novo",
+        "codigoine": "0706"
+      },
+      {
+        "nome": "Mora",
+        "codigoine": "0707"
+      },
+      {
+        "nome": "Mourão",
+        "codigoine": "0708"
+      },
+      {
+        "nome": "Portel",
+        "codigoine": "0709"
+      },
+      {
+        "nome": "Redondo",
+        "codigoine": "0710"
+      },
+      {
+        "nome": "Reguengos de Monsaraz",
+        "codigoine": "0711"
+      },
+      {
+        "nome": "Vendas Novas",
+        "codigoine": "0712"
+      },
+      {
+        "nome": "Viana do Alentejo",
+        "codigoine": "0713"
+      },
+      {
+        "nome": "Vila Viçosa",
+        "codigoine": "0714"
+      }
+    ]
+  }
+]

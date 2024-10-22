@@ -65,7 +65,7 @@ const SearchForm = ({ onSearch }) => {
               className="border border-gray-300 rounded-lg p-2"
             />
           </div>
-          <div className='flex flex-col'>
+          {/* <div className='flex flex-col'>
             <label htmlFor="referencia" className="text-gray-700">Referência</label>
             <input
               type="number"
@@ -75,7 +75,7 @@ const SearchForm = ({ onSearch }) => {
               onChange={handleInputChange}
               className="border border-gray-300 rounded-lg p-2"
             />
-          </div>
+          </div> */}
           {isBuying && (
             <div className="flex flex-col">
               <span className="text-gray-700 mb-2">Preço de Compra</span>

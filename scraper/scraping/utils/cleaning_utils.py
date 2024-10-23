@@ -35,9 +35,16 @@ def remove_number_keywords(text):
     if text is None:
         return None
     
+    # Verifica se 'text' é do tipo int ou float e converte para string
+    if isinstance(text, (int, float)):
+        text = str(text)
+    
     # Aqui é uma função de limpeza de números com palavras-chave específicas
     keywords = ["Área:", "€", "Área Bruta Coberta:", "Ano construção:", "Ano:", "m²", " ", " --", "m2", "·", "."]
+
+    # Substituir vírgulas por pontos
     text = text.replace(",", ".")
+    
     return clean_text(text, keywords)
 
 

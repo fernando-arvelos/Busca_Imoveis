@@ -32,7 +32,11 @@ def extract_property_details(driver, bank_name, bank_data):
     if bank_name == "credito_agricola":
         precoVenda_aluguel = remove_keywords(get_element_text_or_none(driver, *selectors["precoVenda"]), keywords=["Preço de Venda:"]).split(" /")
         precoVenda = precoVenda_aluguel[0].strip() if len(precoVenda_aluguel) > 0 else None
+        if precoVenda == "Preço sob consulta":
+            precoVenda = 0
         precoAluguel = precoVenda_aluguel[1].strip() if len(precoVenda_aluguel) > 1 else None
+        if precoAluguel == "Preço sob consulta":
+            precoAluguel = 0
     else:
         precoVenda = clean_first_line(get_element_text_or_none(driver, *selectors["precoVenda"]))
         precoAluguel = get_element_text_or_none(driver, *selectors["precoAluguel"])

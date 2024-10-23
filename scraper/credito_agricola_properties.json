@@ -1,55 +1,82 @@
 [
     {
-        "natureza": "Terreno",
-        "referência": "11329",
-        "preçoVenda": "29000",
+        "natureza": "Moradia",
+        "referência": "14301",
+        "preçoVenda": "240000",
         "preçoAluguel": null,
-        "distrito": "Leiria",
-        "concelho": "Óbidos",
+        "distrito": "Viseu",
+        "concelho": "Viseu",
         "freguesia": null,
-        "tipologia": null,
-        "area": "522",
-        "ano": null,
+        "tipologia": "T3",
+        "area": "584",
+        "ano": "1990",
         "banco": "Credito_agricola",
-        "contacto": "Drª Filipa da Raquel",
+        "contacto": "João Maia",
         "email": null,
-        "telefone": "213805648",
-        "descricao": "Terreno para construção de moradia unifamiliar, com 522 m² sito em Usseira, Óbidos\n\nDe acordo com o PDM local e respetiva planta de ordenamento, o terreno urbano, insere-se em Solo Urbano, com classificação de Espaço Urbanizável de Nível II, sendo que de acordo com o nº do artigo 37º - Todas as alterações ao uso do solo nas áreas urbanizáveis de nível 2 ficam sujeitas às seguintes disposições:\n\na) Densidade bruta máxima (Db): 60 hab/ha;\nb) Índice de construção bruto máximo (ICb)=0,25;\nc) Número máximo de pisos: 2;\nd) Cércea máxima: 7 m\n\nAssim, considerando o PDM, estima-se que poderá ser edificado no local uma moradia com máximo de 130,5 m² de área bruta de construção.\n\nNão perca esta oportunidade!",
+        "telefone": "232483570",
+        "descricao": "O imóvel encontra-se numa zona residencial de primeira habitação, na periferia de Viseu, a cerca de 11km da sede do concelho.\nDispõe de razoáveis acessos rodoviários, a oferta de comércio e serviços é razoável.",
         "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c0.jpg",
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c1.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c0.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c1.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c2.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c3.jpg"
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P25352824/Tphoto/ID78da8201-0000-0500-0000-000013d8e09f.jpg"
         ]
     },
     {
-        "natureza": "Terreno Urbano",
-        "referência": "6514",
-        "preçoVenda": "70000",
+        "natureza": "Armazém",
+        "referência": "14173",
+        "preçoVenda": "235000",
         "preçoAluguel": null,
-        "distrito": "Faro",
-        "concelho": "Silves",
+        "distrito": "Viseu",
+        "concelho": "Carregal do Sal",
         "freguesia": null,
         "tipologia": null,
-        "area": "815",
-        "ano": null,
+        "area": "1238",
+        "ano": "1980",
         "banco": "Credito_agricola",
-        "contacto": "Drª Filipa da Raquel",
+        "contacto": "João Maia",
         "email": null,
-        "telefone": "213805648",
-        "descricao": "Lote de terreno destinado a construção, com 815m² situado em São Bartolomeu de Messines.\n\nDe acordo com o Alvará de Loteamento, está previsto para o Lote 16 a possibilidade de construção de edifício de habitação de tipologia T3, com 224m² de Área Bruta de Construção, distribuídos por dois pisos acima da cota de soleira e um piso abaixo da cota de soleira, destinado a dois lugares de estacionamento, numa área de implantação de 140m².\n\nLocalizado a 5 minutos do centro de São Bartolomeu de Messines, a sua localização apresenta boa oferta de comércio, serviços e equipamentos públicos.\n\nNão perca esta oportunidade!",
+        "telefone": "232483570",
+        "descricao": "O imóvel localiza-se na vila de Carregal do Sal uma zona dotada de infraestruturas urbanas e rodoviárias. Insere-se numa zona servida de comércio e serviços (junto ao Pingo Doce, Escola Básica e Escola E.B. Nuno Álvares).\nExcelentes acessos rodoviários.",
         "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b86.jpg",
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b87.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b86.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b87.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b88.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b89.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b8a.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b8b.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b8c.jpg"
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P25352825/Tphoto/ID79da8201-0000-0500-0000-000013d8e0a0.jpg"
+        ]
+    },
+    {
+        "natureza": "Loja",
+        "referência": "5737",
+        "preçoVenda": "80500",
+        "preçoAluguel": null,
+        "distrito": "Viseu",
+        "concelho": "Nelas",
+        "freguesia": null,
+        "tipologia": null,
+        "area": "140",
+        "ano": "2009",
+        "banco": "Credito_agricola",
+        "contacto": "JOÃO ORLANDO CARDOSO BOTELHO MAIA",
+        "email": null,
+        "telefone": "232483570",
+        "descricao": "imóvel situado em Nelas destinado a exploração de café/bar.\nEm bom estado de conservação.",
+        "imagens": [
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P25352826/Tphoto/ID7ada8201-0000-0500-0000-000013d8e0a5.jpg"
+        ]
+    },
+    {
+        "natureza": "Escritório",
+        "referência": "4861",
+        "preçoVenda": "45000",
+        "preçoAluguel": null,
+        "distrito": "Viseu",
+        "concelho": "Nelas",
+        "freguesia": null,
+        "tipologia": null,
+        "area": "80",
+        "ano": "1988",
+        "banco": "Credito_agricola",
+        "contacto": "João Orlando Maia",
+        "email": null,
+        "telefone": "232483570",
+        "descricao": "Trata-se de escrtório com res do chão e 1º andar na zona central da vila de Nelas, a meio da Rua Gago Coutinho, uma das ruas mais comerciais que liga as '4 Esquinas' à Praça do Municipio.\nEm bom estado de conservação.",
+        "imagens": [
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P25352827/Tphoto/ID7bda8201-0000-0500-0000-000013d8e0ac.jpg"
         ]
     },
     {
@@ -109,6 +136,87 @@
     },
     {
         "natureza": "Terreno Urbano",
+        "referência": "6514",
+        "preçoVenda": "70000",
+        "preçoAluguel": null,
+        "distrito": "Faro",
+        "concelho": "Silves",
+        "freguesia": null,
+        "tipologia": null,
+        "area": "815",
+        "ano": null,
+        "banco": "Credito_agricola",
+        "contacto": "Drª Filipa da Raquel",
+        "email": null,
+        "telefone": "213805648",
+        "descricao": "Lote de terreno destinado a construção, com 815m² situado em São Bartolomeu de Messines.\n\nDe acordo com o Alvará de Loteamento, está previsto para o Lote 16 a possibilidade de construção de edifício de habitação de tipologia T3, com 224m² de Área Bruta de Construção, distribuídos por dois pisos acima da cota de soleira e um piso abaixo da cota de soleira, destinado a dois lugares de estacionamento, numa área de implantação de 140m².\n\nLocalizado a 5 minutos do centro de São Bartolomeu de Messines, a sua localização apresenta boa oferta de comércio, serviços e equipamentos públicos.\n\nNão perca esta oportunidade!",
+        "imagens": [
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b86.jpg",
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b87.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b86.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b87.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b88.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b89.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b8a.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b8b.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541638/Tphoto/IDc6797601-0000-0500-0000-000012646b8c.jpg"
+        ]
+    },
+    {
+        "natureza": "Terreno",
+        "referência": "11329",
+        "preçoVenda": "29000",
+        "preçoAluguel": null,
+        "distrito": "Leiria",
+        "concelho": "Óbidos",
+        "freguesia": null,
+        "tipologia": null,
+        "area": "522",
+        "ano": null,
+        "banco": "Credito_agricola",
+        "contacto": "Drª Filipa da Raquel",
+        "email": null,
+        "telefone": "213805648",
+        "descricao": "Terreno para construção de moradia unifamiliar, com 522 m² sito em Usseira, Óbidos\n\nDe acordo com o PDM local e respetiva planta de ordenamento, o terreno urbano, insere-se em Solo Urbano, com classificação de Espaço Urbanizável de Nível II, sendo que de acordo com o nº do artigo 37º - Todas as alterações ao uso do solo nas áreas urbanizáveis de nível 2 ficam sujeitas às seguintes disposições:\n\na) Densidade bruta máxima (Db): 60 hab/ha;\nb) Índice de construção bruto máximo (ICb)=0,25;\nc) Número máximo de pisos: 2;\nd) Cércea máxima: 7 m\n\nAssim, considerando o PDM, estima-se que poderá ser edificado no local uma moradia com máximo de 130,5 m² de área bruta de construção.\n\nNão perca esta oportunidade!",
+        "imagens": [
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c0.jpg",
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c1.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c0.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c1.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c2.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P8904035/Tphoto/ID63dd8700-0000-0500-0000-0000128fd0c3.jpg"
+        ]
+    },
+    {
+        "natureza": "Terreno Urbano",
+        "referência": "9432",
+        "preçoVenda": "465000",
+        "preçoAluguel": null,
+        "distrito": "Setúbal",
+        "concelho": "Palmela",
+        "freguesia": null,
+        "tipologia": null,
+        "area": "66250",
+        "ano": "2007",
+        "banco": "Credito_agricola",
+        "contacto": "Mário Costa",
+        "email": null,
+        "telefone": "919549993",
+        "descricao": "Prédio misto sito na Lagoa do Calvo, com a área de 66.250 m2.\nA parte urbana é composta por habitação, com sala, cozinha, escritório, três quartos e duas casas de banho. Possui ainda anexos com cozinha rústica, lavandaria e telheiro com churrasqueira.\nA parte rústica, cerca de 5,7 ha, encontra-se ocupada com vinha, dos quais 2,5 ha de vinha armada e com regada gota-a-gota, com compasso de 2,5 * 1,1 m.",
+        "imagens": [
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33411.jpg",
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33413.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33411.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33413.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33414.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d3341b.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33428.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33435.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33440.jpg"
+        ]
+    },
+    {
+        "natureza": "Terreno Urbano",
         "referência": "6462",
         "preçoVenda": "1130000",
         "preçoAluguel": null,
@@ -158,34 +266,6 @@
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541661/Tphoto/IDdd797601-0000-0500-0000-000012646bf8.jpg",
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541661/Tphoto/IDdd797601-0000-0500-0000-000012646bf9.jpg",
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P24541661/Tphoto/IDdd797601-0000-0500-0000-000012646bfa.jpg"
-        ]
-    },
-    {
-        "natureza": "Terreno Urbano",
-        "referência": "9432",
-        "preçoVenda": "465000",
-        "preçoAluguel": null,
-        "distrito": "Setúbal",
-        "concelho": "Palmela",
-        "freguesia": null,
-        "tipologia": null,
-        "area": "66250",
-        "ano": "2007",
-        "banco": "Credito_agricola",
-        "contacto": "Mário Costa",
-        "email": null,
-        "telefone": "919549993",
-        "descricao": "Prédio misto sito na Lagoa do Calvo, com a área de 66.250 m2.\nA parte urbana é composta por habitação, com sala, cozinha, escritório, três quartos e duas casas de banho. Possui ainda anexos com cozinha rústica, lavandaria e telheiro com churrasqueira.\nA parte rústica, cerca de 5,7 ha, encontra-se ocupada com vinha, dos quais 2,5 ha de vinha armada e com regada gota-a-gota, com compasso de 2,5 * 1,1 m.",
-        "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33411.jpg",
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33413.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33411.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33413.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33414.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d3341b.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33428.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33435.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P16499534/Tphoto/ID4ec3fb00-0000-0500-0000-000013d33440.jpg"
         ]
     },
     {
@@ -346,26 +426,6 @@
             "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P25296817/Tphoto/IDb1ff8101-0000-0500-0000-000013bcc7e1.jpg",
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P25296817/Tphoto/IDb1ff8101-0000-0500-0000-000013bcc7e0.jpg",
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P25296817/Tphoto/IDb1ff8101-0000-0500-0000-000013bcc7e1.jpg"
-        ]
-    },
-    {
-        "natureza": "Garagem",
-        "referência": "9787",
-        "preçoVenda": "2720",
-        "preçoAluguel": null,
-        "distrito": "Lisboa",
-        "concelho": "Vila Franca de Xira",
-        "freguesia": null,
-        "tipologia": null,
-        "area": "30",
-        "ano": "1994",
-        "banco": "Credito_agricola",
-        "contacto": "Ruben Carvalho",
-        "email": null,
-        "telefone": "263975196",
-        "descricao": "Vende se 1/8 (UM OITAVO) de garagem n.º7 localizada na Rua Padre António Bianchi n.º27 com 30 m2 em estado razoável.",
-        "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P25296818/Tphoto/IDb2ff8101-0000-0500-0000-000013bcc7e2.jpg"
         ]
     },
     {
@@ -2371,33 +2431,6 @@
         ]
     },
     {
-        "natureza": "Loja",
-        "referência": "13537",
-        "preçoVenda": "82500",
-        "preçoAluguel": null,
-        "distrito": "Porto",
-        "concelho": "Porto",
-        "freguesia": null,
-        "tipologia": null,
-        "area": "72",
-        "ano": "1984",
-        "banco": "Credito_agricola",
-        "contacto": "Drª Filipa da Raquel",
-        "email": null,
-        "telefone": "213805648",
-        "descricao": "Loja com 72,5m² para venda no centro da cidade do Porto.\n\nConjunto de duas fracções ligadas entre si, situadas no Centro Comercial das Antas. A sua boa localização apresenta bons acessos, proximidade de comércio, serviços, equipamentos públicos e boa oferta de transportes públicos.\n\nMarque já a sua visita e não perca esta oportunidade!",
-        "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a78195f.jpg",
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781961.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a78195f.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781961.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781963.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781965.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781966.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781967.jpg"
-        ]
-    },
-    {
         "natureza": "Apartamento",
         "referência": "14131",
         "preçoVenda": "81000",
@@ -2423,6 +2456,33 @@
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P22584547/Tphoto/IDe39c5801-0000-0500-0000-000010603657.jpg",
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P22584547/Tphoto/IDe39c5801-0000-0500-0000-000010603659.jpg",
             "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P22584547/Tphoto/IDe39c5801-0000-0500-0000-00001060365b.jpg"
+        ]
+    },
+    {
+        "natureza": "Loja",
+        "referência": "13537",
+        "preçoVenda": "82500",
+        "preçoAluguel": null,
+        "distrito": "Porto",
+        "concelho": "Porto",
+        "freguesia": null,
+        "tipologia": null,
+        "area": "72",
+        "ano": "1984",
+        "banco": "Credito_agricola",
+        "contacto": "Drª Filipa da Raquel",
+        "email": null,
+        "telefone": "213805648",
+        "descricao": "Loja com 72,5m² para venda no centro da cidade do Porto.\n\nConjunto de duas fracções ligadas entre si, situadas no Centro Comercial das Antas. A sua boa localização apresenta bons acessos, proximidade de comércio, serviços, equipamentos públicos e boa oferta de transportes públicos.\n\nMarque já a sua visita e não perca esta oportunidade!",
+        "imagens": [
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a78195f.jpg",
+            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781961.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a78195f.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781961.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781963.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781965.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781966.jpg",
+            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P17290736/Tphoto/IDf0d50701-0000-0500-0000-00000a781967.jpg"
         ]
     },
     {
@@ -6871,26 +6931,6 @@
         ]
     },
     {
-        "natureza": "Moradia",
-        "referência": "13424",
-        "preçoVenda": "40000",
-        "preçoAluguel": null,
-        "distrito": "Coimbra",
-        "concelho": "Cantanhede",
-        "freguesia": null,
-        "tipologia": "T1",
-        "area": "84",
-        "ano": "1970",
-        "banco": "Credito_agricola",
-        "contacto": "Márcia Marques",
-        "email": null,
-        "telefone": "239851201",
-        "descricao": "Casa Habitação e Vinha",
-        "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P22793652/Tphoto/IDb4cd5b01-0000-0500-0000-00000ff98aa7.jpg"
-        ]
-    },
-    {
         "natureza": "Loja",
         "referência": "3093",
         "preçoVenda": "140000",
@@ -10790,31 +10830,6 @@
         ]
     },
     {
-        "natureza": "Terreno Rústico",
-        "referência": "13298",
-        "preçoVenda": "30000",
-        "preçoAluguel": null,
-        "distrito": "Viseu",
-        "concelho": "Cinfães",
-        "freguesia": null,
-        "tipologia": null,
-        "area": "4400",
-        "ano": null,
-        "banco": "Credito_agricola",
-        "contacto": "Paulo Mouta",
-        "email": null,
-        "telefone": "255710960",
-        "descricao": "O Terreno localiza-se em zona rural com acesso por caminho estreito, tendo vista para o Douro.",
-        "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P14117250/Tphoto/ID8269d700-0000-0500-0000-00000fa794cc.jpg",
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P14117250/Tphoto/ID8269d700-0000-0500-0000-00000fa794cd.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P14117250/Tphoto/ID8269d700-0000-0500-0000-00000fa794cc.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P14117250/Tphoto/ID8269d700-0000-0500-0000-00000fa794cd.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P14117250/Tphoto/ID8269d700-0000-0500-0000-00000fa794ce.jpg",
-            "https://jackhammer.janeladigital.com/Z360x270/S5/C3119/P14117250/Tphoto/ID8269d700-0000-0500-0000-00000fa794cf.jpg"
-        ]
-    },
-    {
         "natureza": "Lote",
         "referência": "8407",
         "preçoVenda": "32500",
@@ -11925,26 +11940,6 @@
     },
     {
         "natureza": "Lote Moradia",
-        "referência": "9562",
-        "preçoVenda": "55000",
-        "preçoAluguel": null,
-        "distrito": "Braga",
-        "concelho": "Póvoa de Lanhoso",
-        "freguesia": null,
-        "tipologia": null,
-        "area": "926",
-        "ano": null,
-        "banco": "Credito_agricola",
-        "contacto": "BRITO",
-        "email": null,
-        "telefone": "926845445",
-        "descricao": null,
-        "imagens": [
-            "https://jackhammer.janeladigital.com/Z800x600/S5/C3119/P10506497/Tphoto/ID0151a000-0000-0500-0000-0000057902d1.jpg"
-        ]
-    },
-    {
-        "natureza": "Lote Moradia",
         "referência": "9560",
         "preçoVenda": "45000",
         "preçoAluguel": null,
@@ -12348,7 +12343,7 @@
     {
         "natureza": "Terreno Rústico",
         "referência": "13037",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Coimbra",
         "concelho": "Coimbra",
@@ -12420,7 +12415,7 @@
     {
         "natureza": "Barracão",
         "referência": "1100",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Lisboa",
         "concelho": "Cadaval",
@@ -13487,7 +13482,7 @@
     {
         "natureza": "Terreno Urbano",
         "referência": "7845",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Coimbra",
         "concelho": "Lousã",
@@ -15883,7 +15878,7 @@
     {
         "natureza": "Comércio Rés-do-Chão",
         "referência": "8458",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Lisboa",
         "concelho": "Cadaval",
@@ -16545,7 +16540,7 @@
     {
         "natureza": "Comércio Rés-do-Chão",
         "referência": "5419",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Setúbal",
         "concelho": "Santiago do Cacém",
@@ -17720,7 +17715,7 @@
     {
         "natureza": "Comércio Rés-do-Chão",
         "referência": "4908",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Lisboa",
         "concelho": "Cadaval",
@@ -18000,7 +17995,7 @@
     {
         "natureza": "Prédio",
         "referência": "12973",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Coimbra",
         "concelho": "Oliveira do Hospital",
@@ -18040,7 +18035,7 @@
     {
         "natureza": "Terreno Rústico",
         "referência": "13183",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Coimbra",
         "concelho": "Oliveira do Hospital",
@@ -18200,7 +18195,7 @@
     {
         "natureza": "Comércio Rés-do-Chão",
         "referência": "4907",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Lisboa",
         "concelho": "Cadaval",
@@ -18240,7 +18235,7 @@
     {
         "natureza": "Monte",
         "referência": "9405",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Viana do Castelo",
         "concelho": "Paredes de Coura",
@@ -18360,7 +18355,7 @@
     {
         "natureza": "Lote Moradia",
         "referência": "8596",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Coimbra",
         "concelho": "Oliveira do Hospital",
@@ -18400,7 +18395,7 @@
     {
         "natureza": "Casa Antiga",
         "referência": "8486",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Porto",
         "concelho": "Baião",
@@ -18420,7 +18415,7 @@
     {
         "natureza": "Monte",
         "referência": "8487",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Porto",
         "concelho": "Baião",
@@ -18440,7 +18435,7 @@
     {
         "natureza": "Terreno Rústico",
         "referência": "8488",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Porto",
         "concelho": "Baião",
@@ -18780,7 +18775,7 @@
     {
         "natureza": "Lote Prédio",
         "referência": "619",
-        "preçoVenda": "Preçosobconsulta",
+        "preçoVenda": "0",
         "preçoAluguel": null,
         "distrito": "Aveiro",
         "concelho": "Vale de Cambra",

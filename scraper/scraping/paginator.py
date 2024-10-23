@@ -77,6 +77,7 @@ def collect_property_links(driver, bank_name, bank_data):
                 for property_item in properties:
                     try:
                         link = property_item.get_attribute("href")
+                        print(f"Link do imóvel: {link}")
                         if link and link not in links:
                             links.append(link)
                         else:
@@ -126,7 +127,7 @@ def collect_property_links(driver, bank_name, bank_data):
                         print("Botão de próxima página clicado com sucesso.")
                         time.sleep(2)
                     else:
-                        next_button.click()
+                        #next_button.click()
                         print("Botão de próxima página clicado com sucesso.")
 
                     WebDriverWait(driver, 30).until(EC.staleness_of(properties[0]))

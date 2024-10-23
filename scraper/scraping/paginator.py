@@ -127,7 +127,7 @@ def collect_property_links(driver, bank_name, bank_data):
                         print("Botão de próxima página clicado com sucesso.")
                         time.sleep(2)
                     else:
-                        #next_button.click()
+                        next_button.click()
                         print("Botão de próxima página clicado com sucesso.")
 
                     WebDriverWait(driver, 30).until(EC.staleness_of(properties[0]))

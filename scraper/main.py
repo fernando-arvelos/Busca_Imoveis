@@ -26,11 +26,17 @@ def process_bank(bank_name, bank_data):
             print(f"Extraindo dados do imóvel {idx + 1} ({bank_name})...")
             driver.get(link)
             
-            # Extrair os detalhes da propriedade
-            time.sleep(random.uniform(3, 5))
-            property_data = extract_property_details(driver, bank_name, bank_data)
-            time.sleep(random.uniform(3, 5))
-            extracted_data.append(property_data)
+            if bank_name == "cgd":
+                time.sleep(random.uniform(6, 10))
+                property_data = extract_property_details(driver, bank_name, bank_data)
+                time.sleep(random.uniform(6, 10))
+                extracted_data.append(property_data)
+            else:
+                # Extrair os detalhes da propriedade
+                time.sleep(3)
+                property_data = extract_property_details(driver, bank_name, bank_data)
+                time.sleep(3)
+                extracted_data.append(property_data)
 
         # Salvar os dados extraídos em um arquivo CSV e JSON
         # save_to_csv(extracted_data, filename=f"{bank_name}_properties.csv")

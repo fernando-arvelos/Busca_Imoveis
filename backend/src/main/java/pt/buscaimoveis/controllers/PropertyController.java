@@ -34,14 +34,19 @@ public class PropertyController {
     @GetMapping("/search")
     @ResponseStatus(HttpStatus.OK)
     public List<Property> searchProperties(
+            @RequestParam(required = false) String natureza,
             @RequestParam(required = false) String distrito,
             @RequestParam(required = false) String concelho,
+            @RequestParam(required = false) String freguesia,
+            @RequestParam(required = false) String tipologia,
+            @RequestParam(required = false) String banco,
             @RequestParam(required = false) Double minV,
             @RequestParam(required = false) Double maxV,
             @RequestParam(required = false) Double minL,
             @RequestParam(required = false) Double maxL,
             @RequestParam(required = false) Integer minA,
             @RequestParam(required = false) Integer maxA) {
-        return propertyService.searchProperties(distrito, concelho, minV, maxV, minL, maxL, minA, maxA);
+        return propertyService.searchProperties(natureza, distrito, concelho,
+                freguesia, tipologia, banco, minV, maxV, minL, maxL, minA, maxA);
     }
 }

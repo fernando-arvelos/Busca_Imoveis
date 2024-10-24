@@ -31,6 +31,7 @@ const PropertiesPage = () => {
   };
 
   const handleSearch = (filters) => {
+    setCurrentPage(1); // volta para a primeira página
     searchProperties(filters); // chama a função de busca com os filtros
   };
 

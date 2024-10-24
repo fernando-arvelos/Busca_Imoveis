@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const SearchForm = ({ onSearch }) => {
@@ -19,9 +19,39 @@ const SearchForm = ({ onSearch }) => {
     anoMax: '',
     banco: '',
   });
-
   const [isBuying, setIsBuying] = useState(true); // Estado para controlar o botão ativo
+  const [listDistrictsConcelhos, setListDistrictsConcelhos] = useState([]);
+  const [selectedDistrict, setSelectedDistrict] = useState('');
+  const [concelho, setConcelho] = useState([]);
 
+  // buscar json de distritos e concelhos
+  useEffect(() => {
+    fetch('/Lista_distrito_concelho.json')
+      .then((response) => response.json())
+      .then((json) => setListDistrictsConcelhos(json))
+      .catch((error) => console.error('Erro ao buscar distritos e concelhos:', error));
+  }, []);
+  
+
+  // filtrar concelhos por distrito
+  const handleDistrictChange = (event) => {
+    const selectedDistrict = event.target.value;
+    setSelectedDistrict(selectedDistrict);
+
+    setFilters({
+      ...filters,
+      distrito: selectedDistrict,
+    });
+
+    console.log(listDistrictsConcelhos);
+
+    const concelhosDoDistrito = listDistrictsConcelhos
+  .filter(item => item.distrito === selectedDistrict)
+  .flatMap(item => item.concelhos) || [];
+    setConcelho(concelhosDoDistrito);
+    console.log(concelhosDoDistrito);
+  };
+  
   const handleInputChange = (event) => {
     setFilters({
       ...filters,
@@ -138,25 +168,21 @@ const SearchForm = ({ onSearch }) => {
           
           <div className='flex flex-col'>
             <label htmlFor="distrito" className="text-gray-700">Distrito</label>
-            <input
-              type="text"
-              name="distrito"
-              placeholder="Distrito"
-              value={filters.distrito}
-              onChange={handleInputChange}
-              className="border border-gray-300 rounded-lg p-2"
-            />
+            <select id='distrito' value={selectedDistrict} onChange={handleDistrictChange} className="border border-gray-300 rounded-lg p-2">
+              <option value=''>Selecione um distrito</option>
+              {listDistrictsConcelhos.map((item, index) => (
+                <option key={index} value={item.distrito}>{item.distrito}</option>
+              ))}
+              </select>
           </div>
           <div className='flex flex-col'>
-            <label htmlFor="concelho" className="text-gray-700">Conselho</label>
-            <input
-              type="text"
-              name="concelho"
-              placeholder="Concelho"
-              value={filters.concelho}
-              onChange={handleInputChange}
-              className="border border-gray-300 rounded-lg p-2"
-            />
+            <label htmlFor="concelho" className="text-gray-700">Concelho</label>
+            <select id="concelho" name="concelho" value={filters.concelho} onChange={handleInputChange} className='border border-gray-300 rounded-lg p-2'>
+              <option value="">Selecione um concelho</option>
+              {concelho.map((concelho, index) => (
+                <option key={index} value={concelho}>{concelho}</option>
+              ))}
+            </select>
           </div>
           <div className='flex flex-col'>
             <label htmlFor="freguesia" className="text-gray-700">Freguesia</label>

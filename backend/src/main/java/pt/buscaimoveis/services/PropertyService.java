@@ -186,10 +186,13 @@ public class PropertyService {
         }
     }
 
-
     private String normalizeString(String value) {
         return Normalizer.normalize(value, Normalizer.Form.NFD)
                 .replaceAll("\\p{M}", "")
                 .toLowerCase(Locale.ROOT);
+    }
+
+    public Property getPropertyById(Long id) {
+        return propertyRepository.findById(id).orElse(null);
     }
 }

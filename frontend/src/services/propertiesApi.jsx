@@ -27,8 +27,8 @@ export const getProperties = async (filters = {}) => {
 
 }
 
-export const getPropertyById = async (id) => {
-  const url = `${API_BASE_URL}/properties/${id}`;
+export const getPropertyByRef = async (ref) => {
+  const url = `${API_BASE_URL}/properties/search?${ref}`;
 
   try {
     const response = await fetch(url);

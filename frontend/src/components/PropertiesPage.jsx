@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getProperties } from "../services/propertiesApi";
 import SearchForm from "./SearchForm";
 import PropertyCard from "./PropertyCard";
@@ -13,6 +13,7 @@ const PropertiesPage = () => {
   const itemsPerPage = 16;
 
   const { favorites, toggleFavorite } = useFavorites();
+  const resultsRef = useRef(null);
 
   useEffect(() => {
     searchProperties();
@@ -33,6 +34,10 @@ const PropertiesPage = () => {
   const handleSearch = (filters) => {
     setCurrentPage(1); // volta para a primeira página
     searchProperties(filters); // chama a função de busca com os filtros
+
+    if (resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   // Paginação 
@@ -57,7 +62,7 @@ const PropertiesPage = () => {
       {loading && <p>Carregando...</p>}
       {error && <p className="text-red-600">{error}</p>}
 
-      <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <div ref={resultsRef} className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
         {selectedProperties.length > 0 ? (
           selectedProperties.map(property => (
             <PropertyCard

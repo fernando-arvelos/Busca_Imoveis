@@ -134,17 +134,17 @@ public class PropertyService {
 
         return properties.stream()
                 .filter(property -> isNullOrEmpty(natureza) ||
-                        isNullOrMatches(natureza, property.getNatureza()))
+                        isNullOrMatches(natureza, property.getNatureza(), false))
                 .filter(property -> isNullOrEmpty(distrito) ||
-                        isNullOrMatches(distrito, property.getDistrito()))
+                        isNullOrMatches(distrito, property.getDistrito(), true))
                 .filter(property -> isNullOrEmpty(concelho) ||
-                        isNullOrMatches(concelho, property.getConcelho()))
+                        isNullOrMatches(concelho, property.getConcelho(), true))
                 .filter(property -> isNullOrEmpty(freguesia) ||
-                        isNullOrMatches(freguesia, property.getFreguesia()))
+                        isNullOrMatches(freguesia, property.getFreguesia(), false))
                 .filter(property -> isNullOrEmpty(tipologia) ||
-                        isNullOrMatches(tipologia, property.getTipologia()))
+                        isNullOrMatches(tipologia, property.getTipologia(), false))
                 .filter(property -> isNullOrEmpty(banco) ||
-                        isNullOrMatches(banco, property.getBanco()))
+                        isNullOrMatches(banco, property.getBanco(), false))
                 .filter(property -> minV == null ||
                         (property.getpreçoVenda() != null &&
                                 property.getpreçoVenda() >= minV))
@@ -170,14 +170,18 @@ public class PropertyService {
         return value == null || value.trim().isEmpty();
     }
 
-    private boolean isNullOrMatches(String filterValue, String propertyValue) {
+    private boolean isNullOrMatches(String filterValue, String propertyValue, boolean exactMatch) {
         if (isNullOrEmpty(filterValue)) return true;
         if (propertyValue == null) return false;
 
         String[] filterWords = normalizeString(filterValue).split("\\s+");
         String normalizedPropertyValue = normalizeString(propertyValue);
 
-        return Arrays.stream(filterWords).anyMatch(normalizedPropertyValue::contains);
+        if (exactMatch) {
+            return Arrays.asList(filterWords).contains(normalizedPropertyValue);
+        } else {
+            return Arrays.stream(filterWords).anyMatch(normalizedPropertyValue::contains);
+        }
     }
 
 

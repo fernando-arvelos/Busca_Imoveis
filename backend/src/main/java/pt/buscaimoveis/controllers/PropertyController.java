@@ -50,4 +50,10 @@ public class PropertyController {
         return propertyService.searchProperties(natureza, referencia, distrito, concelho,
                 freguesia, tipologia, banco, minV, maxV, minL, maxL, minA, maxA);
     }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Property getProperty(@PathVariable Long id) {
+        return propertyService.getPropertyById(id);
+    }
 }

@@ -125,7 +125,7 @@ public class PropertyService {
 
     }
 
-    public List<Property> searchProperties(String natureza, String distrito, String concelho,
+    public List<Property> searchProperties(String natureza, String referencia, String distrito, String concelho,
                                            String freguesia, String tipologia,
                                            String banco, Double minV, Double maxV,
                                            Double minL, Double maxL,
@@ -135,6 +135,8 @@ public class PropertyService {
         return properties.stream()
                 .filter(property -> isNullOrEmpty(natureza) ||
                         isNullOrMatches(natureza, property.getNatureza(), false))
+                .filter(property -> isNullOrEmpty(referencia) ||
+                        isNullOrMatches(referencia, property.getReferência(), true))
                 .filter(property -> isNullOrEmpty(distrito) ||
                         isNullOrMatches(distrito, property.getDistrito(), true))
                 .filter(property -> isNullOrEmpty(concelho) ||

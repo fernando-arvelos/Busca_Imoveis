@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getPropertyByRef } from "../services/propertiesApi";
+import { getPropertyById } from "../services/propertiesApi";
 
 const PropertyDetails = () => {
   const { referência } = useParams(); // pega o id do imóvel da URL
@@ -11,7 +11,7 @@ const PropertyDetails = () => {
   useEffect(() => {
     const searchProperty = async () => {
       try {
-        const data = await getPropertyByRef(referência); // busca o imóvel pelo id
+        const data = await getPropertyById(id); // busca o imóvel pelo id
         setProperty(data); // atualiza o estado com o imóvel
       } catch (error) {
         setError('Erro ao buscar detalhes do imóvel.', error);

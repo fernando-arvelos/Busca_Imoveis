@@ -10,8 +10,6 @@ const PropertyDetails = () => {
   const [error, setError] = useState(null);
   const { favorites, toggleFavorite } = useFavorites();
 
-  const isFavorite = favorites.includes(id);
-
   useEffect(() => {
     const searchProperty = async (id) => {
       try {
@@ -56,7 +54,6 @@ const PropertyDetails = () => {
               <p><strong>Tipologia:</strong> {property.tipologia}</p>
               <p><strong>Localização:</strong> {property.distrito} / {property.concelho}</p>
               <p><strong>Freguesia:</strong> {property.freguesia}</p>
-              <p><strong>Tipologia:</strong> {property.tipologia}</p>
               <p><strong>Área:</strong> {property.area} m²</p>
               <p><strong>Ano:</strong> {property.ano}</p>
             </div>
@@ -89,7 +86,8 @@ const PropertyDetails = () => {
 
           {/* Ações */}
           <div className="flex justify-between items-center mt-6">
-            <button onClick={() => toggleFavorite(id)} className={`py-2 px-4 rounded ${isFavorite ? 'bg-red-500' : 'bg-blue-500'} text-white`}>{isFavorite ? 'Remover Favorito' : 'Adicionar Favorito'}</button>
+            <button onClick={() => toggleFavorite(property.id)} className={`py-2 px-4 rounded ${favorites.includes(property.id) ? 'bg-red-500' : 'bg-blue-500'} text-white`}>{favorites.includes(property.id) ? 'Remover Favorito' : 'Adicionar Favorito'}
+            </button>
           </div>
         </div>
       ) : (

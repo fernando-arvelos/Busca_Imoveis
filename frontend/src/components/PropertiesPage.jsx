@@ -84,6 +84,7 @@ const PropertiesPage = () => {
       goToNextPage={goToNextPage}
       goToPreviousPage={goToPreviousPage}
       setCurrentPage={setCurrentPage}
+      className="m-8"
       />
     </div>
   );

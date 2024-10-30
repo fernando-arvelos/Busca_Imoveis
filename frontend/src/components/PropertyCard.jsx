@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const PropertyCard = ({ property, favorites, toggleFavorite }) => {
   return (
@@ -31,15 +32,20 @@ const PropertyCard = ({ property, favorites, toggleFavorite }) => {
             </svg>{' '}
           </button>
         </div>
-        <p className="text-gray-600 mb-2">€ {property.preçoVenda}</p>
+        <p className="text-gray-600 mb-2">€ {property.preçoVenda.toLocaleString()}</p>
         <p className="text-gray-700 font-semibold text-sm">{property.area} m² - Ano {property.ano}</p>
         <p className="text-gray-500 text-sm">{property.distrito} - {property.concelho} - {property.freguesia}</p>
         <p className="text-gray-400 text-sm mb-2">Banco responsável: {property.banco}</p>
-        <p className="text-gray-400 text-sm mb-2 hover:text-blue-500">Ver Dealhes</p>
+        <p className="text-gray-400 text-sm mb-2 hover:text-blue-500">Ver Detalhes</p>
       </div>
     </div>
   </Link>
   );
+};
+PropertyCard.propTypes = {
+  property: PropTypes.object.isRequired,
+  favorites: PropTypes.array.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
 };
 
 export default PropertyCard;

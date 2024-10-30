@@ -2,14 +2,18 @@ import { Link } from "react-router-dom";
 
 const PropertyCard = ({ property, favorites, toggleFavorite }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden">
-      <img src={property.imagens[0]} alt={`Imóvel em ${property.freguesia}`} className="w-full h-48 object-cover" />
-      <div className="p-4">
+    <Link to={`/properties/${property.id}`} className="block bg-white shadow-md rounded-lg overflow-hidden">
+      <div onClick={(e) => e.stopPropagation()} className="w-full h-full">
+        <img src={property.imagens[0]} alt={`Imóvel em ${property.freguesia}`} className="w-full h-48 object-cover" />
+        <div className="p-4">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold mb-2">{property.natureza}</h2>
           <button
             className={`text-gray-600 ${favorites.includes(property.id) ? 'text-red-600' : 'hover:text-red-600'}`}
-            onClick={() => toggleFavorite(property.id)}
+            onClick={(e) => {
+              e.preventDefault(); // Impede a navegação ao clicar no botão de favorito
+              toggleFavorite(property.id);
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +35,10 @@ const PropertyCard = ({ property, favorites, toggleFavorite }) => {
         <p className="text-gray-700 font-semibold text-sm">{property.area} m² - Ano {property.ano}</p>
         <p className="text-gray-500 text-sm">{property.distrito} - {property.concelho} - {property.freguesia}</p>
         <p className="text-gray-400 text-sm mb-2">Banco responsável: {property.banco}</p>
-        <Link to={`/properties/${property.id}`} className="text-blue-500 hover:text-blue-700">Ver Detalhes</Link>
+        <p className="text-gray-400 text-sm mb-2 hover:text-blue-500">Ver Dealhes</p>
       </div>
     </div>
+  </Link>
   );
 };
 

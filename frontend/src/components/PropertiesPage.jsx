@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { getProperties } from "../services/propertiesApi";
 import SearchForm from "./SearchForm";
 import PropertyCard from "./PropertyCard";
@@ -14,8 +15,10 @@ const PropertiesPage = () => {
 
   const { favorites, toggleFavorite } = useFavorites();
   const resultsRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
+
     searchProperties();
   }, []);
 
@@ -56,7 +59,6 @@ const PropertiesPage = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6">Buscar Imóveis</h1>
       <SearchForm onSearch={handleSearch} /> {/* passa a função de busca para o componente de busca */}
 
       {loading && <p>Carregando...</p>}

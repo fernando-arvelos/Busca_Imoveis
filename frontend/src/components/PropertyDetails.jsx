@@ -58,7 +58,7 @@ const PropertyDetails = () => {
               <p><strong>Ano:</strong> {property.ano}</p>
             </div>
             <div>
-              <p>{property.descricao}</p>
+            <p dangerouslySetInnerHTML={{ __html: property.descricao }}></p>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ const PropertyDetails = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {property.imagens && property.imagens.length > 0 ? (
                 property.imagens.map((imagem, index) => (
-                  <img key={index} src={imagem.url} alt={`Imagem ${index + 1}`} className="w-full h-auto object-cover" />
+                  <img key={index} src={imagem} alt={`Imagem ${index + 1}`} className="w-full h-auto object-cover" />
                 ))
               ) : (
                 <p>Nenhuma imagem disponível.</p>

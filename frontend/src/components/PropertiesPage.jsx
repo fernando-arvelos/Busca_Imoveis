@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { getProperties } from "../services/propertiesApi";
 import SearchForm from "./SearchForm";
 import PropertyCard from "./PropertyCard";
@@ -15,7 +15,7 @@ const PropertiesPage = () => {
 
   const { favorites, toggleFavorite } = useFavorites();
   const resultsRef = useRef(null);
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
 

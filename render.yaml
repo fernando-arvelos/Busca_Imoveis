@@ -1,0 +1,34 @@
+services:
+  - name: busca_imoveis-backend-1
+    type: web
+    env: docker
+    region: frankfurt  # ou 'frankfurt' se for mais próximo da sua localização
+    plan: free
+
+    # URL do seu repositório
+    repo: https://github.com/LeonardoNunesTrybe/Busca_Imoveis
+
+    # Caminho do Dockerfile
+    build:
+      dockerfilePath: ./backend/Dockerfile  # Ajusta o caminho para a pasta 'backend'
+      contextPath: ./backend  # Define a pasta do backend como contexto para build
+
+    # Deploy automático ativado
+    autoDeploy: true
+
+    # Variáveis de ambiente
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: DATABASE_URL
+        sync: false  # No Render, defina o valor no painel para a URL do banco de dados
+      - key: DB_HOST
+        value: seu-host-do-db
+      - key: DB_PORT
+        value: 5432
+      - key: DB_USER
+        value: usuario-db
+      - key: DB_PASSWORD
+        value: senha-db
+      - key: DB_NAME
+        value: nome-db

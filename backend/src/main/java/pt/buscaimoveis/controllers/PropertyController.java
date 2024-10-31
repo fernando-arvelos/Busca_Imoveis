@@ -39,7 +39,7 @@ public class PropertyController {
             @RequestParam(required = false) String distrito,
             @RequestParam(required = false) String concelho,
             @RequestParam(required = false) String freguesia,
-            @RequestParam(required = false) String tipologia,
+            @RequestParam(required = false) List<String> tipologias,
             @RequestParam(required = false) String banco,
             @RequestParam(required = false) Double minV,
             @RequestParam(required = false) Double maxV,
@@ -48,7 +48,7 @@ public class PropertyController {
             @RequestParam(required = false) Integer minA,
             @RequestParam(required = false) Integer maxA) {
         return propertyService.searchProperties(natureza, referencia, distrito, concelho,
-                freguesia, tipologia, banco, minV, maxV, minL, maxL, minA, maxA);
+                freguesia, tipologias, banco, minV, maxV, minL, maxL, minA, maxA);
     }
 
     @GetMapping("/{id}")

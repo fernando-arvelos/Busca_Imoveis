@@ -126,7 +126,7 @@ public class PropertyService {
     }
 
     public List<Property> searchProperties(String natureza, String referencia, String distrito, String concelho,
-                                           String freguesia, String tipologia,
+                                           String freguesia, List<String> tipologias,
                                            String banco, Double minV, Double maxV,
                                            Double minL, Double maxL,
                                            Integer minA, Integer maxA) {
@@ -143,8 +143,8 @@ public class PropertyService {
                         isNullOrMatches(concelho, property.getConcelho(), true))
                 .filter(property -> isNullOrEmpty(freguesia) ||
                         isNullOrMatches(freguesia, property.getFreguesia(), false))
-                .filter(property -> isNullOrEmpty(tipologia) ||
-                        isNullOrMatches(tipologia, property.getTipologia(), false))
+                .filter(property -> tipologias == null || tipologias.isEmpty() ||
+                        tipologias.stream().anyMatch(tipologia -> isTipologiaValid(tipologia, property.getTipologia())))
                 .filter(property -> isNullOrEmpty(banco) ||
                         isNullOrMatches(banco, property.getBanco(), false))
                 .filter(property -> minV == null ||
@@ -166,6 +166,22 @@ public class PropertyService {
                         (property.getArea() != null &&
                                 property.getArea() <= maxA))
                 .toList();
+    }
+
+    private boolean isTipologiaValid(String filterTipologia, String propertyTipologia) {
+        if (isNullOrEmpty(filterTipologia) || isNullOrEmpty(propertyTipologia)) return false;
+
+        try {
+            int filterValue = Integer.parseInt(filterTipologia.substring(1)); // Ex: "T1" -> 1
+            int propertyValue = Integer.parseInt(propertyTipologia.substring(1)); // Ex: "T3" -> 3
+            if(filterTipologia.equals("T4")) {
+                return propertyValue >= filterValue;
+            } else {
+                return propertyValue == filterValue;
+            }
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     private boolean isNullOrEmpty(String value) {

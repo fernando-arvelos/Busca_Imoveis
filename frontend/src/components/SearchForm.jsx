@@ -89,7 +89,7 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <div className="min-h-screen flex justify-items-start items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/src/images/casa.jpg')` }}>
+    <div className="min-h-screen flex justify-items-start items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/casa.jpg')` }}>
       <div className='container flex flex-col lg:flex-row items-start lg:items-center lg:space-x-8 p-10 shadow-lg rounded-lg'>
           {/* Box de busca */}
         <div className="bg-white lg:w-1/2 p-8 shadow-lg rounded-lg">

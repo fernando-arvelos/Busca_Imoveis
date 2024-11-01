@@ -33,6 +33,9 @@ export const getPropertyById = async (id) => {
   try {
     const response = await fetch(url);
 
+    console.log(response);
+    
+
     if (!response.ok) {
       throw new Error('Erro ao buscar detalhes do imóvel');
     }

@@ -11,7 +11,6 @@ function App() {
         <Header />
         <Routes>
         <Route path="/properties/:id" element={ <PropertyDetails /> } />
-        <Route path="/properties/search?distrito=lisboa" element={ <PropertiesPage /> } />
         <Route path="/" element={ <PropertiesPage /> } />
         </Routes>
         <Footer />

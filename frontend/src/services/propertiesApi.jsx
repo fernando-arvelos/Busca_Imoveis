@@ -1,5 +1,5 @@
 
-const API_BASE_URL = 'https://busca-imoveis.fly.dev/';
+const API_BASE_URL = 'https://busca-imoveis.fly.dev';
 
 export const getProperties = async (filters = {}) => {
   let url = `${API_BASE_URL}/properties`;

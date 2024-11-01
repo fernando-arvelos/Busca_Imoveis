@@ -12,7 +12,7 @@ const SearchForm = ({ onSearch }) => {
     distrito: '',
     concelho: '',
     freguesia: '',
-    tipologia: '',
+    tipologia: [],
     minA: '',
     maxA: '',
     anoMin: '',
@@ -59,6 +59,26 @@ const SearchForm = ({ onSearch }) => {
     });
   };
 
+  const handleCheckboxChange = (event) => {
+    const { value } = event.target;
+    setFilters((prevFilters) => {
+      const isChecked = prevFilters.tipologia.includes(value);
+      if (isChecked) {
+        // Remove o valor se já estiver selecionado
+        return {
+          ...prevFilters,
+          tipologia: prevFilters.tipologia.filter((item) => item !== value),
+        };
+      } else {
+        // Adiciona o valor se não estiver selecionado
+        return {
+          ...prevFilters,
+          tipologia: [...prevFilters.tipologia, value],
+        }
+      }
+    });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     onSearch(filters); // chama a função de busca no componente PropertiesPage
@@ -77,12 +97,10 @@ const SearchForm = ({ onSearch }) => {
           <div className="flex space-x-4 mb-6">
             <button className={`py-2 px-4 rounded-full ${isBuying ? 'bg-blue-600 text-white' : 'bg-gray-200 text-black'}`}
               onClick={() => toggleRentOrBuy(true)}>Comprar</button>
-            <button className={`py-2 px-4 rounded-full ${!isBuying ? 'bg-blue-600 text-white' : 'bg-gray-200 text-black'}`}
+            {/* <button className={`py-2 px-4 rounded-full ${!isBuying ? 'bg-blue-600 text-white' : 'bg-gray-200 text-black'}`}
               onClick={() => toggleRentOrBuy(false)}
-            >Alugar</button>
-            {/* adicionar lógica p alterar os campos qndo clicar em alugar ou comprar */}
+            >Alugar</button> */}
           </div>
-
           {/* Formulário de busca */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col">
@@ -137,7 +155,7 @@ const SearchForm = ({ onSearch }) => {
               </div>
             )}
             
-            {!isBuying && (
+            {/* {!isBuying && (
               <div className="flex flex-col">
                 <span className="text-gray-700 mb-2">Preço de Aluguel</span>
                 <div className="flex space-x-4">
@@ -165,7 +183,7 @@ const SearchForm = ({ onSearch }) => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
             
             <div className='flex flex-col'>
               <label htmlFor="distrito" className="text-gray-700">Distrito</label>
@@ -198,14 +216,65 @@ const SearchForm = ({ onSearch }) => {
             </div>
             <div className='flex flex-col'>
               <label htmlFor="tipologia" className="text-gray-700">Tipologia</label>
-              <input
-                type="text"
+              <div className='flex flex-wrap space-x-4'>
+                <label className='flex items-center space-x-2'>
+                  <input
+                    type="checkbox"
+                    value="T1"
+                    checked={filters.tipologia.includes('T1')}
+                    onChange={(event) => handleCheckboxChange(event, 'tipologia')}
+                    className="form-checkbox text-blue-600"
+                  />
+                  <span>T1</span>
+                </label>
+                <label className='flex items-center space-x-2'>
+                  <input
+                    type="checkbox"
+                    value="T2"
+                    checked={filters.tipologia.includes('T2')}
+                    onChange={(event) => handleCheckboxChange(event)}
+                    className="form-checkbox text-blue-600"
+                  />
+                  <span>T2</span>
+                </label>
+                <label className='flex items-center space-x-2'>
+                  <input
+                    type="checkbox"
+                    value="T3"
+                    checked={filters.tipologia.includes('T3')}
+                    onChange={(event) => handleCheckboxChange(event, 'tipologia')}
+                    className="form-checkbox text-blue-600"
+                  />
+                  <span>T3</span>
+                </label>
+                <label className='flex items-center space-x-2'>
+                  <input
+                    type="checkbox"
+                    value="T4"
+                    checked={filters.tipologia.includes('T4')}
+                    onChange={(event) => handleCheckboxChange(event, 'tipologia')}
+                    className="form-checkbox text-blue-600"
+                  />
+                  <span>T4+</span>
+                </label>
+
+              </div>
+              {/* <input
+                type="checkbox"
                 name="tipologia"
-                placeholder="Tipologia"
                 value={filters.tipologia}
-                onChange={handleInputChange}
-                className="border border-gray-300 rounded-lg p-2"
-              />
+                onChange={(event) => {
+                  const selectedOptions = Array.from(event.target.selectedOptions, (option) => option.value);
+                  setFilters({ ...filters, tipologia: selectedOptions });
+                }}
+                size="3"
+                className="border border-gray-300 rounded-lg mt-2 p-2 cursor-pointer"
+              >
+                <option value="T1">T1</option>
+                <option value="T2">T2</option>
+                <option value="T3">T3</option>
+                <option value="T4">T4+</option>
+              </input> */}
             </div>
             <div className="flex flex-col">
                 <span className="text-gray-700 mb-2">Área</span>

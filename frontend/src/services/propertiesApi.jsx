@@ -31,10 +31,7 @@ export const getPropertyById = async (id) => {
   const url = `${API_BASE_URL}/properties/${id}`;
 
   try {
-    const response = await fetch(url);
-
-    console.log(response);
-    
+    const response = await fetch(url);    
 
     if (!response.ok) {
       throw new Error('Erro ao buscar detalhes do imóvel');

@@ -15,6 +15,8 @@ const PropertyDetails = () => {
       try {
         const data = await getPropertyById(id); // busca o imóvel pelo id
         setProperty(data); // atualiza o estado com o imóvel
+        console.log(data);
+        
       } catch (error) {
         setError('Erro ao buscar detalhes do imóvel.', error);
       } finally {

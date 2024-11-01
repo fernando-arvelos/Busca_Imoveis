@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "build:css": "postcss src/index.css -o src/tailwind-output.css",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "prop-types": "^15.8.1",

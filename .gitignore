@@ -1,0 +1,8 @@
+backend/.mvn/
+backend/imoveis.json
+backend/target/
+.idea/
+scraper/venv/
+.vscode/
+__pycache__/
+*.pyc

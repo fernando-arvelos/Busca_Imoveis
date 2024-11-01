@@ -1,5 +1,5 @@
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const API_BASE_URL = 'https://busca-imoveis.onrender.com';
 
 export const getProperties = async (filters = {}) => {
   let url = `${API_BASE_URL}/properties`;

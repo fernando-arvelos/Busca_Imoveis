@@ -27,6 +27,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/properties").permitAll()
                         .anyRequest().permitAll()
                 )
+                .requiresChannel(channel -> channel.anyRequest().requiresSecure())
                 .build();
     }
 

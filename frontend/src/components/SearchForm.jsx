@@ -81,7 +81,14 @@ const SearchForm = ({ onSearch }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSearch(filters); // chama a função de busca no componente PropertiesPage
+
+    const updatedFilters = {
+      ...filters,
+      tipologia: filters.tipologia.join(",")
+    };
+    console.log(updatedFilters);
+
+    onSearch(updatedFilters); // chama a função de busca no componente PropertiesPage
   };
 
   const toggleRentOrBuy = (Buying) => {
@@ -222,7 +229,7 @@ const SearchForm = ({ onSearch }) => {
                     type="checkbox"
                     value="T1"
                     checked={filters.tipologia.includes('T1')}
-                    onChange={(event) => handleCheckboxChange(event, 'tipologia')}
+                    onChange={(event) => handleCheckboxChange(event)}
                     className="form-checkbox text-blue-600"
                   />
                   <span>T1</span>
@@ -242,7 +249,7 @@ const SearchForm = ({ onSearch }) => {
                     type="checkbox"
                     value="T3"
                     checked={filters.tipologia.includes('T3')}
-                    onChange={(event) => handleCheckboxChange(event, 'tipologia')}
+                    onChange={(event) => handleCheckboxChange(event)}
                     className="form-checkbox text-blue-600"
                   />
                   <span>T3</span>
@@ -252,7 +259,7 @@ const SearchForm = ({ onSearch }) => {
                     type="checkbox"
                     value="T4"
                     checked={filters.tipologia.includes('T4')}
-                    onChange={(event) => handleCheckboxChange(event, 'tipologia')}
+                    onChange={(event) => handleCheckboxChange(event)}
                     className="form-checkbox text-blue-600"
                   />
                   <span>T4+</span>

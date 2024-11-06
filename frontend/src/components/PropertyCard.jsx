@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PropertyCard = ({ property, favorites, toggleFavorite }) => {
   return (
     <Link to={`/properties/${property.id}`} className="block bg-white shadow-md rounded-lg overflow-hidden">
-      <div onClick={(e) => e.stopPropagation()} className="w-full h-full">
+      <div className="w-full h-full">
         <img src={property.imagens[0]} alt={`Imóvel em ${property.freguesia}`} className="w-full h-48 object-cover" />
         <div className="p-4">
         <div className="flex items-center justify-between">

@@ -1,13 +1,21 @@
 
 const API_BASE_URL = 'https://busca-imoveis.onrender.com';
+// const API_BASE_URL = 'http://localhost:8080';
+
 
 export const getProperties = async (filters = {}) => {
   let url = `${API_BASE_URL}/properties`;
 
   //vê se tem algum filtro preenchido
-  const queryParams = new URLSearchParams(filters).toString();
+  // const queryParams = new URLSearchParams(filters).toString();
+
+  let queryParams = Object.keys(filters)
+    .map((key) => `${key}=${filters[key]}`)
+    .join("&");
+    
   if (queryParams) {
     url = `${url}/search?${queryParams}`;
+    console.log(url);
   }
 
   try {

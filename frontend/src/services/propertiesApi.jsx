@@ -1,6 +1,6 @@
 
-// const API_BASE_URL = 'https://busca-imoveis.onrender.com';
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = 'https://busca-imoveis.onrender.com';
+// const API_BASE_URL = 'http://localhost:8080';
 
 
 export const getProperties = async (filters = {}) => {

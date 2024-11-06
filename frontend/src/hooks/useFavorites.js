@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 
 const useFavorites = () => {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    const savedFavorites = localStorage.getItem('favorites');
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
 
   useEffect(() => {
-    const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    setFavorites(savedFavorites);
-  }, []);
-
-  useEffect(() => {
-    if (favorites.length > 0) {
-      localStorage.setItem('favorites', JSON.stringify(favorites));
-    }
+    localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
   const toggleFavorite = (id) => {

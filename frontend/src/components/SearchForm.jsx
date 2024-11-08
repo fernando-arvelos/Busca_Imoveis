@@ -112,14 +112,25 @@ const SearchForm = ({ onSearch }) => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col">
               <label htmlFor="natureza" className="text-gray-700">Natureza</label>
-              <input
-                type="text"
+              <select
                 name="natureza"
-                placeholder="Natureza"
                 value={filters.natureza}
                 onChange={handleInputChange}
                 className="border border-gray-300 rounded-lg p-2"
-              />
+              >
+                <option value="">Selecione a Natureza</option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Moradia">Moradia</option>
+                <option value="Prédio">Prédio</option>
+                <option value="Terreno">Terreno</option>
+                <option value="Garagem">Garagem</option>
+                <option value="Quinta">Quinta</option>
+                <option value="Armazem">Armazém</option>
+                <option value="Escritório">Escritório</option>
+                <option value="Loja">Loja</option>
+                <option value="Parqueamento">Parqueamento</option>
+                <option value="Outros">Outros</option>
+              </select>
             </div>
             {/* <div className='flex flex-col'>
               <label htmlFor="referencia" className="text-gray-700">Referência</label>
@@ -210,7 +221,7 @@ const SearchForm = ({ onSearch }) => {
                 ))}
               </select>
             </div>
-            <div className='flex flex-col'>
+            {/* <div className='flex flex-col'>
               <label htmlFor="freguesia" className="text-gray-700">Freguesia</label>
               <input
                 type="text"
@@ -220,7 +231,7 @@ const SearchForm = ({ onSearch }) => {
                 onChange={handleInputChange}
                 className="border border-gray-300 rounded-lg p-2"
               />
-            </div>
+            </div> */}
             <div className='flex flex-col'>
               <label htmlFor="tipologias" className="text-gray-700">Tipologia</label>
               <div className='flex flex-wrap space-x-4'>
@@ -320,7 +331,7 @@ const SearchForm = ({ onSearch }) => {
                   </div>
                 </div>
               </div>
-            <div className='flex flex-col'>
+            {/* <div className='flex flex-col'>
               <label htmlFor="banco" className="text-gray-700">Banco</label>
               <input
                 type="text"
@@ -330,7 +341,7 @@ const SearchForm = ({ onSearch }) => {
                 onChange={handleInputChange}
                 className="border border-gray-300 rounded-lg p-2"
               />
-            </div>
+            </div> */}
             <button type="submit" className="w-full py-3 bg-blue-600 text-white rounded-lg font-bold">Buscar</button>
           </form>
         </div>

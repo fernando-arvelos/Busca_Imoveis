@@ -12,7 +12,7 @@ const SearchForm = ({ onSearch }) => {
     distrito: '',
     concelho: '',
     freguesia: '',
-    tipologia: [],
+    tipologias: [],
     minA: '',
     maxA: '',
     anoMin: '',
@@ -62,18 +62,18 @@ const SearchForm = ({ onSearch }) => {
   const handleCheckboxChange = (event) => {
     const { value } = event.target;
     setFilters((prevFilters) => {
-      const isChecked = prevFilters.tipologia.includes(value);
+      const isChecked = prevFilters.tipologias.includes(value);
       if (isChecked) {
         // Remove o valor se já estiver selecionado
         return {
           ...prevFilters,
-          tipologia: prevFilters.tipologia.filter((item) => item !== value),
+          tipologias: prevFilters.tipologias.filter((item) => item !== value),
         };
       } else {
         // Adiciona o valor se não estiver selecionado
         return {
           ...prevFilters,
-          tipologia: [...prevFilters.tipologia, value],
+          tipologias: [...prevFilters.tipologias, value],
         }
       }
     });
@@ -84,7 +84,7 @@ const SearchForm = ({ onSearch }) => {
 
     const updatedFilters = {
       ...filters,
-      tipologia: filters.tipologia.join(",")
+      tipologias: filters.tipologias.join(",")
     };
     console.log(updatedFilters);
 
@@ -222,13 +222,13 @@ const SearchForm = ({ onSearch }) => {
               />
             </div>
             <div className='flex flex-col'>
-              <label htmlFor="tipologia" className="text-gray-700">Tipologia</label>
+              <label htmlFor="tipologias" className="text-gray-700">Tipologia</label>
               <div className='flex flex-wrap space-x-4'>
                 <label className='flex items-center space-x-2'>
                   <input
                     type="checkbox"
                     value="T1"
-                    checked={filters.tipologia.includes('T1')}
+                    checked={filters.tipologias.includes('T1')}
                     onChange={(event) => handleCheckboxChange(event)}
                     className="form-checkbox text-blue-600"
                   />
@@ -238,7 +238,7 @@ const SearchForm = ({ onSearch }) => {
                   <input
                     type="checkbox"
                     value="T2"
-                    checked={filters.tipologia.includes('T2')}
+                    checked={filters.tipologias.includes('T2')}
                     onChange={(event) => handleCheckboxChange(event)}
                     className="form-checkbox text-blue-600"
                   />
@@ -248,7 +248,7 @@ const SearchForm = ({ onSearch }) => {
                   <input
                     type="checkbox"
                     value="T3"
-                    checked={filters.tipologia.includes('T3')}
+                    checked={filters.tipologias.includes('T3')}
                     onChange={(event) => handleCheckboxChange(event)}
                     className="form-checkbox text-blue-600"
                   />
@@ -258,7 +258,7 @@ const SearchForm = ({ onSearch }) => {
                   <input
                     type="checkbox"
                     value="T4"
-                    checked={filters.tipologia.includes('T4')}
+                    checked={filters.tipologias.includes('T4')}
                     onChange={(event) => handleCheckboxChange(event)}
                     className="form-checkbox text-blue-600"
                   />

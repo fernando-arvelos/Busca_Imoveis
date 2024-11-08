@@ -225,6 +225,16 @@ const SearchForm = ({ onSearch }) => {
               <label htmlFor="tipologias" className="text-gray-700">Tipologia</label>
               <div className='flex flex-wrap space-x-4'>
                 <label className='flex items-center space-x-2'>
+                    <input
+                      type="checkbox"
+                      value="T0"
+                      checked={filters.tipologias.includes('T0')}
+                      onChange={(event) => handleCheckboxChange(event)}
+                      className="form-checkbox text-blue-600"
+                    />
+                    <span>T0</span>
+                  </label>
+                <label className='flex items-center space-x-2'>
                   <input
                     type="checkbox"
                     value="T1"

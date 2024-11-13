@@ -1,6 +1,9 @@
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
+console.log(API_BASE_URL, API_KEY);
 
+  
 export const getProperties = async (filters = {}) => {
   let url = `${API_BASE_URL}/properties`;
 
@@ -13,11 +16,23 @@ export const getProperties = async (filters = {}) => {
     
   if (queryParams) {
     url = `${url}/search?${queryParams}`;
-    console.log(url);
+    console.log(url, {
+      method: 'GET',
+      headers: {
+          'x-api-key': API_KEY,
+          "Content-Type": "application/json"
+      }
+  });
   }
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+          'x-api-key': API_KEY,
+          "Content-Type": "application/json"
+      }
+  });
 
     const data = await response.json();  // Converte a resposta para JSON
     
@@ -37,7 +52,13 @@ export const getPropertyById = async (id) => {
   let url = `${API_BASE_URL}/properties/${id}`;
 
   try {
-    const response = await fetch(url);    
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+          'x-api-key': API_KEY,
+          "Content-Type": "application/json"
+      }
+  });    
 
     if (!response.ok) {
       throw new Error('Erro ao buscar detalhes do imóvel');

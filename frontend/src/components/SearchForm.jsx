@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const SearchForm = ({ onSearch }) => {
-  const [filters, setFilters] = useState({
+  const initialFilters= {
     natureza: '',
     referencia: '',
     minV: '',
@@ -18,7 +18,9 @@ const SearchForm = ({ onSearch }) => {
     anoMin: '',
     anoMax: '',
     banco: '',
-  });
+  };
+
+  const [filters, setFilters] = useState(initialFilters);
   const [isBuying, setIsBuying] = useState(true); // Estado para controlar o botão ativo
   const [listDistrictsConcelhos, setListDistrictsConcelhos] = useState([]);
   const [selectedDistrict, setSelectedDistrict] = useState('');
@@ -95,6 +97,12 @@ const SearchForm = ({ onSearch }) => {
     setIsBuying(Buying); // Atualiza o estado com base no botão clicado
   };
 
+  const handleClearFilters = () => {
+    setFilters(initialFilters);
+    setSelectedDistrict('');
+    setConcelho([]);
+  };
+
   return (
     <div className="min-h-screen flex justify-items-start items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/casa.jpg')` }}>
       <div className='container flex flex-col lg:flex-row items-start lg:items-center lg:space-x-8 p-10 shadow-lg rounded-lg'>
@@ -117,7 +125,7 @@ const SearchForm = ({ onSearch }) => {
                 value={filters.natureza}
                 onChange={handleInputChange}
                 className="border border-gray-300 rounded-lg p-2"
-              >
+                >
                 <option value="">Selecione a Natureza</option>
                 <option value="Apartamento">Apartamento</option>
                 <option value="Moradia">Moradia</option>
@@ -342,7 +350,19 @@ const SearchForm = ({ onSearch }) => {
                 className="border border-gray-300 rounded-lg p-2"
               />
             </div> */}
-            <button type="submit" className="w-full py-3 bg-blue-600 text-white rounded-lg font-bold">Buscar</button>
+            <button 
+              type="submit" 
+              className="w-full py-3 bg-blue-600 text-white rounded-lg font-bold"
+            >
+              Buscar
+            </button>
+            <button
+              type="button"
+              onClick={handleClearFilters}
+              className="w-full py-3 bg-gray-300 text-black rounded-lg font-bold mt-4"
+            >
+              Limpar Filtros
+            </button>
           </form>
         </div>
 

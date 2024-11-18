@@ -12,21 +12,18 @@ const PropertiesPage = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 16;
+  const [searchPerformed, setSearchPerformed] = useState(false);
 
   const { favorites, toggleFavorite } = useFavorites();
   const resultsRef = useRef(null);
   // const location = useLocation();
-
-  useEffect(() => {
-
-    searchProperties();
-  }, []);
 
   const searchProperties = async (filters = {}) => {
     setLoading(true);
     try {
       const data = await getProperties(filters); // busca os imóveis com ou sem filtros
       setProperties(data); // atualiza o estado com os imóveis
+      setSearchPerformed(true);
     } catch (error) {
       setError('Erro ao buscar imóveis: ', error);
     } finally {
@@ -61,23 +58,25 @@ const PropertiesPage = () => {
     <div>
       <SearchForm onSearch={handleSearch} /> {/* passa a função de busca para o componente de busca */}
 
-      {loading && <p>Carregando...</p>}
       {error && <p className="text-red-600">{error}</p>}
 
       <div ref={resultsRef} className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-        {selectedProperties.length > 0 ? (
+        {loading ? (
+          <p>Carregando...</p>
+        ) : selectedProperties.length > 0 ? (
           selectedProperties.map(property => (
             <PropertyCard
-            key={property.id}
-            property={property}
-            favorites={favorites}
-            toggleFavorite={toggleFavorite}
+              key={property.id}
+              property={property}
+              favorites={favorites}
+              toggleFavorite={toggleFavorite}
             />
           ))
-        ): (
-          <p>Nenhum imóvel encontrado.</p>
+        ) : (
+          searchPerformed && <p>Nenhum imóvel encontrado.</p>
         )}
       </div>
+
       <Pagination
       currentPage={currentPage}
       totalPages={totalPages}

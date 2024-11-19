@@ -6,3 +6,4 @@ scraper/venv/
 .vscode/
 __pycache__/
 *.pyc
+busca-imoveis.pem

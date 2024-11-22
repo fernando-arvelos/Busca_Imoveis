@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-// import { useLocation } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
 import { getProperties } from "../services/propertiesApi";
 import SearchForm from "./SearchForm";
@@ -17,7 +16,6 @@ const PropertiesPage = () => {
 
   const { favorites, toggleFavorite } = useFavorites();
   const resultsRef = useRef(null);
-  // const location = useLocation();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -36,12 +34,13 @@ const PropertiesPage = () => {
   };
 
   const handleSearch = (filters) => {
-    setCurrentPage(1); // volta para a primeira página
+    const queryFilters = { ...filters, page: 1 };
+    setCurrentPage(1);
 
-    const queryString = new URLSearchParams(filters).toString();
+    const queryString = new URLSearchParams(queryFilters).toString();
     navigate(`?${queryString}`);
 
-    searchProperties(filters); // chama a função de busca com os filtros
+    searchProperties(queryFilters); // chama a função de busca com os filtros
 
     if (resultsRef.current) {
       resultsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -50,9 +49,10 @@ const PropertiesPage = () => {
 
   useEffect(() => {
     const queryFilters = Object.fromEntries(new URLSearchParams(location.search));
-    if (Object.keys(queryFilters).length > 0) {
-      searchProperties(queryFilters);
-    }
+    const pageFromUrl = parseInt(queryFilters.page) || 1; // Obtém a página ou usa 1 como padrão
+    setCurrentPage(pageFromUrl);
+  
+    searchProperties(queryFilters); // Busca com os filtros
   }, [location.search]);
 
   // Paginação 
@@ -62,11 +62,19 @@ const PropertiesPage = () => {
   const totalPages = Math.ceil(properties.length / itemsPerPage);
 
   const goToNextPage = () => {
-    setCurrentPage((prevPage) => (prevPage < totalPages ? prevPage + 1 : prevPage));
+    if (currentPage < totalPages) {
+      const queryFilters = Object.fromEntries(new URLSearchParams(location.search));
+      const updatedFilters = { ...queryFilters, page: currentPage + 1 };
+      navigate(`?${new URLSearchParams(updatedFilters).toString()}`); // Atualiza a URL
+    }
   };
 
   const goToPreviousPage = () => {
-    setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
+    if (currentPage > 1) {
+      const queryFilters = Object.fromEntries(new URLSearchParams(location.search));
+      const updatedFilters = { ...queryFilters, page: currentPage - 1 };
+      navigate(`?${new URLSearchParams(updatedFilters).toString()}`); // Atualiza a URL
+    }
   };
 
   return (
@@ -97,7 +105,11 @@ const PropertiesPage = () => {
       totalPages={totalPages}
       goToNextPage={goToNextPage}
       goToPreviousPage={goToPreviousPage}
-      setCurrentPage={setCurrentPage}
+      setCurrentPage={(page) => {
+        const queryFilters = Object.fromEntries(new URLSearchParams(location.search));
+        const updatedFilters = { ...queryFilters, page };
+        navigate(`?${new URLSearchParams(updatedFilters).toString()}`); // Atualiza a URL
+      }}
       />
     </div>
   );

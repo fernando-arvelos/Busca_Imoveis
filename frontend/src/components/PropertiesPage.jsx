@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 // import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { getProperties } from "../services/propertiesApi";
 import SearchForm from "./SearchForm";
 import PropertyCard from "./PropertyCard";
@@ -18,6 +19,9 @@ const PropertiesPage = () => {
   const resultsRef = useRef(null);
   // const location = useLocation();
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const searchProperties = async (filters = {}) => {
     setLoading(true);
     try {
@@ -33,12 +37,23 @@ const PropertiesPage = () => {
 
   const handleSearch = (filters) => {
     setCurrentPage(1); // volta para a primeira página
+
+    const queryString = new URLSearchParams(filters).toString();
+    navigate(`?${queryString}`);
+
     searchProperties(filters); // chama a função de busca com os filtros
 
     if (resultsRef.current) {
       resultsRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    const queryFilters = Object.fromEntries(new URLSearchParams(location.search));
+    if (Object.keys(queryFilters).length > 0) {
+      searchProperties(queryFilters);
+    }
+  }, [location.search]);
 
   // Paginação 
   const startIndex = (currentPage - 1) * itemsPerPage;

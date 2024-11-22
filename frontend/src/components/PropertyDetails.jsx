@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getPropertyById } from "../services/propertiesApi";
 import useFavorites from "../hooks/useFavorites";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const PropertyDetails = () => {
   const { id } = useParams(); // pega o id do imóvel da URL
@@ -9,6 +10,9 @@ const PropertyDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { favorites, toggleFavorite } = useFavorites();
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const searchProperty = async (id) => {
@@ -26,6 +30,36 @@ const PropertyDetails = () => {
     searchProperty(id);
   }, [id]); 
 
+  const handleShare = async () => {
+    const currentUrl = `${window.location.origin}${location.pathname}`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: property?.natureza || "Detalhes do Imóvel",
+          text: `Confira este imóvel: ${property?.natureza || "Imóvel"}`,
+          url: currentUrl,
+        });
+      } catch (error) {
+        console.error('Erro ao compartilhar:', error);
+      }
+    } else {
+      navigator.clipboard.writeText(currentUrl);
+      alert('Link copiado para a área de transferência.');
+    }
+  };
+
+  const formatWhatsappMessage = () => {
+    const propertyUrl = `${window.location.origin}/properties/${property.id}`;
+    const encodedMessage = encodeURIComponent(`
+   *${property.natureza}* - €${property.preçoVenda.toLocaleString()} te espera! 
+   Localização: Braga / Fafe 
+   Área: ${property.area} m²
+   Clique aqui para ver mais detalhes: ${propertyUrl}
+  `);
+    return `https://wa.me/?text=${encodedMessage}`;
+  };
+
   if (loading) {
     return <p>Carregando detalhes do imóvel...</p>
   }
@@ -36,12 +70,42 @@ const PropertyDetails = () => {
 
   return (
     <div className="property-details">
+
+      <div className="container mx-auto p-6">
+        {/* Botão de Voltar */}
+        <button
+          onClick={() => navigate(-1)}
+          className="mb-4 py-2 px-4 bg-blue-500 text-white rounded"
+        >
+          Voltar
+        </button>
+        
       {property ? (
         <div className="container mx-auto p-6">
           {/* Título e Preço */}
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">{property.natureza}</h2>
             <p className="text-3xl font-bold text-pink-600">€{property.preçoVenda.toLocaleString()}</p>
+          </div>
+
+          {/* Botão de Compartilhar */}
+          <div className="mb-6">
+            <button 
+              onClick={handleShare} 
+              className="bg-blue-500 text-white py-2 px-4 rounded mr-4"
+            >
+              Compartilhar
+            </button>
+
+            {/* Link para WhatsApp */}
+            <a
+                href={formatWhatsappMessage()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 text-white py-2 px-4 rounded"
+              >
+                Enviar no WhatsApp
+              </a>
           </div>
 
           {/* Informações Principais */}
@@ -95,6 +159,7 @@ const PropertyDetails = () => {
         <p>Imóvel não encontrado.</p>
       )}
     </div>
+  </div>
   );
 };
 

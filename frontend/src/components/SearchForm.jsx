@@ -104,11 +104,11 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <div className="min-h-screen flex justify-items-start items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/casa.jpg')` }}>
-      <div className='container flex flex-col lg:flex-row items-start lg:items-center lg:space-x-8 p-10 shadow-lg rounded-lg'>
+    <div className="min-h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/casa.jpg')` }}>
+      <div className='container flex flex-col lg:flex-row lg:w-full items-start lg:items-center lg:space-x-8 p-10 shadow-lg rounded-lg'>
           {/* Box de busca */}
-        <div className="bg-white lg:w-1/2 p-8 shadow-lg rounded-lg">
-          <h1 className="text-4xl font-bold mb-6 text-gray-900">Seu Guia de Imóveis à Venda em Portugal</h1>
+        <div className="bg-white w-full p-8 shadow-lg rounded-lg">
+          <h1 className="text-2xl md:text-4xl text-center font-bold mb-6 text-gray-900">Seu Guia de Imóveis à Venda em Portugal</h1>
           <div className="flex space-x-4 mb-6">
             <button className={`py-2 px-4 rounded-full ${isBuying ? 'bg-blue-600 text-white' : 'bg-gray-200 text-black'}`}
               onClick={() => toggleRentOrBuy(true)}>Comprar</button>
@@ -154,8 +154,8 @@ const SearchForm = ({ onSearch }) => {
             {isBuying && (
               <div className="flex flex-col">
                 <span className="text-gray-700 mb-2">Preço de Compra</span>
-                <div className="flex space-x-4">
-                  <div className="flex flex-col w-1/2">
+                <div className="flex flex-col md:flex-row md:space-x-4">
+                  <div className="flex flex-col md:w-1/2">
                     <label htmlFor="minV" className="text-gray-700">Mínimo</label>
                     <input
                       type="number"
@@ -166,7 +166,7 @@ const SearchForm = ({ onSearch }) => {
                       className="border border-gray-300 rounded-lg p-2"
                     />
                   </div>
-                  <div className="flex flex-col w-1/2">
+                  <div className="flex flex-col md:w-1/2">
                     <label htmlFor="maxV" className="text-gray-700">Máximo</label>
                     <input
                       type="number"
@@ -242,7 +242,7 @@ const SearchForm = ({ onSearch }) => {
             </div> */}
             <div className='flex flex-col'>
               <label htmlFor="tipologias" className="text-gray-700">Tipologia</label>
-              <div className='flex flex-wrap space-x-4'>
+              <div className='flex flex-wrap justify-evenly md:justify-start md:space-x-4'>
                 <label className='flex items-center space-x-2'>
                     <input
                       type="checkbox"
@@ -314,8 +314,8 @@ const SearchForm = ({ onSearch }) => {
             </div>
             <div className="flex flex-col">
                 <span className="text-gray-700 mb-2">Área</span>
-                <div className="flex space-x-4">
-                  <div className="flex flex-col w-1/2">
+                <div className="flex flex-col md:flex-row md:space-x-4">
+                  <div className="flex flex-col md:w-1/2">
                     <label htmlFor="minA" className="text-gray-700">Mínimo</label>
                     <input
                       type="number"
@@ -326,7 +326,7 @@ const SearchForm = ({ onSearch }) => {
                       className="border border-gray-300 rounded-lg p-2"
                     />
                   </div>
-                  <div className="flex flex-col w-1/2">
+                  <div className="flex flex-col md:w-1/2">
                     <label htmlFor="maxA" className="text-gray-700">Máximo</label>
                     <input
                       type="number"

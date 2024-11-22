@@ -16,7 +16,7 @@ export const getProperties = async (filters = {}) => {
     
   if (queryParams) {
     url = `${url}/search?${queryParams}`;
-    console.log(url, {
+    (url, {
       method: 'GET',
       headers: {
           'x-api-key': API_KEY,

@@ -53,9 +53,10 @@ const PropertyDetails = () => {
     const propertyUrl = `${window.location.origin}/properties/${property.id}`;
     const encodedMessage = encodeURIComponent(`
    *${property.natureza}* - €${property.preçoVenda.toLocaleString()} te espera! 
-   Localização: Braga / Fafe 
+   Localização: ${property.distrito} / ${property.concelho} 
    Área: ${property.area} m²
-   Clique aqui para ver mais detalhes: ${propertyUrl}
+   Clique aqui para ver mais detalhes: 
+   ${propertyUrl}
   `);
     return `https://wa.me/?text=${encodedMessage}`;
   };
@@ -74,7 +75,13 @@ const PropertyDetails = () => {
       <div className="container mx-auto p-6">
         {/* Botão de Voltar */}
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => {
+            if (window.history.length > 2) {
+              navigate(-1); // Volta para a página anterior se houver histórico
+            } else {
+              navigate("/"); // Redireciona para a página inicial se não houver histórico
+            }
+          }}
           className="mb-4 py-2 px-4 bg-blue-500 text-white rounded"
         >
           Voltar

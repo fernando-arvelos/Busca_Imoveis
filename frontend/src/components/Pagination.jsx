@@ -1,7 +1,7 @@
 
 const Pagination = ({ currentPage, totalPages, goToNextPage, goToPreviousPage, setCurrentPage }) => {
   
-  const maxPagesToShow = 5;
+  const maxPagesToShow = window.innerWidth < 600 ? 3 : 5;
 
   // intervalo de paginas pra exibir
   const startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
@@ -13,7 +13,7 @@ const Pagination = ({ currentPage, totalPages, goToNextPage, goToPreviousPage, s
   }
 
   return (
-    <div className="flex justify-center space-x-4 mt-6">
+    <div className="flex justify-center space-x-2 md:space-x-4 mt-6 border-2 border-red-700">
       {/* botão da primeira página */}
       <button
         onClick={() => setCurrentPage(1)}

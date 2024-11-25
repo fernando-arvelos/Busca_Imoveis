@@ -70,9 +70,9 @@ const PropertyDetails = () => {
   }
 
   return (
-    <div className="property-details">
+    <div className="property-details flex justify-center">
 
-      <div className="container mx-auto p-6">
+      <div className="container px-3 md:px-0 py-6">
         {/* Botão de Voltar */}
         <button
           onClick={() => {
@@ -88,7 +88,7 @@ const PropertyDetails = () => {
         </button>
         
       {property ? (
-        <div className="container mx-auto p-6">
+        <div className="container">
           {/* Título e Preço */}
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">{property.natureza}</h2>

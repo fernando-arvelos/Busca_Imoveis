@@ -1,1 +1,0 @@
-2024-11-25 15:26:29,427 - WARNING - The chromedriver version (129.0.6668.89) detected in PATH at /opt/chromedriver-linux64/chromedriver might not be compatible with the detected chrome version (131.0.6778.85); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry

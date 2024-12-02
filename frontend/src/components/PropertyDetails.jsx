@@ -17,9 +17,9 @@ const PropertyDetails = () => {
   useEffect(() => {
     const searchProperty = async (id) => {
       try {
+        setLoading(true); // liga o loading
         const data = await getPropertyById(id); // busca o imóvel pelo id
-        setProperty(data); // atualiza o estado com o imóvel
-        
+        setProperty(data); // atualiza o estado com o imóvel        
       } catch (error) {
         setError('Erro ao buscar detalhes do imóvel.', error);
       } finally {
@@ -29,6 +29,54 @@ const PropertyDetails = () => {
 
     searchProperty(id);
   }, [id]); 
+
+  useEffect(() => {
+    if (property) {
+      // Atualizar o título da página
+      document.title = `${property.natureza} - €${property.preçoVenda.toLocaleString()}`;
+
+      // Atualizar as meta tags
+      const metaTitle = document.querySelector("meta[property='og:title']");
+      if (metaTitle) {
+        metaTitle.setAttribute("content", `${property.natureza} - €${property.preçoVenda.toLocaleString()}`);
+      } else {
+        const metaTitleElement = document.createElement("meta");
+        metaTitleElement.setAttribute("property", "og:title");
+        metaTitleElement.setAttribute("content", `${property.natureza} - €${property.preçoVenda.toLocaleString()}`);
+        document.head.appendChild(metaTitleElement);
+      }
+
+      const metaDescription = document.querySelector("meta[property='og:description']");
+      if (metaDescription) {
+        metaDescription.setAttribute("content", `Confira este imóvel em ${property.distrito} / ${property.concelho}, com área de ${property.area} m², por €${property.preçoVenda.toLocaleString()}.`);
+      } else {
+        const metaDescriptionElement = document.createElement("meta");
+        metaDescriptionElement.setAttribute("property", "og:description");
+        metaDescriptionElement.setAttribute("content", `Confira este imóvel em ${property.distrito} / ${property.concelho}, com área de ${property.area} m², por €${property.preçoVenda.toLocaleString()}.`);
+        document.head.appendChild(metaDescriptionElement);
+      }
+
+      const metaImage = document.querySelector("meta[property='og:image']");
+      if (metaImage) {
+        metaImage.setAttribute("content", property.imagens && property.imagens[0] ? property.imagens[0] : 'default-image-url.jpg');
+      } else {
+        const metaImageElement = document.createElement("meta");
+        metaImageElement.setAttribute("property", "og:image");
+        metaImageElement.setAttribute("content", property.imagens && property.imagens[0] ? property.imagens[0] : 'default-image-url.jpg');
+        document.head.appendChild(metaImageElement);
+      }
+
+      const metaUrl = document.querySelector("meta[property='og:url']");
+      if (metaUrl) {
+        metaUrl.setAttribute("content", `${window.location.origin}${location.pathname}`);
+      } else {
+        const metaUrlElement = document.createElement("meta");
+        metaUrlElement.setAttribute("property", "og:url");
+        metaUrlElement.setAttribute("content", `${window.location.origin}${location.pathname}`);
+        document.head.appendChild(metaUrlElement);
+      }
+    }
+  }, [property, location.pathname]); // Reexecutar sempre que o imóvel mudar
 
   const handleShare = async () => {
     const currentUrl = `${window.location.origin}${location.pathname}`;

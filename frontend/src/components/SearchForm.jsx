@@ -369,7 +369,7 @@ const SearchForm = ({ onSearch }) => {
           {/* Texto do site */}
           <div className="bg-white lg:w-1/2 p-8 shadow-lg rounded-lg mt-10">
             <p className="mt-4 text-gray-700">
-            Acesse as melhores ofertas de imóveis em Portugal, com informações atualizadas e vindas dos principais bancos. Encontre casas, apartamentos e terrenos de maneira fácil e rápida.
+            Encontre imóveis direto dos principais bancos em Portugal, com informações confiáveis e atualizadas. Simplificamos sua busca por casas, apartamentos e terrenos.
             </p>
           </div>
       </div>

@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-def setup_driver(bank_name, bank_data):
+def setup_driver(bank_name, bank_data, capabilities):
 
     """Configura o WebDriver para um banco específico."""
     # Configurações do banco

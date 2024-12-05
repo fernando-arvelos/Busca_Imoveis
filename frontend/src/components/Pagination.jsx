@@ -13,7 +13,7 @@ const Pagination = ({ currentPage, totalPages, goToNextPage, goToPreviousPage, s
   }
 
   return (
-    <div className="flex justify-center space-x-2 md:space-x-4 mt-6 border-2 border-red-700">
+    <div className="flex justify-center space-x-2 md:space-x-4 mt-6">
       {/* botão da primeira página */}
       <button
         onClick={() => setCurrentPage(1)}

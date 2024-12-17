@@ -35,15 +35,18 @@ public class SecurityConfig {
                         .anyRequest().permitAll()
                 )
                 .addFilterBefore(apiKeyAuthFilter, UsernamePasswordAuthenticationFilter.class)
+                //.sessionManagement(session -> session.SessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
     }
-
-
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:5173", "http://buscaimoveis.pt", "https://buscaimoveis.pt"));
+        configuration.setAllowedOrigins(List.of(
+            "http://localhost:5173", 
+            "http://buscaimoveis.pt", 
+            "https://buscaimoveis.pt"
+        ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*")); // Permite todos os headers
         configuration.setExposedHeaders(List.of("x-api-key"));

@@ -14,9 +14,6 @@ export const getProperties = async (filters = {}) => {
   try {
     const response = await fetch(url, {
       method: 'GET',
-      headers: {
-        "Content-Type": "application/json"
-      }
     });
 
     const data = await response.json();
@@ -38,9 +35,6 @@ export const getPropertyById = async (id) => {
   try {
     const response = await fetch(url, {
       method: 'GET',
-      headers: {
-        "Content-Type": "application/json"
-      }
     });
 
     if (!response.ok) {

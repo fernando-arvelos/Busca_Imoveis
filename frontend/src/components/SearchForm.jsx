@@ -88,7 +88,6 @@ const SearchForm = ({ onSearch }) => {
       ...filters,
       tipologias: filters.tipologias.join(",")
     };
-    console.log(updatedFilters);
 
     onSearch(updatedFilters); // chama a função de busca no componente PropertiesPage
   };

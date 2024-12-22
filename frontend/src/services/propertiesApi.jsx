@@ -3,9 +3,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export const getProperties = async (filters = {}) => {
   let url = `${API_BASE_URL}/properties`;
 
-  let queryParams = Object.keys(filters)
-    .map((key) => `${key}=${filters[key]}`)
-    .join("&");
+  const queryParams = new URLSearchParams(filters).toString();
 
   if (queryParams) {
     url = `${url}/search?${queryParams}`;
@@ -14,11 +12,14 @@ export const getProperties = async (filters = {}) => {
   try {
     const response = await fetch(url, {
       method: 'GET',
+      mode: 'no-cors',
     });
+    
 
     const data = await response.json();
 
     if (!response.ok) {
+      console.error('Erro ao buscar imóveis:', await response.text());
       throw new Error('Erro ao buscar imóveis');
     }
 
@@ -35,7 +36,9 @@ export const getPropertyById = async (id) => {
   try {
     const response = await fetch(url, {
       method: 'GET',
+      mode: 'no-cors',
     });
+    
 
     if (!response.ok) {
       throw new Error('Erro ao buscar detalhes do imóvel');

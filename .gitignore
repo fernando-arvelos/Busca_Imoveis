@@ -8,3 +8,4 @@ __pycache__/
 *.pyc
 busca-imoveis.pem
 backend/src/main/java/pt/buscaimoveis/security/SecurityConfig.java
+scraper/export/__pycache__/json_export.cpython-310.pyc

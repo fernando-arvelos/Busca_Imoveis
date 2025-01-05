@@ -3,13 +3,23 @@ import { useState, useEffect } from "react";
 const useFavorites = () => {
   const [favorites, setFavorites] = useState(() => {
     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-      const savedFavorites = localStorage.getItem('favorites');
-      return savedFavorites ? JSON.parse(savedFavorites) : [];
+      try {
+        const savedFavorites = localStorage.getItem('favorites');
+        return savedFavorites ? JSON.parse(savedFavorites) : [];
+      } catch (error) {
+        console.error("Erro ao carregar favoritos do localStorage:", error);
+        return [];        
+      }
     }
+    return [];
   });
 
   useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+    try {
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+    } catch (error) {
+      console.error("Erro ao salvar favoritos no localStorage:", error);     
+    }
   }, [favorites]);
 
   const toggleFavorite = (id) => {

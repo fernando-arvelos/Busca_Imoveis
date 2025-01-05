@@ -20,7 +20,7 @@ export const getProperties = async (filters = {}) => {
 
 export const getPropertyById = async (id) => {
   try {
-    const response = await axios.get(`http://localhost:8080/properties/${id}`);
+    const response = await axios.get(`http://backend:8080/properties/${id}`);
     return response.data; // Os dados já estão disponíveis aqui
   } catch (error) {
     console.error('Erro ao buscar detalhes do imóvel:', error);

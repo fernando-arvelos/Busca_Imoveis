@@ -1,4 +1,5 @@
 import PropertyDetails from '@/components/PropertyDetails';
+import { getPropertyById } from '@/services/propertiesApi';
 import Head from 'next/head';
 
 export default function Properties({ property, error }) {
@@ -41,8 +42,7 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
 
   try {
-    const response = await fetch(`http://localhost:8080/properties/${id}`);
-    const data = await response.json();
+    const data = await getPropertyById(id);
 
     if (!data) {
       return {

@@ -36,7 +36,7 @@ services:
     depends_on:
       - backend
     ports:
-      - "5173:5173"
+      - "3000:3000"
     volumes:
       - ./next_frontend:/app
       - /app/node_modules
@@ -44,18 +44,6 @@ services:
       CHOKIDAR_USEPOLLING: true
     networks:
       - app-network
-
-  scraper:
-    build:
-      context: ./scraper
-      dockerfile: Dockerfile
-    volumes:
-      - ./scraper:/app
-    environment:
-      - PYTHONUNBUFFERED=1
-    networks:
-      - app-network
-    command: python main.py
 
 networks:
   app-network:

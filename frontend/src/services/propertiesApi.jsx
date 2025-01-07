@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = 'https://buscaimoveisapi.pt';
 
 export const getProperties = async (filters = {}) => {
   let url = `${API_BASE_URL}/properties`;

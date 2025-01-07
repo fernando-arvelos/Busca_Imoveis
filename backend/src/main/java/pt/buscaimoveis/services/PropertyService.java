@@ -106,16 +106,16 @@ public class PropertyService {
     private void saveProperties(List<Property> newProperties, List<Property> updatedProperties) {
         List<District> districts_concelhos = districtRepository.findAll();
         newProperties
-            .forEach(property -> {
-                if (property.getDistrito() == null) {
-                    String concelho = property.getConcelho();
+                .forEach(property -> {
+                    if (property.getDistrito() == null) {
+                        String concelho = property.getConcelho();
                         districts_concelhos.forEach(district -> {
                             if (district.getConcelhos().stream().anyMatch(concelho1 -> concelho1.getNameConcelho().equals(concelho))) {
                                 property.setDistrito(district.getNameDistrict());
                             }
                         });
-                }
-            });
+                    }
+                });
         propertyRepository.saveAll(newProperties);
         propertyRepository.saveAll(updatedProperties);
     }

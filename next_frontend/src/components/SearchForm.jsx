@@ -171,6 +171,7 @@ const SearchForm = ({ onSearch }) => {
             <div className="flex flex-col">
               <label htmlFor="natureza" className="text-gray-700">Natureza</label>
               <select
+                id='natureza'
                 name="natureza"
                 value={filters.natureza}
                 onChange={handleInputChange}
@@ -197,6 +198,7 @@ const SearchForm = ({ onSearch }) => {
                   <div className="flex flex-col md:w-1/2">
                     <label htmlFor="minV" className="text-gray-700">Mínimo</label>
                     <input
+                      id='minV'
                       type="number"
                       name="minV"
                       placeholder="Preço Mínimo"
@@ -208,6 +210,7 @@ const SearchForm = ({ onSearch }) => {
                   <div className="flex flex-col md:w-1/2">
                     <label htmlFor="maxV" className="text-gray-700">Máximo</label>
                     <input
+                      id='maxV'
                       type="number"
                       name="maxV"
                       placeholder="Preço Máximo"
@@ -331,6 +334,7 @@ const SearchForm = ({ onSearch }) => {
                   <div className="flex flex-col md:w-1/2">
                     <label htmlFor="minA" className="text-gray-700">Mínimo</label>
                     <input
+                      id='minA'
                       type="number"
                       name="minA"
                       placeholder="Mínimo"
@@ -342,6 +346,7 @@ const SearchForm = ({ onSearch }) => {
                   <div className="flex flex-col md:w-1/2">
                     <label htmlFor="maxA" className="text-gray-700">Máximo</label>
                     <input
+                      id='maxA'
                       type="number"
                       name="maxA"
                       placeholder="Máximo"

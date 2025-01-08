@@ -1,11 +1,12 @@
 import Link from "next/link";
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 
 const PropertyCard = ({ property, favorites, toggleFavorite }) => {
   return (
     <Link href={`/properties/${property.id}`} className="block bg-white shadow-md rounded-lg overflow-hidden">
       <div className="w-full h-full">
-        <img 
+        <Image 
           src={property.imagens?.[0] || '/placeholder.jpg'} 
           alt={`Imóvel em ${property.freguesia || 'local desconhecido'}`} 
           className="w-full h-48 object-cover" 

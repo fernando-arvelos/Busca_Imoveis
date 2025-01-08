@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const PropertyDetails = ({ property, error }) => {
   const router = useRouter();
@@ -114,7 +115,7 @@ const PropertyDetails = ({ property, error }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {property.imagens && property.imagens.length > 0 ? (
                 property.imagens.map((imagem, index) => (
-                  <img key={index} src={imagem} alt={`Imagem ${index + 1}`} className="w-full h-auto object-cover" />
+                  <Image key={index} src={imagem} alt={`Imagem ${index + 1}`} className="w-full h-auto object-cover" />
                 ))
               ) : (
                 <p>Nenhuma imagem disponível.</p>

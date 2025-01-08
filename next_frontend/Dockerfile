@@ -1,4 +1,4 @@
-FROM node:20.17.0-slim
+FROM node:20.17.0-alpine
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build --no-lint
+RUN npm run build
 
 EXPOSE 3000
 

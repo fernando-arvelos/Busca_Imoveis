@@ -14,6 +14,11 @@ const PropertyCard = ({ property, favorites, toggleFavorite }) => {
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold mb-2">{property.natureza}</h2>
             <button
+              aria-label={
+                favorites.includes(property.id)
+                  ? 'Remover dos favoritos'
+                  : 'Adicionar aos favoritos'
+              }
               className={`text-gray-600 ${favorites.includes(property.id) ? 'text-red-600' : 'hover:text-red-600'}`}
               onClick={(e) => {
                 e.preventDefault(); // Impede a navegação ao clicar no botão de favorito
@@ -27,6 +32,7 @@ const PropertyCard = ({ property, favorites, toggleFavorite }) => {
                 strokeWidth="2"
                 stroke="#000000"
                 className="w-6 h-6 inline-block"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"

@@ -23,7 +23,7 @@ export default function Properties({ property, error }) {
         <meta property="og:title" content={`${property.natureza} - €${property.preçoVenda.toLocaleString()}`} />
         <meta property="og:description" content={property.descricao?.slice(0, 160) || 'Confira os detalhes deste imóvel.'} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`http://localhost:5173/properties/${property.id}`} />
+        <meta property="og:url" content={`https://buscaimoveis.pt/properties/${property.id}`} />
         <meta property="og:image" content={property.imagens?.[0] || '/default-image.jpg'} />
         <meta property="og:image:width" content="1500" />
         <meta property="og:image:height" content="1125" />

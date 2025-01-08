@@ -20,7 +20,7 @@ export default function Properties({ property, error }) {
         <meta name="description" content={property.descricao?.slice(0, 160) || 'Confira os detalhes deste imóvel.'} />
 
         {/* Open Graph Tags */}
-        <meta property="og:title" content={`${property.natureza} - €${property.preçoVenda.toLocaleString()}`} />
+        <meta property="og:title" content={`${property.natureza} à venda em ${property.concelho}, ${property.distrito} - €${property.preçoVenda.toLocaleString()}`} />
         <meta property="og:description" content={property.descricao?.slice(0, 160) || 'Confira os detalhes deste imóvel.'} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://buscaimoveis.pt/properties/${property.id}`} />

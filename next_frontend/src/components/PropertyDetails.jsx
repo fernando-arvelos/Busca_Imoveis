@@ -38,10 +38,7 @@ const PropertyDetails = ({ property, error }) => {
     
     const propertyUrl = `${window.location.origin}/properties/${property.id}`;
     const encodedMessage = encodeURIComponent(`
-   *${property.natureza}* - €${property.preçoVenda.toLocaleString()} te espera! 
-   Localização: ${property.distrito} / ${property.concelho} 
-   Área: ${property.area} m²
-   Clique aqui para ver mais detalhes: 
+    Confira este imóvel:
    ${propertyUrl}
   `);
     return `https://wa.me/?text=${encodedMessage}`;

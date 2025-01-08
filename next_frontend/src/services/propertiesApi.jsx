@@ -19,8 +19,10 @@ export const getProperties = async (filters = {}) => {
 };
 
 export const getPropertyById = async (id) => {
+  let url = 'https://buscaimoveisapi.pt/properties';
+
   try {
-    const response = await axios.get(`${url}/properties/${id}`);
+    const response = await axios.get(`${url}/${id}`);
     return response.data; // Os dados já estão disponíveis aqui
   } catch (error) {
     console.error('Erro ao buscar detalhes do imóvel:', error);

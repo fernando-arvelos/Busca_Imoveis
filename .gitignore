@@ -12,3 +12,4 @@ scraper/export/__pycache__/json_export.cpython-310.pyc
 scraper/errors.log
 .env
 /backend/src/main/java/pt/buscaimoveis/security/
+scraper/dados_bancos

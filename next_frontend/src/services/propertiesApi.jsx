@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getProperties = async (filters = {}) => {
-  let url = 'http://localhost:8080/properties';
+  let url = 'https://buscaimoveisapi.pt/properties';
 
   const queryParams = new URLSearchParams(filters).toString();
 
@@ -20,7 +20,7 @@ export const getProperties = async (filters = {}) => {
 
 export const getPropertyById = async (id) => {
   try {
-    const response = await axios.get(`http://backend:8080/properties/${id}`);
+    const response = await axios.get(`${url}/properties/${id}`);
     return response.data; // Os dados já estão disponíveis aqui
   } catch (error) {
     console.error('Erro ao buscar detalhes do imóvel:', error);

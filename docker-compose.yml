@@ -36,11 +36,11 @@ services:
       context: ./next_frontend
       dockerfile: Dockerfile
     deploy:
-    resources:
-      limits:
-        memory: 2g
-      reservations:
-        memory: 512m
+      resources:
+        limits:
+          memory: 2g
+        reservations:
+          memory: 512m
     depends_on:
       - backend
     ports:

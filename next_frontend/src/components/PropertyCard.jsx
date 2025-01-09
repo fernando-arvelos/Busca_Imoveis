@@ -14,7 +14,7 @@ const PropertyCard = ({ property, favorites, toggleFavorite }) => {
           height={200}
           layout="responsive"
           objectFit="cover"
-          quality={70}
+          quality={50}
         />
         <div className="p-4">
           <div className="flex items-center justify-between">

@@ -101,9 +101,6 @@ const PropertiesPage = () => {
         )}
       </div>
 
-      <script async="async" data-cfasync="false" src="//pl25552622.profitablecpmrate.com/69e9134ea398bc2678d3e57043592b21/invoke.js"></script>
-      <div id="container-69e9134ea398bc2678d3e57043592b21"></div>
-
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}

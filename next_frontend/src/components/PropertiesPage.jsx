@@ -82,9 +82,6 @@ const PropertiesPage = () => {
     <div>
       <SearchForm onSearch={handleSearch} /> {/* passa a função de busca para o componente de busca */}
 
-      <script async="async" data-cfasync="false" src="//pl25552622.profitablecpmrate.com/69e9134ea398bc2678d3e57043592b21/invoke.js"></script>
-      <div id="container-69e9134ea398bc2678d3e57043592b21"></div>
-
       {error && <p className="text-red-600">{error}</p>}
 
       <div ref={resultsRef} className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
@@ -103,9 +100,6 @@ const PropertiesPage = () => {
           searchPerformed && <p>Nenhum imóvel encontrado.</p>
         )}
       </div>
-      
-      <script async="async" data-cfasync="false" src="//pl25552622.profitablecpmrate.com/69e9134ea398bc2678d3e57043592b21/invoke.js"></script>
-      <div id="container-69e9134ea398bc2678d3e57043592b21"></div>
 
       <Pagination
         currentPage={currentPage}

@@ -21,7 +21,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script type='text/javascript' src='//pl25552590.profitablecpmrate.com/6a/eb/de/6aebde97e97cf1681948650a320b5ca9.js'></script>
       </body>
     </Html>
   );

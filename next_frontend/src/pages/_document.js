@@ -17,11 +17,11 @@ export default function Document() {
             `,
           }}
         ></script>
-        <script type='text/javascript' src='//pl25552448.profitablecpmrate.com/93/bd/99/93bd99c70669a77826f67c6cf0b4b87f.js'></script>
       </Head>
       <body>
         <Main />
         <NextScript />
+        <script type='text/javascript' src='//pl25552590.profitablecpmrate.com/6a/eb/de/6aebde97e97cf1681948650a320b5ca9.js'></script>
       </body>
     </Html>
   );

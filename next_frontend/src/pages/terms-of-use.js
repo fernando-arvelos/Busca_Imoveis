@@ -1,6 +1,6 @@
 export default function TermsOfUse() {
   return (
-    <div>
+    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif", lineHeight: "1.6" }}>
       <h1>Termos de Uso</h1>
       <p>Bem-vindo ao Busca Imóveis! Ao acessar nosso site, você concorda em cumprir os termos e condições descritos abaixo. Se não concordar com qualquer parte destes termos, pedimos que não utilize nosso site.</p>
       

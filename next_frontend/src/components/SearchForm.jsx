@@ -377,7 +377,7 @@ const SearchForm = ({ onSearch }) => {
           {/* Texto do site */}
           <div className="bg-white lg:w-1/2 p-8 shadow-lg rounded-lg mt-10">
             <p className="mt-4 text-gray-700">
-            Encontre imóveis direto dos principais bancos em Portugal, com informações confiáveis e atualizadas. Simplificamos sua busca por casas, apartamentos e terrenos.
+            Encontre <strong>imóveis de bancos em Portugal</strong> com vantagens exclusivas: <strong>até 0 de entrada</strong>, taxas reduzidas e financiamento facilitado. Simplificamos sua busca por <strong>casas, apartamentos</strong> e terrenos em regiões como Lisboa, Porto, Braga, Algarve, entre outras.
             </p>
           </div>
       </div>

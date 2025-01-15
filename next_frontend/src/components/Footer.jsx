@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -9,7 +10,11 @@ const Footer = () => {
           <p className="my-2 md:my-0">Contacto: <a href="mailto:contacto@buscaimoveis.pt" className="text-blue-400">contacto@buscaimoveis.pt</a></p>
         </div>
         
-        <p className="text-gray-400 text-sm md:mt-2">&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
+        <p className="text-gray-400 text-sm md:mt-2">&copy; {new Date().getFullYear()} Todos os direitos reservados.</p> |{" "}
+        <p>
+          <Link href="/privacy-policy">Política de Privacidade</Link> |{" "}
+          <Link href="/terms-of-use">Termos de Uso</Link>
+        </p>
       </div>
     </footer>
   );

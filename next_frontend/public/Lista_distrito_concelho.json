@@ -117,6 +117,25 @@
     ]
   },
   {
+    "distrito": "Évora",
+    "concelhos": [
+      "Alandroal",
+      "Arraiolos",
+      "Borba",
+      "Estremoz",
+      "Évora",
+      "Montemor-o-Novo",
+      "Mora",
+      "Mourão",
+      "Portel",
+      "Redondo",
+      "Reguengos de Monsaraz",
+      "Vendas Novas",
+      "Viana do Alentejo",
+      "Vila Viçosa"
+    ]
+  },
+  {
     "distrito": "Faro",
     "concelhos": [
       "Albufeira",
@@ -301,7 +320,91 @@
       "Rio Maior",
       "Salvaterra de Magos",
       "Santarém",
-      "Sardoal"
+      "Sardoal",
+      "Tomar",
+      "Torres Novas",
+      "Vila Nova da Barquinha"
+    ]
+  },
+  {
+    "distrito": "Setúbal",
+    "concelhos": [
+      "Alcácer do Sal",
+      "Alcochete",
+      "Almada",
+      "Barreiro",
+      "Grândola",
+      "Moita",
+      "Montijo",
+      "Palmela",
+      "Santiago do Cacém",
+      "Seixal",
+      "Sesimbra",
+      "Setúbal",
+      "Sines"
+    ]
+  },
+  {
+    "distrito": "Viana do Castelo",
+    "concelhos": [
+      "Arcos de Valdevez",
+      "Caminha",
+      "Melgaço",
+      "Monção",
+      "Paredes de Coura",
+      "Ponte da Barca",
+      "Ponte de Lima",
+      "Valença",
+      "Viana do Castelo",
+      "Vila Nova de Cerveira"
+    ]
+  },
+  {
+    "distrito": "Vila Real",
+    "concelhos": [
+      "Alijó",
+      "Boticas",
+      "Chaves",
+      "Mesão Frio",
+      "Mondim de Basto",
+      "Montalegre",
+      "Murça",
+      "Peso da Régua",
+      "Ribeira de Pena",
+      "Sabrosa",
+      "Santa Marta de Penaguião",
+      "Valpaços",
+      "Vila Pouca de Aguiar",
+      "Vila Real"
+    ]
+  },
+  {
+    "distrito": "Viseu",
+    "concelhos": [
+      "Armamar",
+      "Carregal do Sal",
+      "Castro Daire",
+      "Cinfães",
+      "Lamego",
+      "Mangualde",
+      "Moimenta da Beira",
+      "Mortágua",
+      "Nelas",
+      "Oliveira de Frades",
+      "Penalva do Castelo",
+      "Penedono",
+      "Resende",
+      "Santa Comba Dão",
+      "São João da Pesqueira",
+      "São Pedro do Sul",
+      "Sátão",
+      "Sernancelhe",
+      "Tabuaço",
+      "Tarouca",
+      "Tondela",
+      "Vila Nova de Paiva",
+      "Viseu",
+      "Vouzela"
     ]
   }
 ]

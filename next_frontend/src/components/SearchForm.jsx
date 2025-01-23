@@ -155,7 +155,8 @@ const SearchForm = ({ onSearch }) => {
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/casa.jpg')` }}>
-      <div className='container flex flex-col lg:flex-row lg:w-full items-start lg:items-center lg:space-x-8 p-10 shadow-lg rounded-lg'>
+      <div className='container flex flex-col lg:flex-row max-w-[90%] items-start lg:items-center lg:space-x-12 p-10 shadow-lg rounded-lg'>
+
           {/* Box de busca */}
         <div className="bg-white w-full p-8 shadow-lg rounded-lg">
           <h1 className="text-2xl md:text-4xl text-center font-bold mb-6 text-gray-900">Seu Guia de Imóveis à Venda em Portugal</h1>
@@ -375,9 +376,9 @@ const SearchForm = ({ onSearch }) => {
         </div>
 
           {/* Texto do site */}
-          <div className="bg-white lg:w-1/2 p-8 shadow-lg rounded-lg mt-10">
-            <p className="mt-4 text-gray-700">
-            Encontre imóveis direto dos principais bancos em Portugal, com informações confiáveis e atualizadas. Simplificamos sua busca por casas, apartamentos e terrenos.
+          <div className="bg-white lg:w-4/5 p-8 shadow-lg rounded-lg mt-10">
+            <p className="mt-2 text-gray-700">
+            Encontre <strong>imóveis dos principais bancos em Portugal</strong> com vantagens exclusivas: <strong>Financiamento de até 100% do valor</strong>, taxas reduzidas e custos administrativos mais baixos. Simplificamos sua busca por <strong>casas, apartamentos</strong> e terrenos em regiões como Lisboa, Porto, Braga, Algarve, Coimbra, entre outras.
             </p>
           </div>
       </div>

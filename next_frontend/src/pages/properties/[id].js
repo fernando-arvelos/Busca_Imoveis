@@ -3,12 +3,14 @@ import { getPropertyById } from '@/services/propertiesApi';
 import Head from 'next/head';
 
 export default function Properties({ property, error }) {
-  if (error) {
-    return <p>{error}</p>;
-  }
-
-  if (!property) {
-    return <p>Imóvel não encontrado.</p>;
+  if (error || !property) {
+    return (
+      <div style={{ textAlign: 'center', marginTop: '50px' }}>
+        <h1>Imóvel não encontrado</h1>
+        <p>{error || 'O imóvel que você está procurando não está mais disponível.'}</p>
+        <a href="/">Voltar para a página inicial</a>
+      </div>
+    );
   }
 
   return (
@@ -32,7 +34,7 @@ export default function Properties({ property, error }) {
       </Head>
 
       <main>
-        <PropertyDetails property={property} error={error} />
+        <PropertyDetails property={property} />
       </main>
     </>
   );
@@ -46,7 +48,7 @@ export async function getServerSideProps(context) {
 
     if (!data) {
       return {
-        notFound: true,
+        props: { error: 'O imóvel não foi encontrado ou não está mais disponível.' },
       };
     }
 
